@@ -1,0 +1,6 @@
+
+State Machine - |finalTermProject|pulGen:comb_7|currstate0
+Name currstate0.out_S0 currstate0.out_S2 currstate0.out_S1 
+currstate0.out_S0 0 0 0 
+currstate0.out_S1 1 0 1 
+currstate0.out_S2 1 1 0 
