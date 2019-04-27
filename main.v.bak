@@ -2,69 +2,40 @@ module finalTermProject(
 	input [4:0] SW,
 	output reg [0:6] HEX3,HEX1,HEX0
 	);
+	
 	wire pulse;
-	//(number of people standing in line)/4
-	reg [2:0] state;
-	//input data
-	reg [3:0] input_data;
+	reg[3:0]cnt;
+	parameter Seg9 = 7'b000_1100; parameter Seg8 = 7'b000_0000; parameter Seg7 = 7'b000_1111; 
+	parameter Seg6 = 7'b010_0000; parameter Seg5 = 7'b010_0100;	parameter Seg4 = 7'b100_1100; 
+	parameter Seg3 = 7'b000_0110; parameter Seg2 = 7'b001_0010; parameter Seg1 = 7'b100_1111; 
+	parameter Seg0 = 7'b000_0001; parameter SegX = 7'b111_1111;
 	
-	always@(*)
-		input_data = SW[3:0];
-
-	initial
-		state = 3'b000;
+	input_pulse(SW[0],SW[1],SW[2],SW[3],pulse);
 	
-	pulGen(a,b,c,pulse);
-	
-endmodule
-
-module pulGen(in, clk, rst, out);
-	output reg out;
-	input clk, in, rst;
-	reg [1:0] currstate0;
-	reg [1:0] nextstate0;
-	integer cnt;
-	integer ncnt;
-	parameter out_S0 = 2'b00; parameter out_S1 = 2'b01; parameter out_S2 = 2'b10;
-
-	always @(posedge clk)//State Change
+	always@(posedge pulse)
 	begin
-	if(rst)
-		begin
-		currstate0<=out_S0;cnt<=0;
-		end
-	else
-		begin
-		currstate0 <= nextstate0; cnt <= ncnt; 
-		end
+	cnt <=cnt + 1'b1;
 	end
 	
-	always @(*)
+	always@(*)
 	begin
-	case(currstate0)
-		out_S0 : begin
-			if(in) begin nextstate0 = out_S1; ncnt = 0; end
-			else   begin nextstate0 = out_S0; ncnt = 0; end
-		end
-		out_S1 : begin 
-			if(in) begin
-				nextstate0 = out_S1;
-				ncnt = cnt + 1;
-			end
-			else begin
-				nextstate0 = out_S0; 
-				if(cnt >= 1000)
-					nextstate0 = out_S2;
-				end
-			end
-		out_S2 : begin nextstate0 = out_S0; ncnt = 0; end
-			default : nextstate0 = out_S0;
+		case(cnt)
+			0: HEX0=Seg0;
+			1: HEX0=Seg1;
+			2: HEX0=Seg2;
+	
+			default : HEX0 = SegX;
 		endcase
 	end
 	
-	always @(*)
-		begin
-			if (currstate0 == out_S2) out = 1'b1;
-			else                      out = 1'b0;
-		end
-endmodule 
+endmodule
+
+//design the module that output  1 when 0000>0001
+
+module input_pulse(
+input SW0,SW1,SW2,SW3,
+output pulse
+);
+assign pulse=SW0|SW1|SW2|SW3;
+
+endmodule

@@ -31,43 +31,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-446986c497a3dccba8da73d7f7eed311
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
-pulGen
-# storage
-db|finalTermProject.(1).cnf
-db|finalTermProject.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-main.v
-446986c497a3dccba8da73d7f7eed311
+4212db1397a251f395f32060e8869e30
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -86,21 +50,89 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # user_parameter {
-out_S0
-00
+Seg9
+0001100
 PARAMETER_UNSIGNED_BIN
 DEF
-out_S1
-01
+Seg8
+0000000
 PARAMETER_UNSIGNED_BIN
 DEF
-out_S2
-10
+Seg7
+0001111
+PARAMETER_UNSIGNED_BIN
+DEF
+Seg6
+0100000
+PARAMETER_UNSIGNED_BIN
+DEF
+Seg5
+0100100
+PARAMETER_UNSIGNED_BIN
+DEF
+Seg4
+1001100
+PARAMETER_UNSIGNED_BIN
+DEF
+Seg3
+0000110
+PARAMETER_UNSIGNED_BIN
+DEF
+Seg2
+0010010
+PARAMETER_UNSIGNED_BIN
+DEF
+Seg1
+1001111
+PARAMETER_UNSIGNED_BIN
+DEF
+Seg0
+0000001
+PARAMETER_UNSIGNED_BIN
+DEF
+SegX
+1111111
 PARAMETER_UNSIGNED_BIN
 DEF
 }
 # hierarchies {
-pulGen:comb_7
+|
+}
+# macro_sequence
+
+# end
+# entity
+input_pulse
+# storage
+db|finalTermProject.(1).cnf
+db|finalTermProject.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+main.v
+4212db1397a251f395f32060e8869e30
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+input_pulse:comb_3
 }
 # macro_sequence
 

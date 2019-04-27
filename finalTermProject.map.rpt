@@ -1,5 +1,5 @@
 Analysis & Synthesis report for finalTermProject
-Fri Apr 26 20:16:52 2019
+Sat Apr 27 15:22:43 2019
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -13,13 +13,9 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |finalTermProject|pulGen:comb_7|currstate0
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: pulGen:comb_7
- 13. Port Connectivity Checks: "pulGen:comb_7"
- 14. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |finalTermProject
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -45,15 +41,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 26 20:16:52 2019        ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 27 15:22:43 2019        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; finalTermProject                             ;
 ; Top-level Entity Name              ; finalTermProject                             ;
 ; Family                             ; Cyclone IV E                                 ;
-; Total logic elements               ; 0                                            ;
-;     Total combinational functions  ; 0                                            ;
-;     Dedicated logic registers      ; 0                                            ;
-; Total registers                    ; 0                                            ;
+; Total logic elements               ; 12                                           ;
+;     Total combinational functions  ; 12                                           ;
+;     Dedicated logic registers      ; 4                                            ;
+; Total registers                    ; 4                                            ;
 ; Total pins                         ; 26                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
@@ -163,77 +159,44 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------+------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 26    ;
-; Maximum fan-out node                        ; SW[0] ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 26    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 12     ;
+;                                             ;        ;
+; Total combinational functions               ; 12     ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 9      ;
+;     -- 3 input functions                    ; 1      ;
+;     -- <=2 input functions                  ; 2      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 12     ;
+;     -- arithmetic mode                      ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 4      ;
+;     -- Dedicated logic registers            ; 4      ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 26     ;
+; Maximum fan-out node                        ; cnt[0] ;
+; Maximum fan-out                             ; 11     ;
+; Total fan-out                               ; 83     ;
+; Average fan-out                             ; 1.22   ;
++---------------------------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |finalTermProject          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |finalTermProject   ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                          ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; |finalTermProject          ; 12 (11)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |finalTermProject                    ; work         ;
+;    |input_pulse:comb_3|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |finalTermProject|input_pulse:comb_3 ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------+
-; State Machine - |finalTermProject|pulGen:comb_7|currstate0                    ;
-+-------------------+-------------------+-------------------+-------------------+
-; Name              ; currstate0.out_S0 ; currstate0.out_S2 ; currstate0.out_S1 ;
-+-------------------+-------------------+-------------------+-------------------+
-; currstate0.out_S0 ; 0                 ; 0                 ; 0                 ;
-; currstate0.out_S1 ; 1                 ; 0                 ; 1                 ;
-; currstate0.out_S2 ; 1                 ; 1                 ; 0                 ;
-+-------------------+-------------------+-------------------+-------------------+
-
-
-+-------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                            ;
-+----------------------------------------+--------------------------------------+
-; Register name                          ; Reason for Removal                   ;
-+----------------------------------------+--------------------------------------+
-; pulGen:comb_7|cnt[0..31]               ; Stuck at GND due to stuck port clock ;
-; pulGen:comb_7|currstate0.out_S0        ; Lost fanout                          ;
-; pulGen:comb_7|currstate0.out_S1        ; Lost fanout                          ;
-; pulGen:comb_7|currstate0.out_S2        ; Lost fanout                          ;
-; Total Number of Removed Registers = 35 ;                                      ;
-+----------------------------------------+--------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                             ;
-+----------------------+-------------------------+----------------------------------------+
-; Register name        ; Reason for Removal      ; Registers Removed due to This Register ;
-+----------------------+-------------------------+----------------------------------------+
-; pulGen:comb_7|cnt[1] ; Stuck at GND            ; pulGen:comb_7|cnt[30]                  ;
-;                      ; due to stuck port clock ;                                        ;
-+----------------------+-------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -241,7 +204,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -251,25 +214,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: pulGen:comb_7 ;
-+----------------+-------+-----------------------------------+
-; Parameter Name ; Value ; Type                              ;
-+----------------+-------+-----------------------------------+
-; out_S0         ; 00    ; Unsigned Binary                   ;
-; out_S1         ; 01    ; Unsigned Binary                   ;
-; out_S2         ; 10    ; Unsigned Binary                   ;
-+----------------+-------+-----------------------------------+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |finalTermProject ;
++----------------+---------+-------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                  ;
++----------------+---------+-------------------------------------------------------+
+; Seg9           ; 0001100 ; Unsigned Binary                                       ;
+; Seg8           ; 0000000 ; Unsigned Binary                                       ;
+; Seg7           ; 0001111 ; Unsigned Binary                                       ;
+; Seg6           ; 0100000 ; Unsigned Binary                                       ;
+; Seg5           ; 0100100 ; Unsigned Binary                                       ;
+; Seg4           ; 1001100 ; Unsigned Binary                                       ;
+; Seg3           ; 0000110 ; Unsigned Binary                                       ;
+; Seg2           ; 0010010 ; Unsigned Binary                                       ;
+; Seg1           ; 1001111 ; Unsigned Binary                                       ;
+; Seg0           ; 0000001 ; Unsigned Binary                                       ;
+; SegX           ; 1111111 ; Unsigned Binary                                       ;
++----------------+---------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "pulGen:comb_7"                                                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -278,86 +240,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Apr 26 20:16:50 2019
+    Info: Processing started: Sat Apr 27 15:22:40 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off finalTermProject -c finalTermProject
 Info: Found 2 design units, including 2 entities, in source file main.v
     Info: Found entity 1: finalTermProject
-    Info: Found entity 2: pulGen
-Warning (10236): Verilog HDL Implicit Net warning at main.v(17): created implicit net for "a"
-Warning (10236): Verilog HDL Implicit Net warning at main.v(17): created implicit net for "b"
-Warning (10236): Verilog HDL Implicit Net warning at main.v(17): created implicit net for "c"
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(17): instance has no name
+    Info: Found entity 2: input_pulse
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(13): instance has no name
 Info: Elaborating entity "finalTermProject" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at main.v(7): object "state" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at main.v(9): object "input_data" assigned a value but never read
 Warning (10034): Output port "HEX3" at main.v(3) has no driver
 Warning (10034): Output port "HEX1" at main.v(3) has no driver
-Warning (10034): Output port "HEX0" at main.v(4) has no driver
-Info: Elaborating entity "pulGen" for hierarchy "pulGen:comb_7"
-Warning (10240): Verilog HDL Always Construct warning at main.v(44): inferring latch(es) for variable "ncnt", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "ncnt[0]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[1]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[2]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[3]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[4]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[5]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[6]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[7]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[8]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[9]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[10]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[11]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[12]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[13]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[14]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[15]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[16]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[17]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[18]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[19]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[20]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[21]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[22]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[23]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[24]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[25]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[26]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[27]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[28]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[29]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[30]" at main.v(44)
-Info (10041): Inferred latch for "ncnt[31]" at main.v(44)
-Warning: LATCH primitive "pulGen:comb_7|ncnt[29]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[28]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[27]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[26]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[25]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[24]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[23]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[22]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[21]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[20]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[19]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[18]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[17]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[16]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[15]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[14]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[13]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[12]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[11]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[10]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[9]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[8]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[7]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[6]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[5]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[4]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[3]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[2]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[1]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[31]" is permanently disabled
-Warning: LATCH primitive "pulGen:comb_7|ncnt[30]" is permanently disabled
+Info: Elaborating entity "input_pulse" for hierarchy "input_pulse:comb_3"
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX3[6]" is stuck at GND
     Warning (13410): Pin "HEX3[5]" is stuck at GND
@@ -373,30 +265,17 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX1[2]" is stuck at GND
     Warning (13410): Pin "HEX1[1]" is stuck at GND
     Warning (13410): Pin "HEX1[0]" is stuck at GND
-    Warning (13410): Pin "HEX0[6]" is stuck at GND
-    Warning (13410): Pin "HEX0[5]" is stuck at GND
-    Warning (13410): Pin "HEX0[4]" is stuck at GND
-    Warning (13410): Pin "HEX0[3]" is stuck at GND
-    Warning (13410): Pin "HEX0[2]" is stuck at GND
-    Warning (13410): Pin "HEX0[1]" is stuck at GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND
-Info: 3 registers lost all their fanouts during netlist optimizations. The first 3 are displayed below.
-    Info: Register "pulGen:comb_7|currstate0.out_S0" lost all its fanouts during netlist optimizations.
-    Info: Register "pulGen:comb_7|currstate0.out_S1" lost all its fanouts during netlist optimizations.
-    Info: Register "pulGen:comb_7|currstate0.out_S2" lost all its fanouts during netlist optimizations.
-Warning: Design contains 5 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]"
-    Warning (15610): No output dependent on input pin "SW[1]"
-    Warning (15610): No output dependent on input pin "SW[2]"
-    Warning (15610): No output dependent on input pin "SW[3]"
+Info: Timing-Driven Synthesis is running
+Warning: Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[4]"
-Info: Implemented 26 device resources after synthesis - the final resource count might be different
+Info: Implemented 38 device resources after synthesis - the final resource count might be different
     Info: Implemented 5 input pins
     Info: Implemented 21 output pins
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 229 megabytes
-    Info: Processing ended: Fri Apr 26 20:16:52 2019
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Implemented 12 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 234 megabytes
+    Info: Processing ended: Sat Apr 27 15:22:43 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 
