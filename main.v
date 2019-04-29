@@ -98,7 +98,7 @@ output a,b,c
 );
 assign a = A&~D|A&~E|B&~D&E|B&C&~D|~B&C&D&~E|B&~C&D&~E;
 assign b =  A&D&E| ~A&~B&~D&E | ~A&~B&C&~D| B&~C&~D&~E | B&C&D&~E | ~A&~B&~C&D&~E;
-assign c = A&C | ~A&~C&~E | ~B&C&E | ~C&~D&~E | B&C&D;
+assign c = C&E | A&C | ~A&~C&~E | ~C&~D&~E | B&D&~E;
 endmodule
 
 module d_flip_flop ( input din ,input clk ,input reset ,output reg dout );

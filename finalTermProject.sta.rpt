@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for finalTermProject
-Mon Apr 29 21:03:56 2019
+Mon Apr 29 22:19:09 2019
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -129,13 +129,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                        ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; 555.56 MHz ; 250.0 MHz       ; SW[0]      ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+------------+---------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                       ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+; 489.0 MHz ; 250.0 MHz       ; SW[0]      ; limit due to minimum period restriction (max I/O toggle rate) ;
++-----------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -144,7 +144,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+--------------------+
 ; Clock ; Slack  ; End Point TNS      ;
 +-------+--------+--------------------+
-; SW[0] ; -0.800 ; -2.238             ;
+; SW[0] ; -1.045 ; -2.875             ;
 +-------+--------+--------------------+
 
 
@@ -183,14 +183,14 @@ No paths to report.
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; -0.800 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.719      ;
-; -0.799 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.718      ;
-; -0.751 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.670      ;
-; -0.668 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.587      ;
-; -0.639 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.558      ;
-; -0.482 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.401      ;
-; -0.459 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.378      ;
-; -0.310 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.229      ;
+; -1.045 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.964      ;
+; -0.972 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.891      ;
+; -0.858 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.777      ;
+; -0.839 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.758      ;
+; -0.778 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.697      ;
+; -0.778 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.697      ;
+; -0.693 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.612      ;
+; -0.678 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.597      ;
 ; 0.185  ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 0.734      ;
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -202,13 +202,13 @@ No paths to report.
 +-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.384 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.384 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 0.669      ;
-; 0.802 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.087      ;
-; 0.867 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.152      ;
-; 0.995 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.280      ;
-; 1.029 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.314      ;
-; 1.130 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.415      ;
-; 1.134 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.419      ;
-; 1.248 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.533      ;
+; 0.907 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.192      ;
+; 1.125 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.410      ;
+; 1.127 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.412      ;
+; 1.226 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.511      ;
+; 1.312 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.597      ;
+; 1.440 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.725      ;
+; 1.512 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.797      ;
 +-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -221,30 +221,30 @@ No paths to report.
 ; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
 ; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
 ; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; 0.276  ; 0.464        ; 0.188          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; 0.276  ; 0.464        ; 0.188          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; 0.276  ; 0.464        ; 0.188          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; 0.314  ; 0.534        ; 0.220          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; 0.314  ; 0.534        ; 0.220          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; 0.314  ; 0.534        ; 0.220          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
+; 0.228  ; 0.416        ; 0.188          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
+; 0.228  ; 0.416        ; 0.188          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
+; 0.228  ; 0.416        ; 0.188          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
+; 0.363  ; 0.583        ; 0.220          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
+; 0.363  ; 0.583        ; 0.220          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
+; 0.363  ; 0.583        ; 0.220          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
+; 0.379  ; 0.379        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
+; 0.379  ; 0.379        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
+; 0.381  ; 0.381        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|dout|clk               ;
+; 0.381  ; 0.381        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_8|dout|clk               ;
+; 0.381  ; 0.381        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_9|dout|clk               ;
 ; 0.395  ; 0.395        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|o                 ;
-; 0.418  ; 0.418        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
-; 0.427  ; 0.427        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
-; 0.427  ; 0.427        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
-; 0.428  ; 0.428        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|dout|clk               ;
-; 0.428  ; 0.428        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_8|dout|clk               ;
-; 0.428  ; 0.428        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_9|dout|clk               ;
-; 0.447  ; 0.447        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
+; 0.419  ; 0.419        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
+; 0.448  ; 0.448        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
 ; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|i                 ;
 ; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|i                 ;
 ; 0.550  ; 0.550        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
-; 0.569  ; 0.569        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|dout|clk               ;
-; 0.569  ; 0.569        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_8|dout|clk               ;
-; 0.569  ; 0.569        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_9|dout|clk               ;
-; 0.571  ; 0.571        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
-; 0.571  ; 0.571        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
 ; 0.580  ; 0.580        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
 ; 0.605  ; 0.605        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|o                 ;
+; 0.619  ; 0.619        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|dout|clk               ;
+; 0.619  ; 0.619        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_8|dout|clk               ;
+; 0.619  ; 0.619        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_9|dout|clk               ;
+; 0.620  ; 0.620        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
+; 0.620  ; 0.620        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
 +--------+--------------+----------------+------------------+-------+------------+-------------------------------+
 
 
@@ -253,11 +253,11 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; SW[*]     ; SW[0]      ; 0.566  ; 0.848  ; Rise       ; SW[0]           ;
-;  SW[1]    ; SW[0]      ; 0.322  ; 0.591  ; Rise       ; SW[0]           ;
-;  SW[2]    ; SW[0]      ; -0.095 ; 0.241  ; Rise       ; SW[0]           ;
-;  SW[3]    ; SW[0]      ; 0.566  ; 0.848  ; Rise       ; SW[0]           ;
-;  SW[4]    ; SW[0]      ; -0.369 ; -0.022 ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; -0.186 ; 0.160  ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; -0.213 ; 0.160  ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; -0.186 ; 0.147  ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; -0.302 ; 0.075  ; Rise       ; SW[0]           ;
+;  SW[4]    ; SW[0]      ; -0.506 ; -0.187 ; Rise       ; SW[0]           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -266,11 +266,11 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; SW[*]     ; SW[0]      ; 1.615 ; 1.291 ; Rise       ; SW[0]           ;
-;  SW[1]    ; SW[0]      ; 1.135 ; 0.803 ; Rise       ; SW[0]           ;
-;  SW[2]    ; SW[0]      ; 1.230 ; 0.890 ; Rise       ; SW[0]           ;
-;  SW[3]    ; SW[0]      ; 1.473 ; 1.115 ; Rise       ; SW[0]           ;
-;  SW[4]    ; SW[0]      ; 1.615 ; 1.291 ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; 1.700 ; 1.380 ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 1.541 ; 1.180 ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 1.070 ; 0.723 ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 1.585 ; 1.233 ; Rise       ; SW[0]           ;
+;  SW[4]    ; SW[0]      ; 1.700 ; 1.380 ; Rise       ; SW[0]           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -279,48 +279,48 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; HEX0[*]   ; SW[0]      ; 19.287 ; 19.296 ; Rise       ; SW[0]           ;
-;  HEX0[0]  ; SW[0]      ; 18.097 ; 17.820 ; Rise       ; SW[0]           ;
-;  HEX0[1]  ; SW[0]      ; 18.348 ; 18.313 ; Rise       ; SW[0]           ;
-;  HEX0[2]  ; SW[0]      ; 19.287 ; 19.296 ; Rise       ; SW[0]           ;
-;  HEX0[3]  ; SW[0]      ; 15.594 ; 15.297 ; Rise       ; SW[0]           ;
-;  HEX0[4]  ; SW[0]      ; 15.941 ; 15.628 ; Rise       ; SW[0]           ;
-;  HEX0[5]  ; SW[0]      ; 19.217 ; 19.284 ; Rise       ; SW[0]           ;
-;  HEX0[6]  ; SW[0]      ; 13.839 ; 13.834 ; Rise       ; SW[0]           ;
-; HEX1[*]   ; SW[0]      ; 13.636 ; 13.676 ; Rise       ; SW[0]           ;
-;  HEX1[0]  ; SW[0]      ; 11.691 ; 11.810 ; Rise       ; SW[0]           ;
-;  HEX1[1]  ; SW[0]      ; 13.636 ; 13.676 ; Rise       ; SW[0]           ;
-;  HEX1[2]  ; SW[0]      ; 10.439 ; 10.514 ; Rise       ; SW[0]           ;
-;  HEX1[3]  ; SW[0]      ; 11.106 ; 11.183 ; Rise       ; SW[0]           ;
-;  HEX1[4]  ; SW[0]      ; 10.148 ; 10.225 ; Rise       ; SW[0]           ;
-;  HEX1[5]  ; SW[0]      ; 11.742 ; 11.897 ; Rise       ; SW[0]           ;
-;  HEX1[6]  ; SW[0]      ; 12.200 ; 12.037 ; Rise       ; SW[0]           ;
-; HEX3[*]   ; SW[0]      ; 13.541 ; 13.557 ; Rise       ; SW[0]           ;
-;  HEX3[0]  ; SW[0]      ; 9.624  ; 9.665  ; Rise       ; SW[0]           ;
-;  HEX3[1]  ; SW[0]      ; 13.541 ; 13.557 ; Rise       ; SW[0]           ;
-;  HEX3[2]  ; SW[0]      ; 13.127 ; 12.613 ; Rise       ; SW[0]           ;
-;  HEX3[3]  ; SW[0]      ; 11.418 ; 11.274 ; Rise       ; SW[0]           ;
-;  HEX3[4]  ; SW[0]      ; 10.859 ; 10.747 ; Rise       ; SW[0]           ;
-;  HEX3[5]  ; SW[0]      ; 11.689 ; 11.887 ; Rise       ; SW[0]           ;
-;  HEX3[6]  ; SW[0]      ; 11.675 ; 11.877 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 7.386  ; 7.473  ; Rise       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 6.328  ; 6.357  ; Rise       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 7.386  ; 7.473  ; Rise       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 6.727  ; 6.802  ; Rise       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 6.727  ; 6.802  ; Rise       ; SW[0]           ;
-; HEX7[*]   ; SW[0]      ; 14.742 ; 14.504 ; Rise       ; SW[0]           ;
-;  HEX7[0]  ; SW[0]      ; 12.869 ; 12.674 ; Rise       ; SW[0]           ;
-;  HEX7[1]  ; SW[0]      ; 12.706 ; 12.763 ; Rise       ; SW[0]           ;
-;  HEX7[2]  ; SW[0]      ; 14.627 ; 14.504 ; Rise       ; SW[0]           ;
-;  HEX7[3]  ; SW[0]      ; 14.742 ; 14.387 ; Rise       ; SW[0]           ;
-;  HEX7[4]  ; SW[0]      ; 14.184 ; 13.812 ; Rise       ; SW[0]           ;
-;  HEX7[5]  ; SW[0]      ; 14.157 ; 13.952 ; Rise       ; SW[0]           ;
-;  HEX7[6]  ; SW[0]      ; 13.070 ; 12.973 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 7.386  ; 7.473  ; Fall       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 6.328  ; 6.357  ; Fall       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 7.386  ; 7.473  ; Fall       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 6.727  ; 6.802  ; Fall       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 6.727  ; 6.802  ; Fall       ; SW[0]           ;
+; HEX0[*]   ; SW[0]      ; 16.215 ; 16.091 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 16.021 ; 16.060 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 16.215 ; 16.091 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 13.142 ; 13.099 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 15.305 ; 15.334 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 15.678 ; 15.686 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 13.576 ; 13.520 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 14.137 ; 14.100 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 13.526 ; 13.500 ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 11.756 ; 11.825 ; Rise       ; SW[0]           ;
+;  HEX1[1]  ; SW[0]      ; 13.526 ; 13.500 ; Rise       ; SW[0]           ;
+;  HEX1[2]  ; SW[0]      ; 10.599 ; 10.670 ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 11.187 ; 11.234 ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 10.302 ; 10.360 ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 11.855 ; 11.996 ; Rise       ; SW[0]           ;
+;  HEX1[6]  ; SW[0]      ; 12.411 ; 12.274 ; Rise       ; SW[0]           ;
+; HEX3[*]   ; SW[0]      ; 13.601 ; 13.418 ; Rise       ; SW[0]           ;
+;  HEX3[0]  ; SW[0]      ; 9.664  ; 9.697  ; Rise       ; SW[0]           ;
+;  HEX3[1]  ; SW[0]      ; 13.466 ; 13.418 ; Rise       ; SW[0]           ;
+;  HEX3[2]  ; SW[0]      ; 13.601 ; 13.122 ; Rise       ; SW[0]           ;
+;  HEX3[3]  ; SW[0]      ; 10.756 ; 10.578 ; Rise       ; SW[0]           ;
+;  HEX3[4]  ; SW[0]      ; 10.698 ; 10.600 ; Rise       ; SW[0]           ;
+;  HEX3[5]  ; SW[0]      ; 12.546 ; 12.708 ; Rise       ; SW[0]           ;
+;  HEX3[6]  ; SW[0]      ; 12.482 ; 12.659 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 7.158  ; 7.284  ; Rise       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 7.076  ; 7.157  ; Rise       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 7.158  ; 7.284  ; Rise       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 6.764  ; 6.844  ; Rise       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 6.764  ; 6.844  ; Rise       ; SW[0]           ;
+; HEX7[*]   ; SW[0]      ; 14.439 ; 14.293 ; Rise       ; SW[0]           ;
+;  HEX7[0]  ; SW[0]      ; 14.056 ; 13.813 ; Rise       ; SW[0]           ;
+;  HEX7[1]  ; SW[0]      ; 14.019 ; 14.275 ; Rise       ; SW[0]           ;
+;  HEX7[2]  ; SW[0]      ; 14.439 ; 14.293 ; Rise       ; SW[0]           ;
+;  HEX7[3]  ; SW[0]      ; 13.390 ; 13.326 ; Rise       ; SW[0]           ;
+;  HEX7[4]  ; SW[0]      ; 14.326 ; 14.064 ; Rise       ; SW[0]           ;
+;  HEX7[5]  ; SW[0]      ; 13.195 ; 13.077 ; Rise       ; SW[0]           ;
+;  HEX7[6]  ; SW[0]      ; 14.191 ; 14.029 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 7.158  ; 7.284  ; Fall       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 7.076  ; 7.157  ; Fall       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 7.158  ; 7.284  ; Fall       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 6.764  ; 6.844  ; Fall       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 6.764  ; 6.844  ; Fall       ; SW[0]           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -329,48 +329,48 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; HEX0[*]   ; SW[0]      ; 12.951 ; 12.965 ; Rise       ; SW[0]           ;
-;  HEX0[0]  ; SW[0]      ; 16.947 ; 16.713 ; Rise       ; SW[0]           ;
-;  HEX0[1]  ; SW[0]      ; 17.358 ; 17.245 ; Rise       ; SW[0]           ;
-;  HEX0[2]  ; SW[0]      ; 18.162 ; 18.103 ; Rise       ; SW[0]           ;
-;  HEX0[3]  ; SW[0]      ; 14.539 ; 14.286 ; Rise       ; SW[0]           ;
-;  HEX0[4]  ; SW[0]      ; 14.872 ; 14.603 ; Rise       ; SW[0]           ;
-;  HEX0[5]  ; SW[0]      ; 18.149 ; 18.141 ; Rise       ; SW[0]           ;
-;  HEX0[6]  ; SW[0]      ; 12.951 ; 12.965 ; Rise       ; SW[0]           ;
-; HEX1[*]   ; SW[0]      ; 9.504  ; 9.484  ; Rise       ; SW[0]           ;
-;  HEX1[0]  ; SW[0]      ; 10.981 ; 11.003 ; Rise       ; SW[0]           ;
-;  HEX1[1]  ; SW[0]      ; 12.818 ; 12.738 ; Rise       ; SW[0]           ;
-;  HEX1[2]  ; SW[0]      ; 9.751  ; 9.824  ; Rise       ; SW[0]           ;
-;  HEX1[3]  ; SW[0]      ; 10.424 ; 10.404 ; Rise       ; SW[0]           ;
-;  HEX1[4]  ; SW[0]      ; 9.504  ; 9.484  ; Rise       ; SW[0]           ;
-;  HEX1[5]  ; SW[0]      ; 11.084 ; 11.180 ; Rise       ; SW[0]           ;
-;  HEX1[6]  ; SW[0]      ; 11.541 ; 11.426 ; Rise       ; SW[0]           ;
-; HEX3[*]   ; SW[0]      ; 9.275  ; 9.314  ; Rise       ; SW[0]           ;
-;  HEX3[0]  ; SW[0]      ; 9.275  ; 9.314  ; Rise       ; SW[0]           ;
-;  HEX3[1]  ; SW[0]      ; 12.723 ; 12.620 ; Rise       ; SW[0]           ;
-;  HEX3[2]  ; SW[0]      ; 12.721 ; 12.211 ; Rise       ; SW[0]           ;
-;  HEX3[3]  ; SW[0]      ; 10.997 ; 10.854 ; Rise       ; SW[0]           ;
-;  HEX3[4]  ; SW[0]      ; 10.460 ; 10.348 ; Rise       ; SW[0]           ;
-;  HEX3[5]  ; SW[0]      ; 10.854 ; 10.973 ; Rise       ; SW[0]           ;
-;  HEX3[6]  ; SW[0]      ; 10.854 ; 11.035 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 6.120  ; 6.149  ; Rise       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 6.120  ; 6.149  ; Rise       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 7.136  ; 7.221  ; Rise       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 6.504  ; 6.577  ; Rise       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 6.504  ; 6.577  ; Rise       ; SW[0]           ;
-; HEX7[*]   ; SW[0]      ; 11.831 ; 11.781 ; Rise       ; SW[0]           ;
-;  HEX7[0]  ; SW[0]      ; 11.931 ; 11.781 ; Rise       ; SW[0]           ;
-;  HEX7[1]  ; SW[0]      ; 11.831 ; 11.858 ; Rise       ; SW[0]           ;
-;  HEX7[2]  ; SW[0]      ; 13.680 ; 13.488 ; Rise       ; SW[0]           ;
-;  HEX7[3]  ; SW[0]      ; 13.726 ; 13.414 ; Rise       ; SW[0]           ;
-;  HEX7[4]  ; SW[0]      ; 13.244 ; 12.919 ; Rise       ; SW[0]           ;
-;  HEX7[5]  ; SW[0]      ; 13.232 ; 12.957 ; Rise       ; SW[0]           ;
-;  HEX7[6]  ; SW[0]      ; 12.108 ; 12.047 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 6.120  ; 6.149  ; Fall       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 6.120  ; 6.149  ; Fall       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 7.136  ; 7.221  ; Fall       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 6.504  ; 6.577  ; Fall       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 6.504  ; 6.577  ; Fall       ; SW[0]           ;
+; HEX0[*]   ; SW[0]      ; 12.309 ; 12.278 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 15.140 ; 15.226 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 15.427 ; 15.310 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 12.309 ; 12.278 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 14.448 ; 14.525 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 14.806 ; 14.863 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 12.780 ; 12.732 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 13.203 ; 13.187 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 9.617  ; 9.582  ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 11.008 ; 10.985 ; Rise       ; SW[0]           ;
+;  HEX1[1]  ; SW[0]      ; 12.804 ; 12.832 ; Rise       ; SW[0]           ;
+;  HEX1[2]  ; SW[0]      ; 9.868  ; 9.947  ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 10.466 ; 10.421 ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 9.617  ; 9.582  ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 11.157 ; 11.246 ; Rise       ; SW[0]           ;
+;  HEX1[6]  ; SW[0]      ; 11.711 ; 11.616 ; Rise       ; SW[0]           ;
+; HEX3[*]   ; SW[0]      ; 9.315  ; 9.347  ; Rise       ; SW[0]           ;
+;  HEX3[0]  ; SW[0]      ; 9.315  ; 9.347  ; Rise       ; SW[0]           ;
+;  HEX3[1]  ; SW[0]      ; 12.742 ; 12.749 ; Rise       ; SW[0]           ;
+;  HEX3[2]  ; SW[0]      ; 13.178 ; 12.702 ; Rise       ; SW[0]           ;
+;  HEX3[3]  ; SW[0]      ; 10.363 ; 10.187 ; Rise       ; SW[0]           ;
+;  HEX3[4]  ; SW[0]      ; 10.307 ; 10.209 ; Rise       ; SW[0]           ;
+;  HEX3[5]  ; SW[0]      ; 11.863 ; 12.040 ; Rise       ; SW[0]           ;
+;  HEX3[6]  ; SW[0]      ; 11.827 ; 11.977 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 6.540  ; 6.617  ; Rise       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 6.840  ; 6.917  ; Rise       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 6.918  ; 7.039  ; Rise       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 6.540  ; 6.617  ; Rise       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 6.540  ; 6.617  ; Rise       ; SW[0]           ;
+; HEX7[*]   ; SW[0]      ; 12.427 ; 12.355 ; Rise       ; SW[0]           ;
+;  HEX7[0]  ; SW[0]      ; 13.281 ; 13.027 ; Rise       ; SW[0]           ;
+;  HEX7[1]  ; SW[0]      ; 13.232 ; 13.454 ; Rise       ; SW[0]           ;
+;  HEX7[2]  ; SW[0]      ; 13.696 ; 13.563 ; Rise       ; SW[0]           ;
+;  HEX7[3]  ; SW[0]      ; 12.588 ; 12.559 ; Rise       ; SW[0]           ;
+;  HEX7[4]  ; SW[0]      ; 13.545 ; 13.295 ; Rise       ; SW[0]           ;
+;  HEX7[5]  ; SW[0]      ; 12.427 ; 12.355 ; Rise       ; SW[0]           ;
+;  HEX7[6]  ; SW[0]      ; 13.374 ; 13.248 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 6.540  ; 6.617  ; Fall       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 6.840  ; 6.917  ; Fall       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 6.918  ; 7.039  ; Fall       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 6.540  ; 6.617  ; Fall       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 6.540  ; 6.617  ; Fall       ; SW[0]           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -379,18 +379,18 @@ No paths to report.
 +------------+-------------+--------+----+----+--------+
 ; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
 +------------+-------------+--------+----+----+--------+
-; SW[1]      ; HEX4[0]     ; 8.918  ;    ;    ; 9.268  ;
-; SW[1]      ; HEX4[3]     ; 9.976  ;    ;    ; 10.384 ;
-; SW[1]      ; HEX4[4]     ; 9.317  ;    ;    ; 9.713  ;
-; SW[1]      ; HEX4[5]     ; 9.317  ;    ;    ; 9.713  ;
-; SW[2]      ; HEX4[0]     ; 9.146  ;    ;    ; 9.464  ;
-; SW[2]      ; HEX4[3]     ; 10.204 ;    ;    ; 10.580 ;
-; SW[2]      ; HEX4[4]     ; 9.545  ;    ;    ; 9.909  ;
-; SW[2]      ; HEX4[5]     ; 9.545  ;    ;    ; 9.909  ;
-; SW[3]      ; HEX4[0]     ; 9.125  ;    ;    ; 9.478  ;
-; SW[3]      ; HEX4[3]     ; 10.183 ;    ;    ; 10.594 ;
-; SW[3]      ; HEX4[4]     ; 9.524  ;    ;    ; 9.923  ;
-; SW[3]      ; HEX4[5]     ; 9.524  ;    ;    ; 9.923  ;
+; SW[1]      ; HEX4[0]     ; 9.861  ;    ;    ; 10.278 ;
+; SW[1]      ; HEX4[3]     ; 9.943  ;    ;    ; 10.405 ;
+; SW[1]      ; HEX4[4]     ; 9.549  ;    ;    ; 9.965  ;
+; SW[1]      ; HEX4[5]     ; 9.549  ;    ;    ; 9.965  ;
+; SW[2]      ; HEX4[0]     ; 9.708  ;    ;    ; 10.093 ;
+; SW[2]      ; HEX4[3]     ; 9.790  ;    ;    ; 10.220 ;
+; SW[2]      ; HEX4[4]     ; 9.396  ;    ;    ; 9.780  ;
+; SW[2]      ; HEX4[5]     ; 9.396  ;    ;    ; 9.780  ;
+; SW[3]      ; HEX4[0]     ; 10.169 ;    ;    ; 10.542 ;
+; SW[3]      ; HEX4[3]     ; 10.251 ;    ;    ; 10.669 ;
+; SW[3]      ; HEX4[4]     ; 9.857  ;    ;    ; 10.229 ;
+; SW[3]      ; HEX4[5]     ; 9.857  ;    ;    ; 10.229 ;
 +------------+-------------+--------+----+----+--------+
 
 
@@ -399,18 +399,18 @@ No paths to report.
 +------------+-------------+-------+----+----+--------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF     ;
 +------------+-------------+-------+----+----+--------+
-; SW[1]      ; HEX4[0]     ; 8.608 ;    ;    ; 8.940  ;
-; SW[1]      ; HEX4[3]     ; 9.624 ;    ;    ; 10.012 ;
-; SW[1]      ; HEX4[4]     ; 8.992 ;    ;    ; 9.368  ;
-; SW[1]      ; HEX4[5]     ; 8.992 ;    ;    ; 9.368  ;
-; SW[2]      ; HEX4[0]     ; 8.825 ;    ;    ; 9.127  ;
-; SW[2]      ; HEX4[3]     ; 9.841 ;    ;    ; 10.199 ;
-; SW[2]      ; HEX4[4]     ; 9.209 ;    ;    ; 9.555  ;
-; SW[2]      ; HEX4[5]     ; 9.209 ;    ;    ; 9.555  ;
-; SW[3]      ; HEX4[0]     ; 8.806 ;    ;    ; 9.141  ;
-; SW[3]      ; HEX4[3]     ; 9.822 ;    ;    ; 10.213 ;
-; SW[3]      ; HEX4[4]     ; 9.190 ;    ;    ; 9.569  ;
-; SW[3]      ; HEX4[5]     ; 9.190 ;    ;    ; 9.569  ;
+; SW[1]      ; HEX4[0]     ; 9.513 ;    ;    ; 9.909  ;
+; SW[1]      ; HEX4[3]     ; 9.591 ;    ;    ; 10.031 ;
+; SW[1]      ; HEX4[4]     ; 9.213 ;    ;    ; 9.609  ;
+; SW[1]      ; HEX4[5]     ; 9.213 ;    ;    ; 9.609  ;
+; SW[2]      ; HEX4[0]     ; 9.366 ;    ;    ; 9.732  ;
+; SW[2]      ; HEX4[3]     ; 9.444 ;    ;    ; 9.854  ;
+; SW[2]      ; HEX4[4]     ; 9.066 ;    ;    ; 9.432  ;
+; SW[2]      ; HEX4[5]     ; 9.066 ;    ;    ; 9.432  ;
+; SW[3]      ; HEX4[0]     ; 9.808 ;    ;    ; 10.163 ;
+; SW[3]      ; HEX4[3]     ; 9.886 ;    ;    ; 10.285 ;
+; SW[3]      ; HEX4[4]     ; 9.508 ;    ;    ; 9.863  ;
+; SW[3]      ; HEX4[5]     ; 9.508 ;    ;    ; 9.863  ;
 +------------+-------------+-------+----+----+--------+
 
 
@@ -425,7 +425,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 611.62 MHz ; 250.0 MHz       ; SW[0]      ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 543.48 MHz ; 250.0 MHz       ; SW[0]      ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -435,7 +435,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; SW[0] ; -0.635 ; -1.709            ;
+; SW[0] ; -0.840 ; -2.285            ;
 +-------+--------+-------------------+
 
 
@@ -474,14 +474,14 @@ No paths to report.
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; -0.635 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.565      ;
-; -0.612 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.542      ;
-; -0.570 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.500      ;
-; -0.523 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.453      ;
-; -0.462 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.392      ;
-; -0.342 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.272      ;
-; -0.297 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.227      ;
-; -0.190 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.120      ;
+; -0.840 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.770      ;
+; -0.791 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.721      ;
+; -0.674 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.604      ;
+; -0.654 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.584      ;
+; -0.615 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.545      ;
+; -0.593 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.523      ;
+; -0.516 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.446      ;
+; -0.505 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.435      ;
 ; 0.271  ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 0.659      ;
 +--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -493,13 +493,13 @@ No paths to report.
 +-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.337 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 0.597      ;
 ; 0.337 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 0.597      ;
-; 0.722 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 0.982      ;
-; 0.800 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.060      ;
-; 0.910 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.170      ;
-; 0.944 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.204      ;
-; 1.023 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.283      ;
-; 1.030 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.290      ;
-; 1.124 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.384      ;
+; 0.838 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.098      ;
+; 1.010 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.270      ;
+; 1.013 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.273      ;
+; 1.104 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.364      ;
+; 1.185 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.445      ;
+; 1.299 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.559      ;
+; 1.364 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.624      ;
 +-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -512,29 +512,29 @@ No paths to report.
 ; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
 ; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
 ; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; 0.212  ; 0.430        ; 0.218          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; 0.212  ; 0.430        ; 0.218          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; 0.212  ; 0.430        ; 0.218          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; 0.378  ; 0.564        ; 0.186          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; 0.378  ; 0.564        ; 0.186          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; 0.378  ; 0.564        ; 0.186          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
+; 0.252  ; 0.470        ; 0.218          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
+; 0.252  ; 0.470        ; 0.218          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
+; 0.252  ; 0.470        ; 0.218          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
+; 0.340  ; 0.526        ; 0.186          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
+; 0.340  ; 0.526        ; 0.186          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
+; 0.340  ; 0.526        ; 0.186          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
 ; 0.395  ; 0.395        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|o                 ;
-; 0.447  ; 0.447        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
-; 0.470  ; 0.470        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|dout|clk               ;
-; 0.470  ; 0.470        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_8|dout|clk               ;
-; 0.470  ; 0.470        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_9|dout|clk               ;
-; 0.474  ; 0.474        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
-; 0.474  ; 0.474        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
-; 0.481  ; 0.481        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
+; 0.448  ; 0.448        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
+; 0.482  ; 0.482        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
+; 0.484  ; 0.484        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
+; 0.484  ; 0.484        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
+; 0.488  ; 0.488        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|dout|clk               ;
+; 0.488  ; 0.488        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_8|dout|clk               ;
+; 0.488  ; 0.488        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_9|dout|clk               ;
 ; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|i                 ;
 ; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|i                 ;
-; 0.517  ; 0.517        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
-; 0.522  ; 0.522        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
-; 0.522  ; 0.522        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
-; 0.526  ; 0.526        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|dout|clk               ;
-; 0.526  ; 0.526        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_8|dout|clk               ;
-; 0.526  ; 0.526        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_9|dout|clk               ;
-; 0.551  ; 0.551        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
+; 0.510  ; 0.510        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|dout|clk               ;
+; 0.510  ; 0.510        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_8|dout|clk               ;
+; 0.510  ; 0.510        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_9|dout|clk               ;
+; 0.514  ; 0.514        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
+; 0.514  ; 0.514        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
+; 0.516  ; 0.516        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
+; 0.550  ; 0.550        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
 ; 0.605  ; 0.605        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|o                 ;
 +--------+--------------+----------------+------------------+-------+------------+-------------------------------+
 
@@ -544,11 +544,11 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; SW[*]     ; SW[0]      ; 0.346  ; 0.602  ; Rise       ; SW[0]           ;
-;  SW[1]    ; SW[0]      ; 0.119  ; 0.371  ; Rise       ; SW[0]           ;
-;  SW[2]    ; SW[0]      ; -0.229 ; 0.040  ; Rise       ; SW[0]           ;
-;  SW[3]    ; SW[0]      ; 0.346  ; 0.602  ; Rise       ; SW[0]           ;
-;  SW[4]    ; SW[0]      ; -0.476 ; -0.222 ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; -0.314 ; -0.027 ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; -0.335 ; -0.027 ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; -0.314 ; -0.048 ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; -0.405 ; -0.128 ; Rise       ; SW[0]           ;
+;  SW[4]    ; SW[0]      ; -0.621 ; -0.356 ; Rise       ; SW[0]           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -557,11 +557,11 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; SW[*]     ; SW[0]      ; 1.608 ; 1.356 ; Rise       ; SW[0]           ;
-;  SW[1]    ; SW[0]      ; 1.159 ; 0.917 ; Rise       ; SW[0]           ;
-;  SW[2]    ; SW[0]      ; 1.245 ; 0.994 ; Rise       ; SW[0]           ;
-;  SW[3]    ; SW[0]      ; 1.472 ; 1.188 ; Rise       ; SW[0]           ;
-;  SW[4]    ; SW[0]      ; 1.608 ; 1.356 ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; 1.688 ; 1.441 ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 1.533 ; 1.254 ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 1.119 ; 0.851 ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 1.579 ; 1.302 ; Rise       ; SW[0]           ;
+;  SW[4]    ; SW[0]      ; 1.688 ; 1.441 ; Rise       ; SW[0]           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -570,48 +570,48 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; HEX0[*]   ; SW[0]      ; 18.058 ; 18.159 ; Rise       ; SW[0]           ;
-;  HEX0[0]  ; SW[0]      ; 16.953 ; 16.572 ; Rise       ; SW[0]           ;
-;  HEX0[1]  ; SW[0]      ; 17.282 ; 17.216 ; Rise       ; SW[0]           ;
-;  HEX0[2]  ; SW[0]      ; 17.968 ; 18.091 ; Rise       ; SW[0]           ;
-;  HEX0[3]  ; SW[0]      ; 14.611 ; 14.273 ; Rise       ; SW[0]           ;
-;  HEX0[4]  ; SW[0]      ; 14.934 ; 14.574 ; Rise       ; SW[0]           ;
-;  HEX0[5]  ; SW[0]      ; 18.058 ; 18.159 ; Rise       ; SW[0]           ;
-;  HEX0[6]  ; SW[0]      ; 12.958 ; 12.965 ; Rise       ; SW[0]           ;
-; HEX1[*]   ; SW[0]      ; 12.852 ; 12.701 ; Rise       ; SW[0]           ;
-;  HEX1[0]  ; SW[0]      ; 10.994 ; 11.047 ; Rise       ; SW[0]           ;
-;  HEX1[1]  ; SW[0]      ; 12.852 ; 12.701 ; Rise       ; SW[0]           ;
-;  HEX1[2]  ; SW[0]      ; 9.818  ; 9.862  ; Rise       ; SW[0]           ;
-;  HEX1[3]  ; SW[0]      ; 10.457 ; 10.461 ; Rise       ; SW[0]           ;
-;  HEX1[4]  ; SW[0]      ; 9.561  ; 9.579  ; Rise       ; SW[0]           ;
-;  HEX1[5]  ; SW[0]      ; 11.132 ; 11.212 ; Rise       ; SW[0]           ;
-;  HEX1[6]  ; SW[0]      ; 11.504 ; 11.411 ; Rise       ; SW[0]           ;
-; HEX3[*]   ; SW[0]      ; 12.758 ; 12.588 ; Rise       ; SW[0]           ;
-;  HEX3[0]  ; SW[0]      ; 9.077  ; 9.097  ; Rise       ; SW[0]           ;
-;  HEX3[1]  ; SW[0]      ; 12.758 ; 12.588 ; Rise       ; SW[0]           ;
-;  HEX3[2]  ; SW[0]      ; 12.511 ; 11.888 ; Rise       ; SW[0]           ;
-;  HEX3[3]  ; SW[0]      ; 10.762 ; 10.562 ; Rise       ; SW[0]           ;
-;  HEX3[4]  ; SW[0]      ; 10.234 ; 10.079 ; Rise       ; SW[0]           ;
-;  HEX3[5]  ; SW[0]      ; 10.971 ; 11.123 ; Rise       ; SW[0]           ;
-;  HEX3[6]  ; SW[0]      ; 10.958 ; 11.117 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 7.110  ; 6.985  ; Rise       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 6.123  ; 5.990  ; Rise       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 7.110  ; 6.985  ; Rise       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 6.495  ; 6.401  ; Rise       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 6.495  ; 6.401  ; Rise       ; SW[0]           ;
-; HEX7[*]   ; SW[0]      ; 13.838 ; 13.443 ; Rise       ; SW[0]           ;
-;  HEX7[0]  ; SW[0]      ; 12.048 ; 11.854 ; Rise       ; SW[0]           ;
-;  HEX7[1]  ; SW[0]      ; 11.828 ; 11.948 ; Rise       ; SW[0]           ;
-;  HEX7[2]  ; SW[0]      ; 13.769 ; 13.443 ; Rise       ; SW[0]           ;
-;  HEX7[3]  ; SW[0]      ; 13.838 ; 13.407 ; Rise       ; SW[0]           ;
-;  HEX7[4]  ; SW[0]      ; 13.301 ; 12.878 ; Rise       ; SW[0]           ;
-;  HEX7[5]  ; SW[0]      ; 13.345 ; 12.942 ; Rise       ; SW[0]           ;
-;  HEX7[6]  ; SW[0]      ; 12.236 ; 12.114 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 7.110  ; 6.985  ; Fall       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 6.123  ; 5.990  ; Fall       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 7.110  ; 6.985  ; Fall       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 6.495  ; 6.401  ; Fall       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 6.495  ; 6.401  ; Fall       ; SW[0]           ;
+; HEX0[*]   ; SW[0]      ; 15.106 ; 15.251 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 15.097 ; 14.836 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 15.106 ; 15.251 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 12.226 ; 12.311 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 14.421 ; 14.170 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 14.770 ; 14.491 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 12.741 ; 12.791 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 13.232 ; 13.205 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 12.760 ; 12.544 ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 11.060 ; 11.067 ; Rise       ; SW[0]           ;
+;  HEX1[1]  ; SW[0]      ; 12.760 ; 12.544 ; Rise       ; SW[0]           ;
+;  HEX1[2]  ; SW[0]      ; 9.965  ; 10.014 ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 10.533 ; 10.505 ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 9.708  ; 9.701  ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 11.240 ; 11.306 ; Rise       ; SW[0]           ;
+;  HEX1[6]  ; SW[0]      ; 11.706 ; 11.643 ; Rise       ; SW[0]           ;
+; HEX3[*]   ; SW[0]      ; 12.938 ; 12.449 ; Rise       ; SW[0]           ;
+;  HEX3[0]  ; SW[0]      ; 9.118  ; 9.133  ; Rise       ; SW[0]           ;
+;  HEX3[1]  ; SW[0]      ; 12.698 ; 12.449 ; Rise       ; SW[0]           ;
+;  HEX3[2]  ; SW[0]      ; 12.938 ; 12.388 ; Rise       ; SW[0]           ;
+;  HEX3[3]  ; SW[0]      ; 10.161 ; 9.878  ; Rise       ; SW[0]           ;
+;  HEX3[4]  ; SW[0]      ; 10.095 ; 9.905  ; Rise       ; SW[0]           ;
+;  HEX3[5]  ; SW[0]      ; 11.768 ; 11.871 ; Rise       ; SW[0]           ;
+;  HEX3[6]  ; SW[0]      ; 11.623 ; 11.931 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 6.898  ; 6.826  ; Rise       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 6.814  ; 6.733  ; Rise       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 6.898  ; 6.826  ; Rise       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 6.529  ; 6.441  ; Rise       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 6.529  ; 6.441  ; Rise       ; SW[0]           ;
+; HEX7[*]   ; SW[0]      ; 13.513 ; 13.468 ; Rise       ; SW[0]           ;
+;  HEX7[0]  ; SW[0]      ; 13.252 ; 12.904 ; Rise       ; SW[0]           ;
+;  HEX7[1]  ; SW[0]      ; 13.099 ; 13.468 ; Rise       ; SW[0]           ;
+;  HEX7[2]  ; SW[0]      ; 13.511 ; 13.330 ; Rise       ; SW[0]           ;
+;  HEX7[3]  ; SW[0]      ; 12.611 ; 12.468 ; Rise       ; SW[0]           ;
+;  HEX7[4]  ; SW[0]      ; 13.513 ; 13.010 ; Rise       ; SW[0]           ;
+;  HEX7[5]  ; SW[0]      ; 12.437 ; 12.141 ; Rise       ; SW[0]           ;
+;  HEX7[6]  ; SW[0]      ; 13.371 ; 12.970 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 6.898  ; 6.826  ; Fall       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 6.814  ; 6.733  ; Fall       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 6.898  ; 6.826  ; Fall       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 6.529  ; 6.441  ; Fall       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 6.529  ; 6.441  ; Fall       ; SW[0]           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -620,48 +620,48 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; HEX0[*]   ; SW[0]      ; 12.171 ; 12.198 ; Rise       ; SW[0]           ;
-;  HEX0[0]  ; SW[0]      ; 15.857 ; 15.460 ; Rise       ; SW[0]           ;
-;  HEX0[1]  ; SW[0]      ; 16.363 ; 16.197 ; Rise       ; SW[0]           ;
-;  HEX0[2]  ; SW[0]      ; 16.926 ; 16.953 ; Rise       ; SW[0]           ;
-;  HEX0[3]  ; SW[0]      ; 13.607 ; 13.251 ; Rise       ; SW[0]           ;
-;  HEX0[4]  ; SW[0]      ; 13.917 ; 13.540 ; Rise       ; SW[0]           ;
-;  HEX0[5]  ; SW[0]      ; 17.070 ; 17.071 ; Rise       ; SW[0]           ;
-;  HEX0[6]  ; SW[0]      ; 12.171 ; 12.198 ; Rise       ; SW[0]           ;
-; HEX1[*]   ; SW[0]      ; 8.967  ; 8.929  ; Rise       ; SW[0]           ;
-;  HEX1[0]  ; SW[0]      ; 10.338 ; 10.335 ; Rise       ; SW[0]           ;
-;  HEX1[1]  ; SW[0]      ; 12.092 ; 11.812 ; Rise       ; SW[0]           ;
-;  HEX1[2]  ; SW[0]      ; 9.178  ; 9.239  ; Rise       ; SW[0]           ;
-;  HEX1[3]  ; SW[0]      ; 9.826  ; 9.776  ; Rise       ; SW[0]           ;
-;  HEX1[4]  ; SW[0]      ; 8.967  ; 8.929  ; Rise       ; SW[0]           ;
-;  HEX1[5]  ; SW[0]      ; 10.525 ; 10.564 ; Rise       ; SW[0]           ;
-;  HEX1[6]  ; SW[0]      ; 10.905 ; 10.845 ; Rise       ; SW[0]           ;
-; HEX3[*]   ; SW[0]      ; 8.747  ; 8.766  ; Rise       ; SW[0]           ;
-;  HEX3[0]  ; SW[0]      ; 8.747  ; 8.766  ; Rise       ; SW[0]           ;
-;  HEX3[1]  ; SW[0]      ; 11.998 ; 11.700 ; Rise       ; SW[0]           ;
-;  HEX3[2]  ; SW[0]      ; 12.125 ; 11.510 ; Rise       ; SW[0]           ;
-;  HEX3[3]  ; SW[0]      ; 10.361 ; 10.165 ; Rise       ; SW[0]           ;
-;  HEX3[4]  ; SW[0]      ; 9.854  ; 9.701  ; Rise       ; SW[0]           ;
-;  HEX3[5]  ; SW[0]      ; 10.197 ; 10.252 ; Rise       ; SW[0]           ;
-;  HEX3[6]  ; SW[0]      ; 10.108 ; 10.401 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 5.917  ; 5.788  ; Rise       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 5.917  ; 5.788  ; Rise       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 6.864  ; 6.742  ; Rise       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 6.274  ; 6.182  ; Rise       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 6.274  ; 6.182  ; Rise       ; SW[0]           ;
-; HEX7[*]   ; SW[0]      ; 11.073 ; 10.937 ; Rise       ; SW[0]           ;
-;  HEX7[0]  ; SW[0]      ; 11.150 ; 10.937 ; Rise       ; SW[0]           ;
-;  HEX7[1]  ; SW[0]      ; 11.073 ; 11.082 ; Rise       ; SW[0]           ;
-;  HEX7[2]  ; SW[0]      ; 12.803 ; 12.565 ; Rise       ; SW[0]           ;
-;  HEX7[3]  ; SW[0]      ; 12.865 ; 12.425 ; Rise       ; SW[0]           ;
-;  HEX7[4]  ; SW[0]      ; 12.492 ; 11.965 ; Rise       ; SW[0]           ;
-;  HEX7[5]  ; SW[0]      ; 12.398 ; 12.084 ; Rise       ; SW[0]           ;
-;  HEX7[6]  ; SW[0]      ; 11.316 ; 11.168 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 5.917  ; 5.788  ; Fall       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 5.917  ; 5.788  ; Fall       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 6.864  ; 6.742  ; Fall       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 6.274  ; 6.182  ; Fall       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 6.274  ; 6.182  ; Fall       ; SW[0]           ;
+; HEX0[*]   ; SW[0]      ; 11.456 ; 11.557 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 14.227 ; 14.051 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 14.507 ; 14.390 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 11.456 ; 11.557 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 13.576 ; 13.410 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 13.910 ; 13.718 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 12.008 ; 12.070 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 12.402 ; 12.396 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 9.076  ; 9.020  ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 10.370 ; 10.328 ; Rise       ; SW[0]           ;
+;  HEX1[1]  ; SW[0]      ; 12.101 ; 11.906 ; Rise       ; SW[0]           ;
+;  HEX1[2]  ; SW[0]      ; 9.290  ; 9.352  ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 9.867  ; 9.792  ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 9.076  ; 9.020  ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 10.598 ; 10.624 ; Rise       ; SW[0]           ;
+;  HEX1[6]  ; SW[0]      ; 11.064 ; 11.035 ; Rise       ; SW[0]           ;
+; HEX3[*]   ; SW[0]      ; 8.788  ; 8.802  ; Rise       ; SW[0]           ;
+;  HEX3[0]  ; SW[0]      ; 8.788  ; 8.802  ; Rise       ; SW[0]           ;
+;  HEX3[1]  ; SW[0]      ; 12.038 ; 11.811 ; Rise       ; SW[0]           ;
+;  HEX3[2]  ; SW[0]      ; 12.535 ; 11.991 ; Rise       ; SW[0]           ;
+;  HEX3[3]  ; SW[0]      ; 9.786  ; 9.510  ; Rise       ; SW[0]           ;
+;  HEX3[4]  ; SW[0]      ; 9.721  ; 9.535  ; Rise       ; SW[0]           ;
+;  HEX3[5]  ; SW[0]      ; 11.149 ; 11.229 ; Rise       ; SW[0]           ;
+;  HEX3[6]  ; SW[0]      ; 11.126 ; 11.174 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 6.306  ; 6.221  ; Rise       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 6.579  ; 6.501  ; Rise       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 6.660  ; 6.590  ; Rise       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 6.306  ; 6.221  ; Rise       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 6.306  ; 6.221  ; Rise       ; SW[0]           ;
+; HEX7[*]   ; SW[0]      ; 11.714 ; 11.459 ; Rise       ; SW[0]           ;
+;  HEX7[0]  ; SW[0]      ; 12.398 ; 12.147 ; Rise       ; SW[0]           ;
+;  HEX7[1]  ; SW[0]      ; 12.243 ; 12.606 ; Rise       ; SW[0]           ;
+;  HEX7[2]  ; SW[0]      ; 12.880 ; 12.527 ; Rise       ; SW[0]           ;
+;  HEX7[3]  ; SW[0]      ; 11.780 ; 11.636 ; Rise       ; SW[0]           ;
+;  HEX7[4]  ; SW[0]      ; 12.654 ; 12.367 ; Rise       ; SW[0]           ;
+;  HEX7[5]  ; SW[0]      ; 11.714 ; 11.459 ; Rise       ; SW[0]           ;
+;  HEX7[6]  ; SW[0]      ; 12.550 ; 12.226 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 6.306  ; 6.221  ; Fall       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 6.579  ; 6.501  ; Fall       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 6.660  ; 6.590  ; Fall       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 6.306  ; 6.221  ; Fall       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 6.306  ; 6.221  ; Fall       ; SW[0]           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -670,18 +670,18 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[1]      ; HEX4[0]     ; 8.335 ;    ;    ; 8.480 ;
-; SW[1]      ; HEX4[3]     ; 9.322 ;    ;    ; 9.475 ;
-; SW[1]      ; HEX4[4]     ; 8.707 ;    ;    ; 8.891 ;
-; SW[1]      ; HEX4[5]     ; 8.707 ;    ;    ; 8.891 ;
-; SW[2]      ; HEX4[0]     ; 8.542 ;    ;    ; 8.652 ;
-; SW[2]      ; HEX4[3]     ; 9.529 ;    ;    ; 9.647 ;
-; SW[2]      ; HEX4[4]     ; 8.914 ;    ;    ; 9.063 ;
-; SW[2]      ; HEX4[5]     ; 8.914 ;    ;    ; 9.063 ;
-; SW[3]      ; HEX4[0]     ; 8.527 ;    ;    ; 8.672 ;
-; SW[3]      ; HEX4[3]     ; 9.514 ;    ;    ; 9.667 ;
-; SW[3]      ; HEX4[4]     ; 8.899 ;    ;    ; 9.083 ;
-; SW[3]      ; HEX4[5]     ; 8.899 ;    ;    ; 9.083 ;
+; SW[1]      ; HEX4[0]     ; 9.206 ;    ;    ; 9.415 ;
+; SW[1]      ; HEX4[3]     ; 9.290 ;    ;    ; 9.508 ;
+; SW[1]      ; HEX4[4]     ; 8.921 ;    ;    ; 9.123 ;
+; SW[1]      ; HEX4[5]     ; 8.921 ;    ;    ; 9.123 ;
+; SW[2]      ; HEX4[0]     ; 9.065 ;    ;    ; 9.246 ;
+; SW[2]      ; HEX4[3]     ; 9.149 ;    ;    ; 9.339 ;
+; SW[2]      ; HEX4[4]     ; 8.780 ;    ;    ; 8.954 ;
+; SW[2]      ; HEX4[5]     ; 8.780 ;    ;    ; 8.954 ;
+; SW[3]      ; HEX4[0]     ; 9.490 ;    ;    ; 9.649 ;
+; SW[3]      ; HEX4[3]     ; 9.574 ;    ;    ; 9.742 ;
+; SW[3]      ; HEX4[4]     ; 9.205 ;    ;    ; 9.357 ;
+; SW[3]      ; HEX4[5]     ; 9.205 ;    ;    ; 9.357 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -690,18 +690,18 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[1]      ; HEX4[0]     ; 8.040 ;    ;    ; 8.176 ;
-; SW[1]      ; HEX4[3]     ; 8.987 ;    ;    ; 9.130 ;
-; SW[1]      ; HEX4[4]     ; 8.397 ;    ;    ; 8.570 ;
-; SW[1]      ; HEX4[5]     ; 8.397 ;    ;    ; 8.570 ;
-; SW[2]      ; HEX4[0]     ; 8.240 ;    ;    ; 8.340 ;
-; SW[2]      ; HEX4[3]     ; 9.187 ;    ;    ; 9.294 ;
-; SW[2]      ; HEX4[4]     ; 8.597 ;    ;    ; 8.734 ;
-; SW[2]      ; HEX4[5]     ; 8.597 ;    ;    ; 8.734 ;
-; SW[3]      ; HEX4[0]     ; 8.226 ;    ;    ; 8.359 ;
-; SW[3]      ; HEX4[3]     ; 9.173 ;    ;    ; 9.313 ;
-; SW[3]      ; HEX4[4]     ; 8.583 ;    ;    ; 8.753 ;
-; SW[3]      ; HEX4[5]     ; 8.583 ;    ;    ; 8.753 ;
+; SW[1]      ; HEX4[0]     ; 8.876 ;    ;    ; 9.072 ;
+; SW[1]      ; HEX4[3]     ; 8.957 ;    ;    ; 9.161 ;
+; SW[1]      ; HEX4[4]     ; 8.603 ;    ;    ; 8.792 ;
+; SW[1]      ; HEX4[5]     ; 8.603 ;    ;    ; 8.792 ;
+; SW[2]      ; HEX4[0]     ; 8.740 ;    ;    ; 8.910 ;
+; SW[2]      ; HEX4[3]     ; 8.821 ;    ;    ; 8.999 ;
+; SW[2]      ; HEX4[4]     ; 8.467 ;    ;    ; 8.630 ;
+; SW[2]      ; HEX4[5]     ; 8.467 ;    ;    ; 8.630 ;
+; SW[3]      ; HEX4[0]     ; 9.149 ;    ;    ; 9.297 ;
+; SW[3]      ; HEX4[3]     ; 9.230 ;    ;    ; 9.386 ;
+; SW[3]      ; HEX4[4]     ; 8.876 ;    ;    ; 9.017 ;
+; SW[3]      ; HEX4[5]     ; 8.876 ;    ;    ; 9.017 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -713,11 +713,11 @@ No synchronizer chains to report.
 
 +------------------------------------+
 ; Fast 1200mV 0C Model Setup Summary ;
-+-------+-------+--------------------+
-; Clock ; Slack ; End Point TNS      ;
-+-------+-------+--------------------+
-; SW[0] ; 0.118 ; 0.000              ;
-+-------+-------+--------------------+
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; SW[0] ; -0.006 ; -0.006            ;
++-------+--------+-------------------+
 
 
 +-----------------------------------+
@@ -746,25 +746,25 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; SW[0] ; -3.000 ; -6.540                          ;
+; SW[0] ; -3.000 ; -6.664                          ;
 +-------+--------+---------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Setup: 'SW[0]'                                                                                             ;
-+-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; 0.118 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.829      ;
-; 0.135 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.812      ;
-; 0.155 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.792      ;
-; 0.191 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.756      ;
-; 0.197 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.750      ;
-; 0.272 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.675      ;
-; 0.272 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.675      ;
-; 0.364 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.583      ;
-; 0.597 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.350      ;
-+-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'SW[0]'                                                                                              ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; -0.006 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.953      ;
+; 0.018  ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.929      ;
+; 0.073  ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.874      ;
+; 0.074  ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.873      ;
+; 0.123  ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.824      ;
+; 0.142  ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.805      ;
+; 0.154  ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.793      ;
+; 0.176  ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.771      ;
+; 0.597  ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.350      ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------+
@@ -774,13 +774,13 @@ No paths to report.
 +-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.163 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.307      ;
 ; 0.163 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.307      ;
-; 0.356 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.500      ;
-; 0.384 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.528      ;
-; 0.436 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.580      ;
-; 0.455 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.599      ;
-; 0.500 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.644      ;
-; 0.504 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.648      ;
-; 0.557 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.701      ;
+; 0.401 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.545      ;
+; 0.499 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.643      ;
+; 0.502 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.646      ;
+; 0.547 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.691      ;
+; 0.597 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.741      ;
+; 0.634 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.778      ;
+; 0.671 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.815      ;
 +-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -793,30 +793,30 @@ No paths to report.
 ; -1.000 ; 1.000        ; 2.000          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
 ; -1.000 ; 1.000        ; 2.000          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; -0.180 ; 0.004        ; 0.184          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; -0.180 ; 0.004        ; 0.184          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; -0.180 ; 0.004        ; 0.184          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; 0.000  ; 0.000        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|dout|clk               ;
-; 0.000  ; 0.000        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_8|dout|clk               ;
-; 0.000  ; 0.000        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_9|dout|clk               ;
-; 0.014  ; 0.014        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
-; 0.014  ; 0.014        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
+; -0.199 ; -0.015       ; 0.184          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
+; -0.199 ; -0.015       ; 0.184          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
+; -0.199 ; -0.015       ; 0.184          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
+; -0.019 ; -0.019       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|dout|clk               ;
+; -0.019 ; -0.019       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_8|dout|clk               ;
+; -0.019 ; -0.019       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_9|dout|clk               ;
+; -0.005 ; -0.005       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
+; -0.005 ; -0.005       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
 ; 0.102  ; 0.102        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
 ; 0.106  ; 0.106        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
 ; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|o                 ;
 ; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|i                 ;
 ; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|i                 ;
-; 0.777  ; 0.993        ; 0.216          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; 0.777  ; 0.993        ; 0.216          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; 0.777  ; 0.993        ; 0.216          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
+; 0.795  ; 1.011        ; 0.216          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
+; 0.795  ; 1.011        ; 0.216          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
+; 0.795  ; 1.011        ; 0.216          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
 ; 0.877  ; 0.877        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|o                 ;
 ; 0.892  ; 0.892        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
 ; 0.897  ; 0.897        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
-; 0.985  ; 0.985        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
-; 0.985  ; 0.985        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
-; 0.999  ; 0.999        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|dout|clk               ;
-; 0.999  ; 0.999        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_8|dout|clk               ;
-; 0.999  ; 0.999        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_9|dout|clk               ;
+; 1.003  ; 1.003        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
+; 1.003  ; 1.003        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
+; 1.017  ; 1.017        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|dout|clk               ;
+; 1.017  ; 1.017        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_8|dout|clk               ;
+; 1.017  ; 1.017        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_9|dout|clk               ;
 +--------+--------------+----------------+------------------+-------+------------+-------------------------------+
 
 
@@ -825,11 +825,11 @@ No paths to report.
 +-----------+------------+--------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+-------+------------+-----------------+
-; SW[*]     ; SW[0]      ; 0.307  ; 0.807 ; Rise       ; SW[0]           ;
-;  SW[1]    ; SW[0]      ; 0.194  ; 0.668 ; Rise       ; SW[0]           ;
-;  SW[2]    ; SW[0]      ; -0.021 ; 0.546 ; Rise       ; SW[0]           ;
-;  SW[3]    ; SW[0]      ; 0.307  ; 0.807 ; Rise       ; SW[0]           ;
-;  SW[4]    ; SW[0]      ; -0.171 ; 0.421 ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; -0.076 ; 0.491 ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; -0.083 ; 0.490 ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; -0.076 ; 0.491 ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; -0.145 ; 0.462 ; Rise       ; SW[0]           ;
+;  SW[4]    ; SW[0]      ; -0.238 ; 0.294 ; Rise       ; SW[0]           ;
 +-----------+------------+--------+-------+------------+-----------------+
 
 
@@ -838,62 +838,62 @@ No paths to report.
 +-----------+------------+-------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+--------+------------+-----------------+
-; SW[*]     ; SW[0]      ; 0.765 ; 0.213  ; Rise       ; SW[0]           ;
-;  SW[1]    ; SW[0]      ; 0.542 ; -0.030 ; Rise       ; SW[0]           ;
-;  SW[2]    ; SW[0]      ; 0.591 ; 0.006  ; Rise       ; SW[0]           ;
-;  SW[3]    ; SW[0]      ; 0.694 ; 0.122  ; Rise       ; SW[0]           ;
-;  SW[4]    ; SW[0]      ; 0.765 ; 0.213  ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; 0.826 ; 0.275  ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 0.738 ; 0.168  ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 0.511 ; -0.036 ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 0.769 ; 0.200  ; Rise       ; SW[0]           ;
+;  SW[4]    ; SW[0]      ; 0.826 ; 0.275  ; Rise       ; SW[0]           ;
 +-----------+------------+-------+--------+------------+-----------------+
 
 
-+-------------------------------------------------------------------------+
-; Clock to Output Times                                                   ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; HEX0[*]   ; SW[0]      ; 10.485 ; 10.166 ; Rise       ; SW[0]           ;
-;  HEX0[0]  ; SW[0]      ; 9.388  ; 9.880  ; Rise       ; SW[0]           ;
-;  HEX0[1]  ; SW[0]      ; 10.050 ; 9.751  ; Rise       ; SW[0]           ;
-;  HEX0[2]  ; SW[0]      ; 10.357 ; 9.962  ; Rise       ; SW[0]           ;
-;  HEX0[3]  ; SW[0]      ; 8.083  ; 8.355  ; Rise       ; SW[0]           ;
-;  HEX0[4]  ; SW[0]      ; 8.251  ; 8.548  ; Rise       ; SW[0]           ;
-;  HEX0[5]  ; SW[0]      ; 10.485 ; 10.166 ; Rise       ; SW[0]           ;
-;  HEX0[6]  ; SW[0]      ; 7.375  ; 7.135  ; Rise       ; SW[0]           ;
-; HEX1[*]   ; SW[0]      ; 6.905  ; 7.259  ; Rise       ; SW[0]           ;
-;  HEX1[0]  ; SW[0]      ; 6.025  ; 6.226  ; Rise       ; SW[0]           ;
-;  HEX1[1]  ; SW[0]      ; 6.905  ; 7.259  ; Rise       ; SW[0]           ;
-;  HEX1[2]  ; SW[0]      ; 5.427  ; 5.409  ; Rise       ; SW[0]           ;
-;  HEX1[3]  ; SW[0]      ; 5.701  ; 5.883  ; Rise       ; SW[0]           ;
-;  HEX1[4]  ; SW[0]      ; 5.192  ; 5.337  ; Rise       ; SW[0]           ;
-;  HEX1[5]  ; SW[0]      ; 6.225  ; 6.420  ; Rise       ; SW[0]           ;
-;  HEX1[6]  ; SW[0]      ; 6.602  ; 6.399  ; Rise       ; SW[0]           ;
-; HEX3[*]   ; SW[0]      ; 7.238  ; 7.168  ; Rise       ; SW[0]           ;
-;  HEX3[0]  ; SW[0]      ; 4.978  ; 5.078  ; Rise       ; SW[0]           ;
-;  HEX3[1]  ; SW[0]      ; 6.837  ; 7.168  ; Rise       ; SW[0]           ;
-;  HEX3[2]  ; SW[0]      ; 7.238  ; 7.139  ; Rise       ; SW[0]           ;
-;  HEX3[3]  ; SW[0]      ; 5.944  ; 6.048  ; Rise       ; SW[0]           ;
-;  HEX3[4]  ; SW[0]      ; 5.685  ; 5.764  ; Rise       ; SW[0]           ;
-;  HEX3[5]  ; SW[0]      ; 6.109  ; 6.271  ; Rise       ; SW[0]           ;
-;  HEX3[6]  ; SW[0]      ; 6.103  ; 6.273  ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 3.883  ; 4.483  ; Rise       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 3.354  ; 3.848  ; Rise       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 3.883  ; 4.483  ; Rise       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 3.560  ; 4.106  ; Rise       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 3.560  ; 4.106  ; Rise       ; SW[0]           ;
-; HEX7[*]   ; SW[0]      ; 7.662  ; 7.812  ; Rise       ; SW[0]           ;
-;  HEX7[0]  ; SW[0]      ; 6.773  ; 6.751  ; Rise       ; SW[0]           ;
-;  HEX7[1]  ; SW[0]      ; 6.843  ; 6.755  ; Rise       ; SW[0]           ;
-;  HEX7[2]  ; SW[0]      ; 7.504  ; 7.812  ; Rise       ; SW[0]           ;
-;  HEX7[3]  ; SW[0]      ; 7.662  ; 7.760  ; Rise       ; SW[0]           ;
-;  HEX7[4]  ; SW[0]      ; 7.380  ; 7.393  ; Rise       ; SW[0]           ;
-;  HEX7[5]  ; SW[0]      ; 7.232  ; 7.524  ; Rise       ; SW[0]           ;
-;  HEX7[6]  ; SW[0]      ; 6.912  ; 6.964  ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 3.883  ; 4.483  ; Fall       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 3.354  ; 3.848  ; Fall       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 3.883  ; 4.483  ; Fall       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 3.560  ; 4.106  ; Fall       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 3.560  ; 4.106  ; Fall       ; SW[0]           ;
-+-----------+------------+--------+--------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; SW[0]      ; 8.893 ; 8.652 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 8.256 ; 8.652 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 8.893 ; 8.521 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 6.949 ; 6.732 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 7.880 ; 8.234 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 8.060 ; 8.429 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 7.328 ; 7.149 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 7.563 ; 7.315 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 6.887 ; 7.234 ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 6.035 ; 6.238 ; Rise       ; SW[0]           ;
+;  HEX1[1]  ; SW[0]      ; 6.887 ; 7.234 ; Rise       ; SW[0]           ;
+;  HEX1[2]  ; SW[0]      ; 5.522 ; 5.510 ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 5.733 ; 5.920 ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 5.277 ; 5.419 ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 6.286 ; 6.491 ; Rise       ; SW[0]           ;
+;  HEX1[6]  ; SW[0]      ; 6.728 ; 6.523 ; Rise       ; SW[0]           ;
+; HEX3[*]   ; SW[0]      ; 7.512 ; 7.390 ; Rise       ; SW[0]           ;
+;  HEX3[0]  ; SW[0]      ; 5.005 ; 5.108 ; Rise       ; SW[0]           ;
+;  HEX3[1]  ; SW[0]      ; 6.837 ; 7.160 ; Rise       ; SW[0]           ;
+;  HEX3[2]  ; SW[0]      ; 7.512 ; 7.390 ; Rise       ; SW[0]           ;
+;  HEX3[3]  ; SW[0]      ; 5.573 ; 5.656 ; Rise       ; SW[0]           ;
+;  HEX3[4]  ; SW[0]      ; 5.592 ; 5.682 ; Rise       ; SW[0]           ;
+;  HEX3[5]  ; SW[0]      ; 6.555 ; 6.736 ; Rise       ; SW[0]           ;
+;  HEX3[6]  ; SW[0]      ; 6.704 ; 6.571 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 3.794 ; 4.359 ; Rise       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 3.762 ; 4.316 ; Rise       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 3.794 ; 4.359 ; Rise       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 3.596 ; 4.123 ; Rise       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 3.596 ; 4.123 ; Rise       ; SW[0]           ;
+; HEX7[*]   ; SW[0]      ; 7.579 ; 7.572 ; Rise       ; SW[0]           ;
+;  HEX7[0]  ; SW[0]      ; 7.362 ; 7.468 ; Rise       ; SW[0]           ;
+;  HEX7[1]  ; SW[0]      ; 7.554 ; 7.475 ; Rise       ; SW[0]           ;
+;  HEX7[2]  ; SW[0]      ; 7.579 ; 7.572 ; Rise       ; SW[0]           ;
+;  HEX7[3]  ; SW[0]      ; 7.084 ; 7.171 ; Rise       ; SW[0]           ;
+;  HEX7[4]  ; SW[0]      ; 7.361 ; 7.550 ; Rise       ; SW[0]           ;
+;  HEX7[5]  ; SW[0]      ; 6.906 ; 7.022 ; Rise       ; SW[0]           ;
+;  HEX7[6]  ; SW[0]      ; 7.369 ; 7.552 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 3.794 ; 4.359 ; Fall       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 3.762 ; 4.316 ; Fall       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 3.794 ; 4.359 ; Fall       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 3.596 ; 4.123 ; Fall       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 3.596 ; 4.123 ; Fall       ; SW[0]           ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 +-----------------------------------------------------------------------+
@@ -901,48 +901,48 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; HEX0[*]   ; SW[0]      ; 6.897 ; 6.664 ; Rise       ; SW[0]           ;
-;  HEX0[0]  ; SW[0]      ; 8.659 ; 9.161 ; Rise       ; SW[0]           ;
-;  HEX0[1]  ; SW[0]      ; 9.462 ; 9.174 ; Rise       ; SW[0]           ;
-;  HEX0[2]  ; SW[0]      ; 9.756 ; 9.368 ; Rise       ; SW[0]           ;
-;  HEX0[3]  ; SW[0]      ; 7.407 ; 7.699 ; Rise       ; SW[0]           ;
-;  HEX0[4]  ; SW[0]      ; 7.569 ; 7.885 ; Rise       ; SW[0]           ;
-;  HEX0[5]  ; SW[0]      ; 9.920 ; 9.602 ; Rise       ; SW[0]           ;
-;  HEX0[6]  ; SW[0]      ; 6.897 ; 6.664 ; Rise       ; SW[0]           ;
-; HEX1[*]   ; SW[0]      ; 4.876 ; 4.943 ; Rise       ; SW[0]           ;
-;  HEX1[0]  ; SW[0]      ; 5.673 ; 5.793 ; Rise       ; SW[0]           ;
-;  HEX1[1]  ; SW[0]      ; 6.476 ; 6.804 ; Rise       ; SW[0]           ;
-;  HEX1[2]  ; SW[0]      ; 5.093 ; 5.063 ; Rise       ; SW[0]           ;
-;  HEX1[3]  ; SW[0]      ; 5.364 ; 5.467 ; Rise       ; SW[0]           ;
-;  HEX1[4]  ; SW[0]      ; 4.876 ; 4.943 ; Rise       ; SW[0]           ;
-;  HEX1[5]  ; SW[0]      ; 5.902 ; 6.068 ; Rise       ; SW[0]           ;
-;  HEX1[6]  ; SW[0]      ; 6.269 ; 6.092 ; Rise       ; SW[0]           ;
-; HEX3[*]   ; SW[0]      ; 4.804 ; 4.901 ; Rise       ; SW[0]           ;
-;  HEX3[0]  ; SW[0]      ; 4.804 ; 4.901 ; Rise       ; SW[0]           ;
-;  HEX3[1]  ; SW[0]      ; 6.409 ; 6.714 ; Rise       ; SW[0]           ;
-;  HEX3[2]  ; SW[0]      ; 7.034 ; 6.927 ; Rise       ; SW[0]           ;
-;  HEX3[3]  ; SW[0]      ; 5.730 ; 5.828 ; Rise       ; SW[0]           ;
-;  HEX3[4]  ; SW[0]      ; 5.481 ; 5.555 ; Rise       ; SW[0]           ;
-;  HEX3[5]  ; SW[0]      ; 5.669 ; 5.824 ; Rise       ; SW[0]           ;
-;  HEX3[6]  ; SW[0]      ; 5.838 ; 5.692 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 3.250 ; 3.740 ; Rise       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 3.250 ; 3.740 ; Rise       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 3.758 ; 4.350 ; Rise       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 3.447 ; 3.988 ; Rise       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 3.447 ; 3.988 ; Rise       ; SW[0]           ;
-; HEX7[*]   ; SW[0]      ; 6.156 ; 6.237 ; Rise       ; SW[0]           ;
-;  HEX7[0]  ; SW[0]      ; 6.156 ; 6.237 ; Rise       ; SW[0]           ;
-;  HEX7[1]  ; SW[0]      ; 6.244 ; 6.264 ; Rise       ; SW[0]           ;
-;  HEX7[2]  ; SW[0]      ; 7.150 ; 7.144 ; Rise       ; SW[0]           ;
-;  HEX7[3]  ; SW[0]      ; 7.006 ; 7.127 ; Rise       ; SW[0]           ;
-;  HEX7[4]  ; SW[0]      ; 6.749 ; 7.017 ; Rise       ; SW[0]           ;
-;  HEX7[5]  ; SW[0]      ; 6.876 ; 6.868 ; Rise       ; SW[0]           ;
-;  HEX7[6]  ; SW[0]      ; 6.280 ; 6.366 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 3.250 ; 3.740 ; Fall       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 3.250 ; 3.740 ; Fall       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 3.758 ; 4.350 ; Fall       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 3.447 ; 3.988 ; Fall       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 3.447 ; 3.988 ; Fall       ; SW[0]           ;
+; HEX0[*]   ; SW[0]      ; 6.531 ; 6.308 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 7.693 ; 8.031 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 8.287 ; 8.112 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 6.531 ; 6.308 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 7.334 ; 7.631 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 7.506 ; 7.818 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 6.936 ; 6.747 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 7.059 ; 6.818 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 4.939 ; 4.999 ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 5.664 ; 5.783 ; Rise       ; SW[0]           ;
+;  HEX1[1]  ; SW[0]      ; 6.511 ; 6.847 ; Rise       ; SW[0]           ;
+;  HEX1[2]  ; SW[0]      ; 5.165 ; 5.140 ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 5.376 ; 5.480 ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 4.939 ; 4.999 ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 5.942 ; 6.115 ; Rise       ; SW[0]           ;
+;  HEX1[6]  ; SW[0]      ; 6.369 ; 6.182 ; Rise       ; SW[0]           ;
+; HEX3[*]   ; SW[0]      ; 4.829 ; 4.929 ; Rise       ; SW[0]           ;
+;  HEX3[0]  ; SW[0]      ; 4.829 ; 4.929 ; Rise       ; SW[0]           ;
+;  HEX3[1]  ; SW[0]      ; 6.462 ; 6.773 ; Rise       ; SW[0]           ;
+;  HEX3[2]  ; SW[0]      ; 7.296 ; 7.167 ; Rise       ; SW[0]           ;
+;  HEX3[3]  ; SW[0]      ; 5.374 ; 5.451 ; Rise       ; SW[0]           ;
+;  HEX3[4]  ; SW[0]      ; 5.391 ; 5.476 ; Rise       ; SW[0]           ;
+;  HEX3[5]  ; SW[0]      ; 6.198 ; 6.355 ; Rise       ; SW[0]           ;
+;  HEX3[6]  ; SW[0]      ; 6.164 ; 6.286 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 3.482 ; 4.004 ; Rise       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 3.642 ; 4.189 ; Rise       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 3.673 ; 4.231 ; Rise       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 3.482 ; 4.004 ; Rise       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 3.482 ; 4.004 ; Rise       ; SW[0]           ;
+; HEX7[*]   ; SW[0]      ; 6.401 ; 6.514 ; Rise       ; SW[0]           ;
+;  HEX7[0]  ; SW[0]      ; 6.844 ; 6.863 ; Rise       ; SW[0]           ;
+;  HEX7[1]  ; SW[0]      ; 6.945 ; 6.879 ; Rise       ; SW[0]           ;
+;  HEX7[2]  ; SW[0]      ; 6.996 ; 7.148 ; Rise       ; SW[0]           ;
+;  HEX7[3]  ; SW[0]      ; 6.502 ; 6.576 ; Rise       ; SW[0]           ;
+;  HEX7[4]  ; SW[0]      ; 6.958 ; 6.956 ; Rise       ; SW[0]           ;
+;  HEX7[5]  ; SW[0]      ; 6.401 ; 6.514 ; Rise       ; SW[0]           ;
+;  HEX7[6]  ; SW[0]      ; 6.843 ; 6.961 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 3.482 ; 4.004 ; Fall       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 3.642 ; 4.189 ; Fall       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 3.673 ; 4.231 ; Fall       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 3.482 ; 4.004 ; Fall       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 3.482 ; 4.004 ; Fall       ; SW[0]           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -951,18 +951,18 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[1]      ; HEX4[0]     ; 4.753 ;    ;    ; 5.422 ;
-; SW[1]      ; HEX4[3]     ; 5.282 ;    ;    ; 6.057 ;
-; SW[1]      ; HEX4[4]     ; 4.959 ;    ;    ; 5.680 ;
-; SW[1]      ; HEX4[5]     ; 4.959 ;    ;    ; 5.680 ;
-; SW[2]      ; HEX4[0]     ; 4.861 ;    ;    ; 5.531 ;
-; SW[2]      ; HEX4[3]     ; 5.390 ;    ;    ; 6.166 ;
-; SW[2]      ; HEX4[4]     ; 5.067 ;    ;    ; 5.789 ;
-; SW[2]      ; HEX4[5]     ; 5.067 ;    ;    ; 5.789 ;
-; SW[3]      ; HEX4[0]     ; 4.847 ;    ;    ; 5.525 ;
-; SW[3]      ; HEX4[3]     ; 5.376 ;    ;    ; 6.160 ;
-; SW[3]      ; HEX4[4]     ; 5.053 ;    ;    ; 5.783 ;
-; SW[3]      ; HEX4[5]     ; 5.053 ;    ;    ; 5.783 ;
+; SW[1]      ; HEX4[0]     ; 5.259 ;    ;    ; 6.000 ;
+; SW[1]      ; HEX4[3]     ; 5.291 ;    ;    ; 6.043 ;
+; SW[1]      ; HEX4[4]     ; 5.093 ;    ;    ; 5.807 ;
+; SW[1]      ; HEX4[5]     ; 5.093 ;    ;    ; 5.807 ;
+; SW[2]      ; HEX4[0]     ; 5.181 ;    ;    ; 5.916 ;
+; SW[2]      ; HEX4[3]     ; 5.213 ;    ;    ; 5.959 ;
+; SW[2]      ; HEX4[4]     ; 5.015 ;    ;    ; 5.723 ;
+; SW[2]      ; HEX4[5]     ; 5.015 ;    ;    ; 5.723 ;
+; SW[3]      ; HEX4[0]     ; 5.397 ;    ;    ; 6.139 ;
+; SW[3]      ; HEX4[3]     ; 5.429 ;    ;    ; 6.182 ;
+; SW[3]      ; HEX4[4]     ; 5.231 ;    ;    ; 5.946 ;
+; SW[3]      ; HEX4[5]     ; 5.231 ;    ;    ; 5.946 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -971,18 +971,18 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[1]      ; HEX4[0]     ; 4.592 ;    ;    ; 5.249 ;
-; SW[1]      ; HEX4[3]     ; 5.100 ;    ;    ; 5.859 ;
-; SW[1]      ; HEX4[4]     ; 4.789 ;    ;    ; 5.497 ;
-; SW[1]      ; HEX4[5]     ; 4.789 ;    ;    ; 5.497 ;
-; SW[2]      ; HEX4[0]     ; 4.696 ;    ;    ; 5.354 ;
-; SW[2]      ; HEX4[3]     ; 5.204 ;    ;    ; 5.964 ;
-; SW[2]      ; HEX4[4]     ; 4.893 ;    ;    ; 5.602 ;
-; SW[2]      ; HEX4[5]     ; 4.893 ;    ;    ; 5.602 ;
-; SW[3]      ; HEX4[0]     ; 4.683 ;    ;    ; 5.348 ;
-; SW[3]      ; HEX4[3]     ; 5.191 ;    ;    ; 5.958 ;
-; SW[3]      ; HEX4[4]     ; 4.880 ;    ;    ; 5.596 ;
-; SW[3]      ; HEX4[5]     ; 4.880 ;    ;    ; 5.596 ;
+; SW[1]      ; HEX4[0]     ; 5.079 ;    ;    ; 5.804 ;
+; SW[1]      ; HEX4[3]     ; 5.110 ;    ;    ; 5.846 ;
+; SW[1]      ; HEX4[4]     ; 4.919 ;    ;    ; 5.619 ;
+; SW[1]      ; HEX4[5]     ; 4.919 ;    ;    ; 5.619 ;
+; SW[2]      ; HEX4[0]     ; 5.003 ;    ;    ; 5.723 ;
+; SW[2]      ; HEX4[3]     ; 5.034 ;    ;    ; 5.765 ;
+; SW[2]      ; HEX4[4]     ; 4.843 ;    ;    ; 5.538 ;
+; SW[2]      ; HEX4[5]     ; 4.843 ;    ;    ; 5.538 ;
+; SW[3]      ; HEX4[0]     ; 5.211 ;    ;    ; 5.937 ;
+; SW[3]      ; HEX4[3]     ; 5.242 ;    ;    ; 5.979 ;
+; SW[3]      ; HEX4[4]     ; 5.051 ;    ;    ; 5.752 ;
+; SW[3]      ; HEX4[5]     ; 5.051 ;    ;    ; 5.752 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -997,10 +997,10 @@ No synchronizer chains to report.
 +------------------+--------+-------+----------+---------+---------------------+
 ; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -0.800 ; 0.163 ; N/A      ; N/A     ; -3.000              ;
-;  SW[0]           ; -0.800 ; 0.163 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -2.238 ; 0.0   ; 0.0      ; 0.0     ; -6.855              ;
-;  SW[0]           ; -2.238 ; 0.000 ; N/A      ; N/A     ; -6.855              ;
+; Worst-case Slack ; -1.045 ; 0.163 ; N/A      ; N/A     ; -3.000              ;
+;  SW[0]           ; -1.045 ; 0.163 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -2.875 ; 0.0   ; 0.0      ; 0.0     ; -6.855              ;
+;  SW[0]           ; -2.875 ; 0.000 ; N/A      ; N/A     ; -6.855              ;
 +------------------+--------+-------+----------+---------+---------------------+
 
 
@@ -1009,11 +1009,11 @@ No synchronizer chains to report.
 +-----------+------------+--------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+-------+------------+-----------------+
-; SW[*]     ; SW[0]      ; 0.566  ; 0.848 ; Rise       ; SW[0]           ;
-;  SW[1]    ; SW[0]      ; 0.322  ; 0.668 ; Rise       ; SW[0]           ;
-;  SW[2]    ; SW[0]      ; -0.021 ; 0.546 ; Rise       ; SW[0]           ;
-;  SW[3]    ; SW[0]      ; 0.566  ; 0.848 ; Rise       ; SW[0]           ;
-;  SW[4]    ; SW[0]      ; -0.171 ; 0.421 ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; -0.076 ; 0.491 ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; -0.083 ; 0.490 ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; -0.076 ; 0.491 ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; -0.145 ; 0.462 ; Rise       ; SW[0]           ;
+;  SW[4]    ; SW[0]      ; -0.238 ; 0.294 ; Rise       ; SW[0]           ;
 +-----------+------------+--------+-------+------------+-----------------+
 
 
@@ -1022,11 +1022,11 @@ No synchronizer chains to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; SW[*]     ; SW[0]      ; 1.615 ; 1.356 ; Rise       ; SW[0]           ;
-;  SW[1]    ; SW[0]      ; 1.159 ; 0.917 ; Rise       ; SW[0]           ;
-;  SW[2]    ; SW[0]      ; 1.245 ; 0.994 ; Rise       ; SW[0]           ;
-;  SW[3]    ; SW[0]      ; 1.473 ; 1.188 ; Rise       ; SW[0]           ;
-;  SW[4]    ; SW[0]      ; 1.615 ; 1.356 ; Rise       ; SW[0]           ;
+; SW[*]     ; SW[0]      ; 1.700 ; 1.441 ; Rise       ; SW[0]           ;
+;  SW[1]    ; SW[0]      ; 1.541 ; 1.254 ; Rise       ; SW[0]           ;
+;  SW[2]    ; SW[0]      ; 1.119 ; 0.851 ; Rise       ; SW[0]           ;
+;  SW[3]    ; SW[0]      ; 1.585 ; 1.302 ; Rise       ; SW[0]           ;
+;  SW[4]    ; SW[0]      ; 1.700 ; 1.441 ; Rise       ; SW[0]           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -1035,48 +1035,48 @@ No synchronizer chains to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; HEX0[*]   ; SW[0]      ; 19.287 ; 19.296 ; Rise       ; SW[0]           ;
-;  HEX0[0]  ; SW[0]      ; 18.097 ; 17.820 ; Rise       ; SW[0]           ;
-;  HEX0[1]  ; SW[0]      ; 18.348 ; 18.313 ; Rise       ; SW[0]           ;
-;  HEX0[2]  ; SW[0]      ; 19.287 ; 19.296 ; Rise       ; SW[0]           ;
-;  HEX0[3]  ; SW[0]      ; 15.594 ; 15.297 ; Rise       ; SW[0]           ;
-;  HEX0[4]  ; SW[0]      ; 15.941 ; 15.628 ; Rise       ; SW[0]           ;
-;  HEX0[5]  ; SW[0]      ; 19.217 ; 19.284 ; Rise       ; SW[0]           ;
-;  HEX0[6]  ; SW[0]      ; 13.839 ; 13.834 ; Rise       ; SW[0]           ;
-; HEX1[*]   ; SW[0]      ; 13.636 ; 13.676 ; Rise       ; SW[0]           ;
-;  HEX1[0]  ; SW[0]      ; 11.691 ; 11.810 ; Rise       ; SW[0]           ;
-;  HEX1[1]  ; SW[0]      ; 13.636 ; 13.676 ; Rise       ; SW[0]           ;
-;  HEX1[2]  ; SW[0]      ; 10.439 ; 10.514 ; Rise       ; SW[0]           ;
-;  HEX1[3]  ; SW[0]      ; 11.106 ; 11.183 ; Rise       ; SW[0]           ;
-;  HEX1[4]  ; SW[0]      ; 10.148 ; 10.225 ; Rise       ; SW[0]           ;
-;  HEX1[5]  ; SW[0]      ; 11.742 ; 11.897 ; Rise       ; SW[0]           ;
-;  HEX1[6]  ; SW[0]      ; 12.200 ; 12.037 ; Rise       ; SW[0]           ;
-; HEX3[*]   ; SW[0]      ; 13.541 ; 13.557 ; Rise       ; SW[0]           ;
-;  HEX3[0]  ; SW[0]      ; 9.624  ; 9.665  ; Rise       ; SW[0]           ;
-;  HEX3[1]  ; SW[0]      ; 13.541 ; 13.557 ; Rise       ; SW[0]           ;
-;  HEX3[2]  ; SW[0]      ; 13.127 ; 12.613 ; Rise       ; SW[0]           ;
-;  HEX3[3]  ; SW[0]      ; 11.418 ; 11.274 ; Rise       ; SW[0]           ;
-;  HEX3[4]  ; SW[0]      ; 10.859 ; 10.747 ; Rise       ; SW[0]           ;
-;  HEX3[5]  ; SW[0]      ; 11.689 ; 11.887 ; Rise       ; SW[0]           ;
-;  HEX3[6]  ; SW[0]      ; 11.675 ; 11.877 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 7.386  ; 7.473  ; Rise       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 6.328  ; 6.357  ; Rise       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 7.386  ; 7.473  ; Rise       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 6.727  ; 6.802  ; Rise       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 6.727  ; 6.802  ; Rise       ; SW[0]           ;
-; HEX7[*]   ; SW[0]      ; 14.742 ; 14.504 ; Rise       ; SW[0]           ;
-;  HEX7[0]  ; SW[0]      ; 12.869 ; 12.674 ; Rise       ; SW[0]           ;
-;  HEX7[1]  ; SW[0]      ; 12.706 ; 12.763 ; Rise       ; SW[0]           ;
-;  HEX7[2]  ; SW[0]      ; 14.627 ; 14.504 ; Rise       ; SW[0]           ;
-;  HEX7[3]  ; SW[0]      ; 14.742 ; 14.387 ; Rise       ; SW[0]           ;
-;  HEX7[4]  ; SW[0]      ; 14.184 ; 13.812 ; Rise       ; SW[0]           ;
-;  HEX7[5]  ; SW[0]      ; 14.157 ; 13.952 ; Rise       ; SW[0]           ;
-;  HEX7[6]  ; SW[0]      ; 13.070 ; 12.973 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 7.386  ; 7.473  ; Fall       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 6.328  ; 6.357  ; Fall       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 7.386  ; 7.473  ; Fall       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 6.727  ; 6.802  ; Fall       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 6.727  ; 6.802  ; Fall       ; SW[0]           ;
+; HEX0[*]   ; SW[0]      ; 16.215 ; 16.091 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 16.021 ; 16.060 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 16.215 ; 16.091 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 13.142 ; 13.099 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 15.305 ; 15.334 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 15.678 ; 15.686 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 13.576 ; 13.520 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 14.137 ; 14.100 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 13.526 ; 13.500 ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 11.756 ; 11.825 ; Rise       ; SW[0]           ;
+;  HEX1[1]  ; SW[0]      ; 13.526 ; 13.500 ; Rise       ; SW[0]           ;
+;  HEX1[2]  ; SW[0]      ; 10.599 ; 10.670 ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 11.187 ; 11.234 ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 10.302 ; 10.360 ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 11.855 ; 11.996 ; Rise       ; SW[0]           ;
+;  HEX1[6]  ; SW[0]      ; 12.411 ; 12.274 ; Rise       ; SW[0]           ;
+; HEX3[*]   ; SW[0]      ; 13.601 ; 13.418 ; Rise       ; SW[0]           ;
+;  HEX3[0]  ; SW[0]      ; 9.664  ; 9.697  ; Rise       ; SW[0]           ;
+;  HEX3[1]  ; SW[0]      ; 13.466 ; 13.418 ; Rise       ; SW[0]           ;
+;  HEX3[2]  ; SW[0]      ; 13.601 ; 13.122 ; Rise       ; SW[0]           ;
+;  HEX3[3]  ; SW[0]      ; 10.756 ; 10.578 ; Rise       ; SW[0]           ;
+;  HEX3[4]  ; SW[0]      ; 10.698 ; 10.600 ; Rise       ; SW[0]           ;
+;  HEX3[5]  ; SW[0]      ; 12.546 ; 12.708 ; Rise       ; SW[0]           ;
+;  HEX3[6]  ; SW[0]      ; 12.482 ; 12.659 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 7.158  ; 7.284  ; Rise       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 7.076  ; 7.157  ; Rise       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 7.158  ; 7.284  ; Rise       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 6.764  ; 6.844  ; Rise       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 6.764  ; 6.844  ; Rise       ; SW[0]           ;
+; HEX7[*]   ; SW[0]      ; 14.439 ; 14.293 ; Rise       ; SW[0]           ;
+;  HEX7[0]  ; SW[0]      ; 14.056 ; 13.813 ; Rise       ; SW[0]           ;
+;  HEX7[1]  ; SW[0]      ; 14.019 ; 14.275 ; Rise       ; SW[0]           ;
+;  HEX7[2]  ; SW[0]      ; 14.439 ; 14.293 ; Rise       ; SW[0]           ;
+;  HEX7[3]  ; SW[0]      ; 13.390 ; 13.326 ; Rise       ; SW[0]           ;
+;  HEX7[4]  ; SW[0]      ; 14.326 ; 14.064 ; Rise       ; SW[0]           ;
+;  HEX7[5]  ; SW[0]      ; 13.195 ; 13.077 ; Rise       ; SW[0]           ;
+;  HEX7[6]  ; SW[0]      ; 14.191 ; 14.029 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 7.158  ; 7.284  ; Fall       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 7.076  ; 7.157  ; Fall       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 7.158  ; 7.284  ; Fall       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 6.764  ; 6.844  ; Fall       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 6.764  ; 6.844  ; Fall       ; SW[0]           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -1085,48 +1085,48 @@ No synchronizer chains to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; HEX0[*]   ; SW[0]      ; 6.897 ; 6.664 ; Rise       ; SW[0]           ;
-;  HEX0[0]  ; SW[0]      ; 8.659 ; 9.161 ; Rise       ; SW[0]           ;
-;  HEX0[1]  ; SW[0]      ; 9.462 ; 9.174 ; Rise       ; SW[0]           ;
-;  HEX0[2]  ; SW[0]      ; 9.756 ; 9.368 ; Rise       ; SW[0]           ;
-;  HEX0[3]  ; SW[0]      ; 7.407 ; 7.699 ; Rise       ; SW[0]           ;
-;  HEX0[4]  ; SW[0]      ; 7.569 ; 7.885 ; Rise       ; SW[0]           ;
-;  HEX0[5]  ; SW[0]      ; 9.920 ; 9.602 ; Rise       ; SW[0]           ;
-;  HEX0[6]  ; SW[0]      ; 6.897 ; 6.664 ; Rise       ; SW[0]           ;
-; HEX1[*]   ; SW[0]      ; 4.876 ; 4.943 ; Rise       ; SW[0]           ;
-;  HEX1[0]  ; SW[0]      ; 5.673 ; 5.793 ; Rise       ; SW[0]           ;
-;  HEX1[1]  ; SW[0]      ; 6.476 ; 6.804 ; Rise       ; SW[0]           ;
-;  HEX1[2]  ; SW[0]      ; 5.093 ; 5.063 ; Rise       ; SW[0]           ;
-;  HEX1[3]  ; SW[0]      ; 5.364 ; 5.467 ; Rise       ; SW[0]           ;
-;  HEX1[4]  ; SW[0]      ; 4.876 ; 4.943 ; Rise       ; SW[0]           ;
-;  HEX1[5]  ; SW[0]      ; 5.902 ; 6.068 ; Rise       ; SW[0]           ;
-;  HEX1[6]  ; SW[0]      ; 6.269 ; 6.092 ; Rise       ; SW[0]           ;
-; HEX3[*]   ; SW[0]      ; 4.804 ; 4.901 ; Rise       ; SW[0]           ;
-;  HEX3[0]  ; SW[0]      ; 4.804 ; 4.901 ; Rise       ; SW[0]           ;
-;  HEX3[1]  ; SW[0]      ; 6.409 ; 6.714 ; Rise       ; SW[0]           ;
-;  HEX3[2]  ; SW[0]      ; 7.034 ; 6.927 ; Rise       ; SW[0]           ;
-;  HEX3[3]  ; SW[0]      ; 5.730 ; 5.828 ; Rise       ; SW[0]           ;
-;  HEX3[4]  ; SW[0]      ; 5.481 ; 5.555 ; Rise       ; SW[0]           ;
-;  HEX3[5]  ; SW[0]      ; 5.669 ; 5.824 ; Rise       ; SW[0]           ;
-;  HEX3[6]  ; SW[0]      ; 5.838 ; 5.692 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 3.250 ; 3.740 ; Rise       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 3.250 ; 3.740 ; Rise       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 3.758 ; 4.350 ; Rise       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 3.447 ; 3.988 ; Rise       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 3.447 ; 3.988 ; Rise       ; SW[0]           ;
-; HEX7[*]   ; SW[0]      ; 6.156 ; 6.237 ; Rise       ; SW[0]           ;
-;  HEX7[0]  ; SW[0]      ; 6.156 ; 6.237 ; Rise       ; SW[0]           ;
-;  HEX7[1]  ; SW[0]      ; 6.244 ; 6.264 ; Rise       ; SW[0]           ;
-;  HEX7[2]  ; SW[0]      ; 7.150 ; 7.144 ; Rise       ; SW[0]           ;
-;  HEX7[3]  ; SW[0]      ; 7.006 ; 7.127 ; Rise       ; SW[0]           ;
-;  HEX7[4]  ; SW[0]      ; 6.749 ; 7.017 ; Rise       ; SW[0]           ;
-;  HEX7[5]  ; SW[0]      ; 6.876 ; 6.868 ; Rise       ; SW[0]           ;
-;  HEX7[6]  ; SW[0]      ; 6.280 ; 6.366 ; Rise       ; SW[0]           ;
-; HEX4[*]   ; SW[0]      ; 3.250 ; 3.740 ; Fall       ; SW[0]           ;
-;  HEX4[0]  ; SW[0]      ; 3.250 ; 3.740 ; Fall       ; SW[0]           ;
-;  HEX4[3]  ; SW[0]      ; 3.758 ; 4.350 ; Fall       ; SW[0]           ;
-;  HEX4[4]  ; SW[0]      ; 3.447 ; 3.988 ; Fall       ; SW[0]           ;
-;  HEX4[5]  ; SW[0]      ; 3.447 ; 3.988 ; Fall       ; SW[0]           ;
+; HEX0[*]   ; SW[0]      ; 6.531 ; 6.308 ; Rise       ; SW[0]           ;
+;  HEX0[0]  ; SW[0]      ; 7.693 ; 8.031 ; Rise       ; SW[0]           ;
+;  HEX0[1]  ; SW[0]      ; 8.287 ; 8.112 ; Rise       ; SW[0]           ;
+;  HEX0[2]  ; SW[0]      ; 6.531 ; 6.308 ; Rise       ; SW[0]           ;
+;  HEX0[3]  ; SW[0]      ; 7.334 ; 7.631 ; Rise       ; SW[0]           ;
+;  HEX0[4]  ; SW[0]      ; 7.506 ; 7.818 ; Rise       ; SW[0]           ;
+;  HEX0[5]  ; SW[0]      ; 6.936 ; 6.747 ; Rise       ; SW[0]           ;
+;  HEX0[6]  ; SW[0]      ; 7.059 ; 6.818 ; Rise       ; SW[0]           ;
+; HEX1[*]   ; SW[0]      ; 4.939 ; 4.999 ; Rise       ; SW[0]           ;
+;  HEX1[0]  ; SW[0]      ; 5.664 ; 5.783 ; Rise       ; SW[0]           ;
+;  HEX1[1]  ; SW[0]      ; 6.511 ; 6.847 ; Rise       ; SW[0]           ;
+;  HEX1[2]  ; SW[0]      ; 5.165 ; 5.140 ; Rise       ; SW[0]           ;
+;  HEX1[3]  ; SW[0]      ; 5.376 ; 5.480 ; Rise       ; SW[0]           ;
+;  HEX1[4]  ; SW[0]      ; 4.939 ; 4.999 ; Rise       ; SW[0]           ;
+;  HEX1[5]  ; SW[0]      ; 5.942 ; 6.115 ; Rise       ; SW[0]           ;
+;  HEX1[6]  ; SW[0]      ; 6.369 ; 6.182 ; Rise       ; SW[0]           ;
+; HEX3[*]   ; SW[0]      ; 4.829 ; 4.929 ; Rise       ; SW[0]           ;
+;  HEX3[0]  ; SW[0]      ; 4.829 ; 4.929 ; Rise       ; SW[0]           ;
+;  HEX3[1]  ; SW[0]      ; 6.462 ; 6.773 ; Rise       ; SW[0]           ;
+;  HEX3[2]  ; SW[0]      ; 7.296 ; 7.167 ; Rise       ; SW[0]           ;
+;  HEX3[3]  ; SW[0]      ; 5.374 ; 5.451 ; Rise       ; SW[0]           ;
+;  HEX3[4]  ; SW[0]      ; 5.391 ; 5.476 ; Rise       ; SW[0]           ;
+;  HEX3[5]  ; SW[0]      ; 6.198 ; 6.355 ; Rise       ; SW[0]           ;
+;  HEX3[6]  ; SW[0]      ; 6.164 ; 6.286 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 3.482 ; 4.004 ; Rise       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 3.642 ; 4.189 ; Rise       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 3.673 ; 4.231 ; Rise       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 3.482 ; 4.004 ; Rise       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 3.482 ; 4.004 ; Rise       ; SW[0]           ;
+; HEX7[*]   ; SW[0]      ; 6.401 ; 6.514 ; Rise       ; SW[0]           ;
+;  HEX7[0]  ; SW[0]      ; 6.844 ; 6.863 ; Rise       ; SW[0]           ;
+;  HEX7[1]  ; SW[0]      ; 6.945 ; 6.879 ; Rise       ; SW[0]           ;
+;  HEX7[2]  ; SW[0]      ; 6.996 ; 7.148 ; Rise       ; SW[0]           ;
+;  HEX7[3]  ; SW[0]      ; 6.502 ; 6.576 ; Rise       ; SW[0]           ;
+;  HEX7[4]  ; SW[0]      ; 6.958 ; 6.956 ; Rise       ; SW[0]           ;
+;  HEX7[5]  ; SW[0]      ; 6.401 ; 6.514 ; Rise       ; SW[0]           ;
+;  HEX7[6]  ; SW[0]      ; 6.843 ; 6.961 ; Rise       ; SW[0]           ;
+; HEX4[*]   ; SW[0]      ; 3.482 ; 4.004 ; Fall       ; SW[0]           ;
+;  HEX4[0]  ; SW[0]      ; 3.642 ; 4.189 ; Fall       ; SW[0]           ;
+;  HEX4[3]  ; SW[0]      ; 3.673 ; 4.231 ; Fall       ; SW[0]           ;
+;  HEX4[4]  ; SW[0]      ; 3.482 ; 4.004 ; Fall       ; SW[0]           ;
+;  HEX4[5]  ; SW[0]      ; 3.482 ; 4.004 ; Fall       ; SW[0]           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -1135,18 +1135,18 @@ No synchronizer chains to report.
 +------------+-------------+--------+----+----+--------+
 ; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
 +------------+-------------+--------+----+----+--------+
-; SW[1]      ; HEX4[0]     ; 8.918  ;    ;    ; 9.268  ;
-; SW[1]      ; HEX4[3]     ; 9.976  ;    ;    ; 10.384 ;
-; SW[1]      ; HEX4[4]     ; 9.317  ;    ;    ; 9.713  ;
-; SW[1]      ; HEX4[5]     ; 9.317  ;    ;    ; 9.713  ;
-; SW[2]      ; HEX4[0]     ; 9.146  ;    ;    ; 9.464  ;
-; SW[2]      ; HEX4[3]     ; 10.204 ;    ;    ; 10.580 ;
-; SW[2]      ; HEX4[4]     ; 9.545  ;    ;    ; 9.909  ;
-; SW[2]      ; HEX4[5]     ; 9.545  ;    ;    ; 9.909  ;
-; SW[3]      ; HEX4[0]     ; 9.125  ;    ;    ; 9.478  ;
-; SW[3]      ; HEX4[3]     ; 10.183 ;    ;    ; 10.594 ;
-; SW[3]      ; HEX4[4]     ; 9.524  ;    ;    ; 9.923  ;
-; SW[3]      ; HEX4[5]     ; 9.524  ;    ;    ; 9.923  ;
+; SW[1]      ; HEX4[0]     ; 9.861  ;    ;    ; 10.278 ;
+; SW[1]      ; HEX4[3]     ; 9.943  ;    ;    ; 10.405 ;
+; SW[1]      ; HEX4[4]     ; 9.549  ;    ;    ; 9.965  ;
+; SW[1]      ; HEX4[5]     ; 9.549  ;    ;    ; 9.965  ;
+; SW[2]      ; HEX4[0]     ; 9.708  ;    ;    ; 10.093 ;
+; SW[2]      ; HEX4[3]     ; 9.790  ;    ;    ; 10.220 ;
+; SW[2]      ; HEX4[4]     ; 9.396  ;    ;    ; 9.780  ;
+; SW[2]      ; HEX4[5]     ; 9.396  ;    ;    ; 9.780  ;
+; SW[3]      ; HEX4[0]     ; 10.169 ;    ;    ; 10.542 ;
+; SW[3]      ; HEX4[3]     ; 10.251 ;    ;    ; 10.669 ;
+; SW[3]      ; HEX4[4]     ; 9.857  ;    ;    ; 10.229 ;
+; SW[3]      ; HEX4[5]     ; 9.857  ;    ;    ; 10.229 ;
 +------------+-------------+--------+----+----+--------+
 
 
@@ -1155,18 +1155,18 @@ No synchronizer chains to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[1]      ; HEX4[0]     ; 4.592 ;    ;    ; 5.249 ;
-; SW[1]      ; HEX4[3]     ; 5.100 ;    ;    ; 5.859 ;
-; SW[1]      ; HEX4[4]     ; 4.789 ;    ;    ; 5.497 ;
-; SW[1]      ; HEX4[5]     ; 4.789 ;    ;    ; 5.497 ;
-; SW[2]      ; HEX4[0]     ; 4.696 ;    ;    ; 5.354 ;
-; SW[2]      ; HEX4[3]     ; 5.204 ;    ;    ; 5.964 ;
-; SW[2]      ; HEX4[4]     ; 4.893 ;    ;    ; 5.602 ;
-; SW[2]      ; HEX4[5]     ; 4.893 ;    ;    ; 5.602 ;
-; SW[3]      ; HEX4[0]     ; 4.683 ;    ;    ; 5.348 ;
-; SW[3]      ; HEX4[3]     ; 5.191 ;    ;    ; 5.958 ;
-; SW[3]      ; HEX4[4]     ; 4.880 ;    ;    ; 5.596 ;
-; SW[3]      ; HEX4[5]     ; 4.880 ;    ;    ; 5.596 ;
+; SW[1]      ; HEX4[0]     ; 5.079 ;    ;    ; 5.804 ;
+; SW[1]      ; HEX4[3]     ; 5.110 ;    ;    ; 5.846 ;
+; SW[1]      ; HEX4[4]     ; 4.919 ;    ;    ; 5.619 ;
+; SW[1]      ; HEX4[5]     ; 4.919 ;    ;    ; 5.619 ;
+; SW[2]      ; HEX4[0]     ; 5.003 ;    ;    ; 5.723 ;
+; SW[2]      ; HEX4[3]     ; 5.034 ;    ;    ; 5.765 ;
+; SW[2]      ; HEX4[4]     ; 4.843 ;    ;    ; 5.538 ;
+; SW[2]      ; HEX4[5]     ; 4.843 ;    ;    ; 5.538 ;
+; SW[3]      ; HEX4[0]     ; 5.211 ;    ;    ; 5.937 ;
+; SW[3]      ; HEX4[3]     ; 5.242 ;    ;    ; 5.979 ;
+; SW[3]      ; HEX4[4]     ; 5.051 ;    ;    ; 5.752 ;
+; SW[3]      ; HEX4[5]     ; 5.051 ;    ;    ; 5.752 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -1221,9 +1221,9 @@ No synchronizer chains to report.
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
 ; CLOCK_50                ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[2]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[1]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[3]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[1]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[2]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[4]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[0]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -1327,7 +1327,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; SW[0]      ; SW[0]    ; 12       ; 0        ; 0        ; 0        ;
+; SW[0]      ; SW[0]    ; 13       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1337,7 +1337,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; SW[0]      ; SW[0]    ; 12       ; 0        ; 0        ; 0        ;
+; SW[0]      ; SW[0]    ; 13       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1374,7 +1374,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II TimeQuest Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Apr 29 21:03:52 2019
+    Info: Processing started: Mon Apr 29 22:19:05 2019
 Info: Command: quartus_sta finalTermProject -c finalTermProject
 Info: qsta_default_script.tcl version: #1
 Info: Core supply voltage is 1.2V
@@ -1396,10 +1396,10 @@ Info: Deriving Clock Uncertainty
     Info: set_clock_uncertainty -fall_from [get_clocks {SW[0]}] -fall_to [get_clocks {SW[0]}] -hold 0.020
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning: Timing requirements not met
-Info: Worst-case setup slack is -0.800
+Info: Worst-case setup slack is -1.045
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -0.800        -2.238 SW[0] 
+    Info:    -1.045        -2.875 SW[0] 
 Info: Worst-case hold slack is 0.384
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
@@ -1424,10 +1424,10 @@ Info: Deriving Clock Uncertainty
     Info: set_clock_uncertainty -fall_from [get_clocks {SW[0]}] -rise_to [get_clocks {SW[0]}] -hold 0.020
     Info: set_clock_uncertainty -fall_from [get_clocks {SW[0]}] -fall_to [get_clocks {SW[0]}] -hold 0.020
 Critical Warning: Timing requirements not met
-Info: Worst-case setup slack is -0.635
+Info: Worst-case setup slack is -0.840
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -0.635        -1.709 SW[0] 
+    Info:    -0.840        -2.285 SW[0] 
 Info: Worst-case hold slack is 0.337
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
@@ -1451,27 +1451,27 @@ Info: Deriving Clock Uncertainty
     Info: set_clock_uncertainty -rise_from [get_clocks {SW[0]}] -fall_to [get_clocks {SW[0]}] -hold 0.020
     Info: set_clock_uncertainty -fall_from [get_clocks {SW[0]}] -rise_to [get_clocks {SW[0]}] -hold 0.020
     Info: set_clock_uncertainty -fall_from [get_clocks {SW[0]}] -fall_to [get_clocks {SW[0]}] -hold 0.020
-Info: Worst-case setup slack is 0.118
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.006
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:     0.118         0.000 SW[0] 
+    Info:    -0.006        -0.006 SW[0] 
 Info: Worst-case hold slack is 0.163
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
     Info:     0.163         0.000 SW[0] 
 Info: No Recovery paths to report
 Info: No Removal paths to report
-Critical Warning: Timing requirements not met
 Info: Worst-case minimum pulse width slack is -3.000
     Info:     Slack End Point TNS Clock 
     Info: ========= ============= =====================
-    Info:    -3.000        -6.540 SW[0] 
+    Info:    -3.000        -6.664 SW[0] 
 Info: Design is not fully constrained for setup requirements
 Info: Design is not fully constrained for hold requirements
 Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 315 megabytes
-    Info: Processing ended: Mon Apr 29 21:03:56 2019
+    Info: Processing ended: Mon Apr 29 22:19:09 2019
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 
