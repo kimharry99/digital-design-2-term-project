@@ -1,5 +1,5 @@
 Analysis & Synthesis report for finalTermProject
-Sat Apr 27 15:22:43 2019
+Mon Apr 29 21:03:34 2019
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -15,7 +15,9 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Parameter Settings for User Entity Instance: Top-level Entity: |finalTermProject
- 10. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "clock_4:comb_5"
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -41,16 +43,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 27 15:22:43 2019        ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 29 21:03:34 2019        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; finalTermProject                             ;
 ; Top-level Entity Name              ; finalTermProject                             ;
 ; Family                             ; Cyclone IV E                                 ;
-; Total logic elements               ; 12                                           ;
-;     Total combinational functions  ; 12                                           ;
-;     Dedicated logic registers      ; 4                                            ;
-; Total registers                    ; 4                                            ;
-; Total pins                         ; 26                                           ;
+; Total logic elements               ; 29                                           ;
+;     Total combinational functions  ; 29                                           ;
+;     Dedicated logic registers      ; 3                                            ;
+; Total registers                    ; 3                                            ;
+; Total pins                         ; 41                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
@@ -159,33 +161,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------+------------------------------------------------------------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 12     ;
-;                                             ;        ;
-; Total combinational functions               ; 12     ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 9      ;
-;     -- 3 input functions                    ; 1      ;
-;     -- <=2 input functions                  ; 2      ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 12     ;
-;     -- arithmetic mode                      ; 0      ;
-;                                             ;        ;
-; Total registers                             ; 4      ;
-;     -- Dedicated logic registers            ; 4      ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 26     ;
-; Maximum fan-out node                        ; cnt[0] ;
-; Maximum fan-out                             ; 11     ;
-; Total fan-out                               ; 83     ;
-; Average fan-out                             ; 1.22   ;
-+---------------------------------------------+--------+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                           ;
++---------------------------------------------+-------------------------+
+; Resource                                    ; Usage                   ;
++---------------------------------------------+-------------------------+
+; Estimated Total logic elements              ; 29                      ;
+;                                             ;                         ;
+; Total combinational functions               ; 29                      ;
+; Logic element usage by number of LUT inputs ;                         ;
+;     -- 4 input functions                    ; 9                       ;
+;     -- 3 input functions                    ; 16                      ;
+;     -- <=2 input functions                  ; 4                       ;
+;                                             ;                         ;
+; Logic elements by mode                      ;                         ;
+;     -- normal mode                          ; 29                      ;
+;     -- arithmetic mode                      ; 0                       ;
+;                                             ;                         ;
+; Total registers                             ; 3                       ;
+;     -- Dedicated logic registers            ; 3                       ;
+;     -- I/O registers                        ; 0                       ;
+;                                             ;                         ;
+; I/O pins                                    ; 41                      ;
+; Maximum fan-out node                        ; d_flip_flop:comb_8|dout ;
+; Maximum fan-out                             ; 25                      ;
+; Total fan-out                               ; 171                     ;
+; Average fan-out                             ; 1.50                    ;
++---------------------------------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -193,7 +195,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
-; |finalTermProject          ; 12 (11)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |finalTermProject                    ; work         ;
+; |finalTermProject          ; 29 (17)           ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |finalTermProject                    ; work         ;
+;    |d_flip_flop:comb_7|    ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |finalTermProject|d_flip_flop:comb_7 ;              ;
+;    |d_flip_flop:comb_8|    ; 4 (4)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |finalTermProject|d_flip_flop:comb_8 ;              ;
+;    |d_flip_flop:comb_9|    ; 4 (4)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |finalTermProject|d_flip_flop:comb_9 ;              ;
 ;    |input_pulse:comb_3|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |finalTermProject|input_pulse:comb_3 ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -204,7 +209,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
+; Total registers                              ; 3     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -234,48 +239,68 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_4:comb_5"                                                                       ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; newclk ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sat Apr 27 15:22:40 2019
+    Info: Processing started: Mon Apr 29 21:03:32 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off finalTermProject -c finalTermProject
-Info: Found 2 design units, including 2 entities, in source file main.v
+Info: Found 7 design units, including 7 entities, in source file main.v
     Info: Found entity 1: finalTermProject
     Info: Found entity 2: input_pulse
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(13): instance has no name
+    Info: Found entity 3: input_encoder
+    Info: Found entity 4: conventionalLogic
+    Info: Found entity 5: d_flip_flop
+    Info: Found entity 6: clock_4
+    Info: Found entity 7: clock_8
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(17): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(18): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(19): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(21): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(23): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(24): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(25): instance has no name
 Info: Elaborating entity "finalTermProject" for the top level hierarchy
-Warning (10034): Output port "HEX3" at main.v(3) has no driver
-Warning (10034): Output port "HEX1" at main.v(3) has no driver
+Warning (10199): Verilog HDL Case Statement warning at main.v(63): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at main.v(64): case item expression never matches the case expression
 Info: Elaborating entity "input_pulse" for hierarchy "input_pulse:comb_3"
+Info: Elaborating entity "input_encoder" for hierarchy "input_encoder:comb_4"
+Info: Elaborating entity "clock_4" for hierarchy "clock_4:comb_5"
+Info: Elaborating entity "conventionalLogic" for hierarchy "conventionalLogic:comb_6"
+Info: Elaborating entity "d_flip_flop" for hierarchy "d_flip_flop:comb_7"
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX3[6]" is stuck at GND
-    Warning (13410): Pin "HEX3[5]" is stuck at GND
-    Warning (13410): Pin "HEX3[4]" is stuck at GND
-    Warning (13410): Pin "HEX3[3]" is stuck at GND
-    Warning (13410): Pin "HEX3[2]" is stuck at GND
-    Warning (13410): Pin "HEX3[1]" is stuck at GND
-    Warning (13410): Pin "HEX3[0]" is stuck at GND
-    Warning (13410): Pin "HEX1[6]" is stuck at GND
-    Warning (13410): Pin "HEX1[5]" is stuck at GND
-    Warning (13410): Pin "HEX1[4]" is stuck at GND
-    Warning (13410): Pin "HEX1[3]" is stuck at GND
-    Warning (13410): Pin "HEX1[2]" is stuck at GND
-    Warning (13410): Pin "HEX1[1]" is stuck at GND
-    Warning (13410): Pin "HEX1[0]" is stuck at GND
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC
+    Warning (13410): Pin "HEX4[2]" is stuck at GND
+    Warning (13410): Pin "HEX4[1]" is stuck at GND
 Info: Timing-Driven Synthesis is running
+Info: Generated suppressed messages file C:/Users/kimha/Documents/KU/2_1/정논설/assignment#2/finalTermProject.map.smsg
 Warning: Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[4]"
-Info: Implemented 38 device resources after synthesis - the final resource count might be different
-    Info: Implemented 5 input pins
-    Info: Implemented 21 output pins
-    Info: Implemented 12 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 234 megabytes
-    Info: Processing ended: Sat Apr 27 15:22:43 2019
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:04
+    Warning (15610): No output dependent on input pin "CLOCK_50"
+Info: Implemented 70 device resources after synthesis - the final resource count might be different
+    Info: Implemented 6 input pins
+    Info: Implemented 35 output pins
+    Info: Implemented 29 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 235 megabytes
+    Info: Processing ended: Mon Apr 29 21:03:34 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/kimha/Documents/KU/2_1/정논설/assignment#2/finalTermProject.map.smsg.
 
 

@@ -1,30 +1,45 @@
 |finalTermProject
-SW[0] => SW[0].IN1
-SW[1] => SW[1].IN1
-SW[2] => SW[2].IN1
-SW[3] => SW[3].IN1
-SW[4] => ~NO_FANOUT~
-HEX3[6] <= <GND>
-HEX3[5] <= <GND>
-HEX3[4] <= <GND>
-HEX3[3] <= <GND>
-HEX3[2] <= <GND>
-HEX3[1] <= <GND>
-HEX3[0] <= <GND>
-HEX1[6] <= <GND>
-HEX1[5] <= <GND>
-HEX1[4] <= <GND>
-HEX1[3] <= <GND>
-HEX1[2] <= <GND>
-HEX1[1] <= <GND>
-HEX1[0] <= <GND>
-HEX0[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SW[0] => SW[0].IN2
+SW[1] => SW[1].IN2
+SW[2] => SW[2].IN2
+SW[3] => SW[3].IN2
+SW[4] => SW[4].IN3
+CLOCK_50 => CLOCK_50.IN1
+HEX3[6] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[5] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[4] <= B.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[3] <= B.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[2] <= A.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[1] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+HEX3[0] <= B.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[6] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[5] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[1] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[0] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 HEX0[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 HEX0[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 HEX0[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[6] <= <VCC>
+HEX4[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[2] <= <GND>
+HEX4[1] <= <GND>
+HEX4[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX7[6] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+HEX7[5] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+HEX7[4] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+HEX7[3] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+HEX7[2] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+HEX7[1] <= HEX7.DB_MAX_OUTPUT_PORT_TYPE
+HEX7[0] <= HEX7.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |finalTermProject|input_pulse:comb_3
@@ -33,5 +48,114 @@ SW1 => pulse.IN1
 SW2 => pulse.IN1
 SW3 => pulse.IN1
 pulse <= pulse.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|finalTermProject|input_encoder:comb_4
+SW0 => ~NO_FANOUT~
+SW1 => encodedOutput_0.IN0
+SW2 => encodedOutput_1.IN0
+SW3 => encodedOutput_1.IN1
+SW3 => encodedOutput_0.IN1
+encodedOutput_1 <= encodedOutput_1.DB_MAX_OUTPUT_PORT_TYPE
+encodedOutput_0 <= encodedOutput_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|finalTermProject|clock_4:comb_5
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+clk => cnt[20].CLK
+clk => cnt[21].CLK
+clk => cnt[22].CLK
+clk => cnt[23].CLK
+clk => cnt[24].CLK
+newclk <= cnt[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|finalTermProject|conventionalLogic:comb_6
+A => a.IN0
+A => a.IN0
+A => b.IN0
+A => c.IN0
+A => b.IN0
+A => c.IN0
+B => a.IN0
+B => a.IN0
+B => a.IN0
+B => a.IN0
+B => b.IN1
+C => a.IN1
+C => a.IN1
+C => b.IN1
+C => c.IN1
+C => a.IN1
+C => b.IN1
+C => c.IN0
+C => c.IN1
+D => a.IN1
+D => a.IN1
+D => b.IN1
+D => b.IN1
+D => b.IN1
+D => a.IN1
+D => a.IN1
+D => a.IN1
+D => b.IN1
+D => b.IN1
+D => b.IN1
+D => c.IN1
+E => a.IN1
+E => b.IN1
+E => b.IN1
+E => c.IN1
+E => a.IN1
+E => a.IN1
+E => a.IN1
+E => b.IN1
+E => b.IN1
+E => b.IN1
+E => c.IN1
+E => c.IN1
+a <= a.DB_MAX_OUTPUT_PORT_TYPE
+b <= b.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|finalTermProject|d_flip_flop:comb_7
+din => dout.DATAA
+clk => dout~reg0.CLK
+reset => dout.OUTPUTSELECT
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|finalTermProject|d_flip_flop:comb_8
+din => dout.DATAA
+clk => dout~reg0.CLK
+reset => dout.OUTPUTSELECT
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|finalTermProject|d_flip_flop:comb_9
+din => dout.DATAA
+clk => dout~reg0.CLK
+reset => dout.OUTPUTSELECT
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

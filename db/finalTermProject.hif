@@ -31,7 +31,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-4212db1397a251f395f32060e8869e30
+6983b924cf6f1f61445b936c2b1af013
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -113,7 +113,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-4212db1397a251f395f32060e8869e30
+6983b924cf6f1f61445b936c2b1af013
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -133,6 +133,152 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 input_pulse:comb_3
+}
+# macro_sequence
+
+# end
+# entity
+input_encoder
+# storage
+db|finalTermProject.(2).cnf
+db|finalTermProject.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+main.v
+6983b924cf6f1f61445b936c2b1af013
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+input_encoder:comb_4
+}
+# macro_sequence
+
+# end
+# entity
+clock_4
+# storage
+db|finalTermProject.(3).cnf
+db|finalTermProject.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+main.v
+6983b924cf6f1f61445b936c2b1af013
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+clock_4:comb_5
+}
+# macro_sequence
+
+# end
+# entity
+conventionalLogic
+# storage
+db|finalTermProject.(4).cnf
+db|finalTermProject.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+main.v
+6983b924cf6f1f61445b936c2b1af013
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+conventionalLogic:comb_6
+}
+# macro_sequence
+
+# end
+# entity
+d_flip_flop
+# storage
+db|finalTermProject.(5).cnf
+db|finalTermProject.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+main.v
+6983b924cf6f1f61445b936c2b1af013
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+d_flip_flop:comb_7
+d_flip_flop:comb_8
+d_flip_flop:comb_9
 }
 # macro_sequence
 
