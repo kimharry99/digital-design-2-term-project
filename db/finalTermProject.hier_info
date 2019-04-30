@@ -5,44 +5,51 @@ SW[2] => SW[2].IN2
 SW[3] => SW[3].IN2
 SW[4] => SW[4].IN1
 CLOCK_50 => CLOCK_50.IN1
-HEX3[6] <= print:comb_8.port6
-HEX3[5] <= print:comb_8.port6
-HEX3[4] <= print:comb_8.port6
-HEX3[3] <= print:comb_8.port6
-HEX3[2] <= print:comb_8.port6
-HEX3[1] <= print:comb_8.port6
-HEX3[0] <= print:comb_8.port6
-HEX1[6] <= print:comb_8.port5
-HEX1[5] <= print:comb_8.port5
-HEX1[4] <= print:comb_8.port5
-HEX1[3] <= print:comb_8.port5
-HEX1[2] <= print:comb_8.port5
-HEX1[1] <= print:comb_8.port5
-HEX1[0] <= print:comb_8.port5
-HEX0[6] <= print:comb_8.port4
-HEX0[5] <= print:comb_8.port4
-HEX0[4] <= print:comb_8.port4
-HEX0[3] <= print:comb_8.port4
-HEX0[2] <= print:comb_8.port4
-HEX0[1] <= print:comb_8.port4
-HEX0[0] <= print:comb_8.port4
-HEX4[6] <= print:comb_8.port7
-HEX4[5] <= print:comb_8.port7
-HEX4[4] <= print:comb_8.port7
-HEX4[3] <= print:comb_8.port7
-HEX4[2] <= print:comb_8.port7
-HEX4[1] <= print:comb_8.port7
-HEX4[0] <= print:comb_8.port7
-HEX7[6] <= print:comb_8.port8
-HEX7[5] <= print:comb_8.port8
-HEX7[4] <= print:comb_8.port8
-HEX7[3] <= print:comb_8.port8
-HEX7[2] <= print:comb_8.port8
-HEX7[1] <= print:comb_8.port8
-HEX7[0] <= print:comb_8.port8
+HEX3[6] <= print:comb_9.port6
+HEX3[5] <= print:comb_9.port6
+HEX3[4] <= print:comb_9.port6
+HEX3[3] <= print:comb_9.port6
+HEX3[2] <= print:comb_9.port6
+HEX3[1] <= print:comb_9.port6
+HEX3[0] <= print:comb_9.port6
+HEX1[6] <= print:comb_9.port5
+HEX1[5] <= print:comb_9.port5
+HEX1[4] <= print:comb_9.port5
+HEX1[3] <= print:comb_9.port5
+HEX1[2] <= print:comb_9.port5
+HEX1[1] <= print:comb_9.port5
+HEX1[0] <= print:comb_9.port5
+HEX0[6] <= print:comb_9.port4
+HEX0[5] <= print:comb_9.port4
+HEX0[4] <= print:comb_9.port4
+HEX0[3] <= print:comb_9.port4
+HEX0[2] <= print:comb_9.port4
+HEX0[1] <= print:comb_9.port4
+HEX0[0] <= print:comb_9.port4
+HEX4[6] <= print:comb_9.port7
+HEX4[5] <= print:comb_9.port7
+HEX4[4] <= print:comb_9.port7
+HEX4[3] <= print:comb_9.port7
+HEX4[2] <= print:comb_9.port7
+HEX4[1] <= print:comb_9.port7
+HEX4[0] <= print:comb_9.port7
+HEX7[6] <= print:comb_9.port8
+HEX7[5] <= print:comb_9.port8
+HEX7[4] <= print:comb_9.port8
+HEX7[3] <= print:comb_9.port8
+HEX7[2] <= print:comb_9.port8
+HEX7[1] <= print:comb_9.port8
+HEX7[0] <= print:comb_9.port8
 
 
-|finalTermProject|input_pulse:comb_3
+|finalTermProject|d_flip_flop:comb_3
+din => dout.DATAA
+clk => dout~reg0.CLK
+reset => dout.OUTPUTSELECT
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|finalTermProject|input_pulse:comb_4
 SW0 => pulse.IN0
 SW1 => pulse.IN1
 SW2 => pulse.IN1
@@ -50,7 +57,7 @@ SW3 => pulse.IN1
 pulse <= pulse.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|finalTermProject|input_encoder:comb_4
+|finalTermProject|input_encoder:comb_5
 SW0 => ~NO_FANOUT~
 SW1 => encodedOutput_0.IN0
 SW2 => encodedOutput_1.IN0
@@ -60,7 +67,7 @@ encodedOutput_1 <= encodedOutput_1.DB_MAX_OUTPUT_PORT_TYPE
 encodedOutput_0 <= encodedOutput_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|finalTermProject|clock_4:comb_5
+|finalTermProject|clock_24:comb_6
 clk => cnt[0].CLK
 clk => cnt[1].CLK
 clk => cnt[2].CLK
@@ -86,10 +93,10 @@ clk => cnt[21].CLK
 clk => cnt[22].CLK
 clk => cnt[23].CLK
 clk => cnt[24].CLK
-newclk <= cnt[4].DB_MAX_OUTPUT_PORT_TYPE
+newclk <= cnt[20].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|finalTermProject|conventionalLogic:comb_6
+|finalTermProject|conventionalLogic:comb_7
 A => a.IN0
 A => a.IN0
 A => b.IN0
@@ -142,7 +149,7 @@ b <= b.DB_MAX_OUTPUT_PORT_TYPE
 c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|finalTermProject|dffs:comb_7
+|finalTermProject|dffs:comb_8
 dinA => dinA.IN1
 dinB => dinB.IN1
 dinC => dinC.IN1
@@ -153,28 +160,28 @@ doutB <= d_flip_flop:comb_4.port3
 doutC <= d_flip_flop:comb_5.port3
 
 
-|finalTermProject|dffs:comb_7|d_flip_flop:comb_3
+|finalTermProject|dffs:comb_8|d_flip_flop:comb_3
 din => dout.DATAA
 clk => dout~reg0.CLK
 reset => dout.OUTPUTSELECT
 dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|finalTermProject|dffs:comb_7|d_flip_flop:comb_4
+|finalTermProject|dffs:comb_8|d_flip_flop:comb_4
 din => dout.DATAA
 clk => dout~reg0.CLK
 reset => dout.OUTPUTSELECT
 dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|finalTermProject|dffs:comb_7|d_flip_flop:comb_5
+|finalTermProject|dffs:comb_8|d_flip_flop:comb_5
 din => dout.DATAA
 clk => dout~reg0.CLK
 reset => dout.OUTPUTSELECT
 dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|finalTermProject|print:comb_8
+|finalTermProject|print:comb_9
 A => Decoder1.IN0
 A => Decoder2.IN0
 A => h3[2].DATAIN

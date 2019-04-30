@@ -2,40 +2,88 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'SW[0]'
-Slack : -1.045
-TNS   : -2.875
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -1.873
+TNS   : -25.076
 
-Type  : Slow 1200mV 85C Model Hold 'SW[0]'
-Slack : 0.384
+Type  : Slow 1200mV 85C Model Setup 'd_flip_flop:comb_3|dout'
+Slack : -1.305
+TNS   : -2.997
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.028
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SW[0]'
-Slack : -3.000
-TNS   : -6.855
-
-Type  : Slow 1200mV 0C Model Setup 'SW[0]'
-Slack : -0.840
-TNS   : -2.285
-
-Type  : Slow 1200mV 0C Model Hold 'SW[0]'
-Slack : 0.337
+Type  : Slow 1200mV 85C Model Hold 'd_flip_flop:comb_3|dout'
+Slack : 0.386
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SW[0]'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -6.855
+TNS   : -29.985
 
-Type  : Fast 1200mV 0C Model Setup 'SW[0]'
-Slack : -0.006
-TNS   : -0.006
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'd_flip_flop:comb_3|dout'
+Slack : -1.285
+TNS   : -3.855
 
-Type  : Fast 1200mV 0C Model Hold 'SW[0]'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_24:comb_6|cnt[20]'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.563
+TNS   : -20.292
+
+Type  : Slow 1200mV 0C Model Setup 'd_flip_flop:comb_3|dout'
+Slack : -1.130
+TNS   : -2.520
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.102
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'd_flip_flop:comb_3|dout'
+Slack : 0.335
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -29.985
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'd_flip_flop:comb_3|dout'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_24:comb_6|cnt[20]'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -0.417
+TNS   : -2.982
+
+Type  : Fast 1200mV 0C Model Setup 'd_flip_flop:comb_3|dout'
+Slack : -0.121
+TNS   : -0.121
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.014
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'd_flip_flop:comb_3|dout'
 Slack : 0.163
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SW[0]'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -6.664
+TNS   : -30.211
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'd_flip_flop:comb_3|dout'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_24:comb_6|cnt[20]'
+Slack : -1.000
+TNS   : -1.000
 
 ------------------------------------------------------------

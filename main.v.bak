@@ -4,16 +4,18 @@ module finalTermProject(
 	output reg [0:6] HEX3,HEX1,HEX0,HEX4,HEX7
 	);
 	
-	wire pulse;
+	wire in_pulse, pulse;
 	wire input_x,input_y,in_A,in_B,in_C;
-	wire newClk_4;
+	wire newClk_24;
 	wire A,B,C;
 	wire [0:6] h0,h1,h2,h3,h4,h5,h6,h7;
 	reg state_A, state_B, state_C;
 	
-	input_pulse(SW[0],SW[1],SW[2],SW[3],pulse);
+	d_flip_flop ( in_pulse ,newClk_24 ,1'b0 , pulse );
+	
+	input_pulse(SW[0],SW[1],SW[2],SW[3],in_pulse);
 	input_encoder(SW[0],SW[1],SW[2],SW[3],input_x,input_y);
-	clock_4(CLOCK_50,newClk_4);
+	clock_24(CLOCK_50,newClk_24);
 	
 	conventionalLogic(A,B,C,input_x,input_y, in_A,in_B,in_C);
 	dffs(in_A,in_B,in_C,pulse,SW[4],A,B,C);
@@ -70,33 +72,26 @@ module d_flip_flop ( input din ,input clk ,input reset ,output reg dout );
 	end
 endmodule 
 
-module clock_4(input clk, output newclk);
+module clock_24(input clk, output newclk);
 	reg [24:0]cnt;
 	
 	always@(posedge clk)
 	begin
 		cnt <= cnt + 1'b1;
 	end
-	assign newclk = cnt[4];
-endmodule
-
-module clock_8(input clk, output newclk);
-	reg [24:0]cnt;
-	
-	always@(posedge clk)
-	begin
-		cnt <= cnt + 1'b1;
-	end
-	assign newclk = cnt[8];
+	assign newclk = cnt[20];
 endmodule
 
 module dffs(
 input dinA, dinB, dinC, clk, reset,
-output doutA, doutB, doutC
+output reg doutA, doutB, doutC
 );
-d_flip_flop ( dinA ,clk , reset ,doutA );
-d_flip_flop ( dinB ,clk , reset ,doutB );
-d_flip_flop ( dinC ,clk , reset ,doutC );
+wire outA, outB, outC ;
+
+d_flip_flop (dinA, clk, reset, doutA);
+d_flip_flop (dinB, clk, reset, doutB);
+d_flip_flop (dinC, clk, reset, doutC);
+
 
 endmodule
 
@@ -107,6 +102,7 @@ module print(
 	parameter Seg9 = 7'b000_1100; parameter Seg8 = 7'b000_0000; parameter Seg7 = 7'b000_1111; 
 	parameter Seg6 = 7'b010_0000; parameter Seg5 = 7'b010_0100;	parameter Seg4 = 7'b100_1100; 
 	parameter Seg3 = 7'b000_0110; parameter Seg2 = 7'b001_0010; parameter Seg1 = 7'b100_1111; 
+	parameter Seg0 = 7'b000_0001; parameter SegX = 7'b111_1111;
 	always@(*)
 	begin
 		case(pulse)

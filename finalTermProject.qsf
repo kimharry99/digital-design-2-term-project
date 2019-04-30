@@ -53,7 +53,7 @@ set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name MISC_FILE "C:/Users/kimha/Documents/KU/2_1/Á¤³í¼³/assignment#2/finalTermProject.dpf"
 set_global_assignment -name VECTOR_WAVEFORM_FILE finalTermProject.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE finalTermProject.vwf
-set_global_assignment -name SIMULATION_MODE TIMING
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_location_assignment PIN_D2 -to AUD_ADCDAT
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCDAT

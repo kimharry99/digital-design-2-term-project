@@ -1,5 +1,5 @@
 Simulator report for finalTermProject
-Tue Apr 30 11:41:17 2019
+Tue Apr 30 16:27:35 2019
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -45,12 +45,11 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 58 nodes     ;
-; Simulation Coverage         ;      29.82 % ;
-; Total Number of Transitions ; 1259         ;
+; Simulation Netlist Size     ; 124 nodes    ;
+; Simulation Coverage         ;      71.54 % ;
+; Total Number of Transitions ; 501          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
-; Device                      ; EP2C35F672C6 ;
 +-----------------------------+--------------+
 
 
@@ -59,7 +58,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------------+----------------------+---------------+
 ; Option                                                                                     ; Setting              ; Default Value ;
 +--------------------------------------------------------------------------------------------+----------------------+---------------+
-; Simulation mode                                                                            ; Timing               ; Timing        ;
+; Simulation mode                                                                            ; Functional           ; Timing        ;
 ; Start time                                                                                 ; 0 ns                 ; 0 ns          ;
 ; Simulation results format                                                                  ; CVWF                 ;               ;
 ; Vector input source                                                                        ; finalTermProject.vwf ;               ;
@@ -95,13 +94,13 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      29.82 % ;
-; Total nodes checked                                 ; 58           ;
-; Total output ports checked                          ; 57           ;
-; Total output ports with complete 1/0-value coverage ; 17           ;
-; Total output ports with no 1/0-value coverage       ; 36           ;
-; Total output ports with no 1-value coverage         ; 37           ;
-; Total output ports with no 0-value coverage         ; 39           ;
+; Total coverage as a percentage                      ;      71.54 % ;
+; Total nodes checked                                 ; 124          ;
+; Total output ports checked                          ; 123          ;
+; Total output ports with complete 1/0-value coverage ; 88           ;
+; Total output ports with no 1/0-value coverage       ; 35           ;
+; Total output ports with no 1-value coverage         ; 35           ;
+; Total output ports with no 0-value coverage         ; 35           ;
 +-----------------------------------------------------+--------------+
 
 
@@ -111,118 +110,183 @@ The following table displays output ports that toggle between 1 and 0 during sim
 +---------------------------------------------------------+---------------------------------------------------------+------------------+
 ; Node Name                                               ; Output Port Name                                        ; Output Port Type ;
 +---------------------------------------------------------+---------------------------------------------------------+------------------+
+; |finalTermProject|SW[0]                                 ; |finalTermProject|SW[0]                                 ; out              ;
+; |finalTermProject|SW[2]                                 ; |finalTermProject|SW[2]                                 ; out              ;
+; |finalTermProject|SW[3]                                 ; |finalTermProject|SW[3]                                 ; out              ;
+; |finalTermProject|HEX3[5]                               ; |finalTermProject|HEX3[5]                               ; pin_out          ;
+; |finalTermProject|HEX3[4]                               ; |finalTermProject|HEX3[4]                               ; pin_out          ;
+; |finalTermProject|HEX3[3]                               ; |finalTermProject|HEX3[3]                               ; pin_out          ;
+; |finalTermProject|HEX3[0]                               ; |finalTermProject|HEX3[0]                               ; pin_out          ;
+; |finalTermProject|HEX1[5]                               ; |finalTermProject|HEX1[5]                               ; pin_out          ;
+; |finalTermProject|HEX1[4]                               ; |finalTermProject|HEX1[4]                               ; pin_out          ;
+; |finalTermProject|HEX1[3]                               ; |finalTermProject|HEX1[3]                               ; pin_out          ;
+; |finalTermProject|HEX1[0]                               ; |finalTermProject|HEX1[0]                               ; pin_out          ;
+; |finalTermProject|HEX0[6]                               ; |finalTermProject|HEX0[6]                               ; pin_out          ;
+; |finalTermProject|HEX0[5]                               ; |finalTermProject|HEX0[5]                               ; pin_out          ;
+; |finalTermProject|HEX0[4]                               ; |finalTermProject|HEX0[4]                               ; pin_out          ;
+; |finalTermProject|HEX0[3]                               ; |finalTermProject|HEX0[3]                               ; pin_out          ;
+; |finalTermProject|HEX0[2]                               ; |finalTermProject|HEX0[2]                               ; pin_out          ;
+; |finalTermProject|HEX0[0]                               ; |finalTermProject|HEX0[0]                               ; pin_out          ;
+; |finalTermProject|HEX4[5]                               ; |finalTermProject|HEX4[5]                               ; pin_out          ;
+; |finalTermProject|HEX4[4]                               ; |finalTermProject|HEX4[4]                               ; pin_out          ;
+; |finalTermProject|HEX4[3]                               ; |finalTermProject|HEX4[3]                               ; pin_out          ;
+; |finalTermProject|HEX4[0]                               ; |finalTermProject|HEX4[0]                               ; pin_out          ;
+; |finalTermProject|HEX7[6]                               ; |finalTermProject|HEX7[6]                               ; pin_out          ;
+; |finalTermProject|HEX7[5]                               ; |finalTermProject|HEX7[5]                               ; pin_out          ;
+; |finalTermProject|HEX7[4]                               ; |finalTermProject|HEX7[4]                               ; pin_out          ;
+; |finalTermProject|HEX7[3]                               ; |finalTermProject|HEX7[3]                               ; pin_out          ;
+; |finalTermProject|HEX7[2]                               ; |finalTermProject|HEX7[2]                               ; pin_out          ;
+; |finalTermProject|HEX7[0]                               ; |finalTermProject|HEX7[0]                               ; pin_out          ;
+; |finalTermProject|print:comb_8|WideOr0                  ; |finalTermProject|print:comb_8|WideOr0                  ; out0             ;
+; |finalTermProject|print:comb_8|WideOr2                  ; |finalTermProject|print:comb_8|WideOr2                  ; out0             ;
+; |finalTermProject|print:comb_8|WideOr3                  ; |finalTermProject|print:comb_8|WideOr3                  ; out0             ;
+; |finalTermProject|print:comb_8|WideOr4                  ; |finalTermProject|print:comb_8|WideOr4                  ; out0             ;
+; |finalTermProject|print:comb_8|WideOr6                  ; |finalTermProject|print:comb_8|WideOr6                  ; out0             ;
+; |finalTermProject|print:comb_8|h7[0]                    ; |finalTermProject|print:comb_8|h7[0]                    ; out0             ;
+; |finalTermProject|print:comb_8|WideOr7                  ; |finalTermProject|print:comb_8|WideOr7                  ; out0             ;
+; |finalTermProject|print:comb_8|WideOr8                  ; |finalTermProject|print:comb_8|WideOr8                  ; out0             ;
+; |finalTermProject|print:comb_8|WideOr9                  ; |finalTermProject|print:comb_8|WideOr9                  ; out0             ;
+; |finalTermProject|print:comb_8|WideOr10                 ; |finalTermProject|print:comb_8|WideOr10                 ; out0             ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~0 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~0 ; out              ;
 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout   ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout   ; regout           ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~0 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~0 ; out              ;
 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout   ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout   ; regout           ;
-; |finalTermProject|print:comb_8|WideOr0~0                ; |finalTermProject|print:comb_8|WideOr0~0                ; combout          ;
-; |finalTermProject|print:comb_8|WideOr1~0                ; |finalTermProject|print:comb_8|WideOr1~0                ; combout          ;
-; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~0 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~0 ; combout          ;
-; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~2 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~2 ; combout          ;
-; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~0 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~0 ; combout          ;
-; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~1 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~1 ; combout          ;
-; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~2 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~2 ; combout          ;
-; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~0 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~0 ; combout          ;
-; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~1 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~1 ; combout          ;
-; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~2 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~2 ; combout          ;
-; |finalTermProject|input_pulse:comb_3|pulse              ; |finalTermProject|input_pulse:comb_3|pulse              ; combout          ;
-; |finalTermProject|HEX0[6]                               ; |finalTermProject|HEX0[6]                               ; padio            ;
-; |finalTermProject|HEX7[6]                               ; |finalTermProject|HEX7[6]                               ; padio            ;
-; |finalTermProject|SW[2]                                 ; |finalTermProject|SW[2]~corein                          ; combout          ;
-; |finalTermProject|input_pulse:comb_3|pulse~clkctrl      ; |finalTermProject|input_pulse:comb_3|pulse~clkctrl      ; outclk           ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~0 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~0 ; out              ;
+; |finalTermProject|conventionalLogic:comb_6|a~3          ; |finalTermProject|conventionalLogic:comb_6|a~3          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~6          ; |finalTermProject|conventionalLogic:comb_6|a~6          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~7          ; |finalTermProject|conventionalLogic:comb_6|a~7          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~8          ; |finalTermProject|conventionalLogic:comb_6|a~8          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~9          ; |finalTermProject|conventionalLogic:comb_6|a~9          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~10         ; |finalTermProject|conventionalLogic:comb_6|a~10         ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~12         ; |finalTermProject|conventionalLogic:comb_6|a~12         ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~13         ; |finalTermProject|conventionalLogic:comb_6|a~13         ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~14         ; |finalTermProject|conventionalLogic:comb_6|a~14         ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a            ; |finalTermProject|conventionalLogic:comb_6|a            ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~2          ; |finalTermProject|conventionalLogic:comb_6|b~2          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~5          ; |finalTermProject|conventionalLogic:comb_6|b~5          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~6          ; |finalTermProject|conventionalLogic:comb_6|b~6          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~7          ; |finalTermProject|conventionalLogic:comb_6|b~7          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~8          ; |finalTermProject|conventionalLogic:comb_6|b~8          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~9          ; |finalTermProject|conventionalLogic:comb_6|b~9          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~10         ; |finalTermProject|conventionalLogic:comb_6|b~10         ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~11         ; |finalTermProject|conventionalLogic:comb_6|b~11         ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~12         ; |finalTermProject|conventionalLogic:comb_6|b~12         ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~13         ; |finalTermProject|conventionalLogic:comb_6|b~13         ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~14         ; |finalTermProject|conventionalLogic:comb_6|b~14         ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~15         ; |finalTermProject|conventionalLogic:comb_6|b~15         ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~16         ; |finalTermProject|conventionalLogic:comb_6|b~16         ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~17         ; |finalTermProject|conventionalLogic:comb_6|b~17         ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b            ; |finalTermProject|conventionalLogic:comb_6|b            ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|c~0          ; |finalTermProject|conventionalLogic:comb_6|c~0          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|c~2          ; |finalTermProject|conventionalLogic:comb_6|c~2          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|c~3          ; |finalTermProject|conventionalLogic:comb_6|c~3          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|c~4          ; |finalTermProject|conventionalLogic:comb_6|c~4          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|c~5          ; |finalTermProject|conventionalLogic:comb_6|c~5          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|c~6          ; |finalTermProject|conventionalLogic:comb_6|c~6          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|c~7          ; |finalTermProject|conventionalLogic:comb_6|c~7          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|c~8          ; |finalTermProject|conventionalLogic:comb_6|c~8          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|c~9          ; |finalTermProject|conventionalLogic:comb_6|c~9          ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|c~10         ; |finalTermProject|conventionalLogic:comb_6|c~10         ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|c            ; |finalTermProject|conventionalLogic:comb_6|c            ; out0             ;
+; |finalTermProject|input_encoder:comb_4|encodedOutput_1  ; |finalTermProject|input_encoder:comb_4|encodedOutput_1  ; out0             ;
+; |finalTermProject|input_encoder:comb_4|encodedOutput_0  ; |finalTermProject|input_encoder:comb_4|encodedOutput_0  ; out0             ;
+; |finalTermProject|input_pulse:comb_3|pulse~0            ; |finalTermProject|input_pulse:comb_3|pulse~0            ; out0             ;
+; |finalTermProject|input_pulse:comb_3|pulse~1            ; |finalTermProject|input_pulse:comb_3|pulse~1            ; out0             ;
+; |finalTermProject|input_pulse:comb_3|pulse              ; |finalTermProject|input_pulse:comb_3|pulse              ; out0             ;
+; |finalTermProject|print:comb_8|Decoder1~0               ; |finalTermProject|print:comb_8|Decoder1~0               ; out0             ;
+; |finalTermProject|print:comb_8|Decoder1~1               ; |finalTermProject|print:comb_8|Decoder1~1               ; out0             ;
+; |finalTermProject|print:comb_8|Decoder1~2               ; |finalTermProject|print:comb_8|Decoder1~2               ; out0             ;
+; |finalTermProject|print:comb_8|Decoder1~3               ; |finalTermProject|print:comb_8|Decoder1~3               ; out0             ;
+; |finalTermProject|print:comb_8|Decoder2~0               ; |finalTermProject|print:comb_8|Decoder2~0               ; out0             ;
 +---------------------------------------------------------+---------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+-------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                      ;
-+---------------------------+--------------------------------+------------------+
-; Node Name                 ; Output Port Name               ; Output Port Type ;
-+---------------------------+--------------------------------+------------------+
-; |finalTermProject|HEX3[6] ; |finalTermProject|HEX3[6]      ; padio            ;
-; |finalTermProject|HEX3[5] ; |finalTermProject|HEX3[5]      ; padio            ;
-; |finalTermProject|HEX3[4] ; |finalTermProject|HEX3[4]      ; padio            ;
-; |finalTermProject|HEX3[3] ; |finalTermProject|HEX3[3]      ; padio            ;
-; |finalTermProject|HEX3[2] ; |finalTermProject|HEX3[2]      ; padio            ;
-; |finalTermProject|HEX3[1] ; |finalTermProject|HEX3[1]      ; padio            ;
-; |finalTermProject|HEX3[0] ; |finalTermProject|HEX3[0]      ; padio            ;
-; |finalTermProject|HEX1[6] ; |finalTermProject|HEX1[6]      ; padio            ;
-; |finalTermProject|HEX1[5] ; |finalTermProject|HEX1[5]      ; padio            ;
-; |finalTermProject|HEX1[4] ; |finalTermProject|HEX1[4]      ; padio            ;
-; |finalTermProject|HEX1[3] ; |finalTermProject|HEX1[3]      ; padio            ;
-; |finalTermProject|HEX1[2] ; |finalTermProject|HEX1[2]      ; padio            ;
-; |finalTermProject|HEX1[1] ; |finalTermProject|HEX1[1]      ; padio            ;
-; |finalTermProject|HEX1[0] ; |finalTermProject|HEX1[0]      ; padio            ;
-; |finalTermProject|HEX0[5] ; |finalTermProject|HEX0[5]      ; padio            ;
-; |finalTermProject|HEX0[4] ; |finalTermProject|HEX0[4]      ; padio            ;
-; |finalTermProject|HEX0[3] ; |finalTermProject|HEX0[3]      ; padio            ;
-; |finalTermProject|HEX0[2] ; |finalTermProject|HEX0[2]      ; padio            ;
-; |finalTermProject|HEX0[1] ; |finalTermProject|HEX0[1]      ; padio            ;
-; |finalTermProject|HEX0[0] ; |finalTermProject|HEX0[0]      ; padio            ;
-; |finalTermProject|HEX4[6] ; |finalTermProject|HEX4[6]      ; padio            ;
-; |finalTermProject|HEX4[5] ; |finalTermProject|HEX4[5]      ; padio            ;
-; |finalTermProject|HEX4[4] ; |finalTermProject|HEX4[4]      ; padio            ;
-; |finalTermProject|HEX4[3] ; |finalTermProject|HEX4[3]      ; padio            ;
-; |finalTermProject|HEX4[2] ; |finalTermProject|HEX4[2]      ; padio            ;
-; |finalTermProject|HEX4[1] ; |finalTermProject|HEX4[1]      ; padio            ;
-; |finalTermProject|HEX4[0] ; |finalTermProject|HEX4[0]      ; padio            ;
-; |finalTermProject|HEX7[5] ; |finalTermProject|HEX7[5]      ; padio            ;
-; |finalTermProject|HEX7[4] ; |finalTermProject|HEX7[4]      ; padio            ;
-; |finalTermProject|HEX7[3] ; |finalTermProject|HEX7[3]      ; padio            ;
-; |finalTermProject|HEX7[2] ; |finalTermProject|HEX7[2]      ; padio            ;
-; |finalTermProject|HEX7[1] ; |finalTermProject|HEX7[1]      ; padio            ;
-; |finalTermProject|HEX7[0] ; |finalTermProject|HEX7[0]      ; padio            ;
-; |finalTermProject|SW[3]   ; |finalTermProject|SW[3]~corein ; combout          ;
-; |finalTermProject|SW[4]   ; |finalTermProject|SW[4]~corein ; combout          ;
-; |finalTermProject|SW[1]   ; |finalTermProject|SW[1]~corein ; combout          ;
-; |finalTermProject|SW[0]   ; |finalTermProject|SW[0]~corein ; combout          ;
-+---------------------------+--------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                         ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+; Node Name                                             ; Output Port Name                                      ; Output Port Type ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+; |finalTermProject|SW[1]                               ; |finalTermProject|SW[1]                               ; out              ;
+; |finalTermProject|SW[4]                               ; |finalTermProject|SW[4]                               ; out              ;
+; |finalTermProject|HEX3[6]                             ; |finalTermProject|HEX3[6]                             ; pin_out          ;
+; |finalTermProject|HEX3[2]                             ; |finalTermProject|HEX3[2]                             ; pin_out          ;
+; |finalTermProject|HEX3[1]                             ; |finalTermProject|HEX3[1]                             ; pin_out          ;
+; |finalTermProject|HEX1[6]                             ; |finalTermProject|HEX1[6]                             ; pin_out          ;
+; |finalTermProject|HEX1[2]                             ; |finalTermProject|HEX1[2]                             ; pin_out          ;
+; |finalTermProject|HEX1[1]                             ; |finalTermProject|HEX1[1]                             ; pin_out          ;
+; |finalTermProject|HEX0[1]                             ; |finalTermProject|HEX0[1]                             ; pin_out          ;
+; |finalTermProject|HEX4[6]                             ; |finalTermProject|HEX4[6]                             ; pin_out          ;
+; |finalTermProject|HEX4[2]                             ; |finalTermProject|HEX4[2]                             ; pin_out          ;
+; |finalTermProject|HEX4[1]                             ; |finalTermProject|HEX4[1]                             ; pin_out          ;
+; |finalTermProject|HEX7[1]                             ; |finalTermProject|HEX7[1]                             ; pin_out          ;
+; |finalTermProject|print:comb_8|WideOr1                ; |finalTermProject|print:comb_8|WideOr1                ; out0             ;
+; |finalTermProject|print:comb_8|WideOr5                ; |finalTermProject|print:comb_8|WideOr5                ; out0             ;
+; |finalTermProject|print:comb_8|h7[1]                  ; |finalTermProject|print:comb_8|h7[1]                  ; out0             ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout ; regout           ;
+; |finalTermProject|conventionalLogic:comb_6|a~0        ; |finalTermProject|conventionalLogic:comb_6|a~0        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~1        ; |finalTermProject|conventionalLogic:comb_6|a~1        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~2        ; |finalTermProject|conventionalLogic:comb_6|a~2        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~4        ; |finalTermProject|conventionalLogic:comb_6|a~4        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~5        ; |finalTermProject|conventionalLogic:comb_6|a~5        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~11       ; |finalTermProject|conventionalLogic:comb_6|a~11       ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~15       ; |finalTermProject|conventionalLogic:comb_6|a~15       ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~0        ; |finalTermProject|conventionalLogic:comb_6|b~0        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~1        ; |finalTermProject|conventionalLogic:comb_6|b~1        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~3        ; |finalTermProject|conventionalLogic:comb_6|b~3        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~4        ; |finalTermProject|conventionalLogic:comb_6|b~4        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|c~1        ; |finalTermProject|conventionalLogic:comb_6|c~1        ; out0             ;
+; |finalTermProject|print:comb_8|Decoder1~4             ; |finalTermProject|print:comb_8|Decoder1~4             ; out0             ;
+; |finalTermProject|print:comb_8|Decoder1~5             ; |finalTermProject|print:comb_8|Decoder1~5             ; out0             ;
+; |finalTermProject|print:comb_8|Decoder1~6             ; |finalTermProject|print:comb_8|Decoder1~6             ; out0             ;
+; |finalTermProject|print:comb_8|Decoder1~7             ; |finalTermProject|print:comb_8|Decoder1~7             ; out0             ;
+; |finalTermProject|print:comb_8|Decoder2~1             ; |finalTermProject|print:comb_8|Decoder2~1             ; out0             ;
+; |finalTermProject|print:comb_8|Decoder2~2             ; |finalTermProject|print:comb_8|Decoder2~2             ; out0             ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                                                                             ;
-+---------------------------------------------------------+---------------------------------------------------------+------------------+
-; Node Name                                               ; Output Port Name                                        ; Output Port Type ;
-+---------------------------------------------------------+---------------------------------------------------------+------------------+
-; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout   ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout   ; regout           ;
-; |finalTermProject|print:comb_8|Decoder0~0               ; |finalTermProject|print:comb_8|Decoder0~0               ; combout          ;
-; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~1 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~1 ; combout          ;
-; |finalTermProject|HEX3[6]                               ; |finalTermProject|HEX3[6]                               ; padio            ;
-; |finalTermProject|HEX3[5]                               ; |finalTermProject|HEX3[5]                               ; padio            ;
-; |finalTermProject|HEX3[4]                               ; |finalTermProject|HEX3[4]                               ; padio            ;
-; |finalTermProject|HEX3[3]                               ; |finalTermProject|HEX3[3]                               ; padio            ;
-; |finalTermProject|HEX3[2]                               ; |finalTermProject|HEX3[2]                               ; padio            ;
-; |finalTermProject|HEX3[1]                               ; |finalTermProject|HEX3[1]                               ; padio            ;
-; |finalTermProject|HEX3[0]                               ; |finalTermProject|HEX3[0]                               ; padio            ;
-; |finalTermProject|HEX1[5]                               ; |finalTermProject|HEX1[5]                               ; padio            ;
-; |finalTermProject|HEX1[4]                               ; |finalTermProject|HEX1[4]                               ; padio            ;
-; |finalTermProject|HEX1[3]                               ; |finalTermProject|HEX1[3]                               ; padio            ;
-; |finalTermProject|HEX1[2]                               ; |finalTermProject|HEX1[2]                               ; padio            ;
-; |finalTermProject|HEX1[1]                               ; |finalTermProject|HEX1[1]                               ; padio            ;
-; |finalTermProject|HEX1[0]                               ; |finalTermProject|HEX1[0]                               ; padio            ;
-; |finalTermProject|HEX0[5]                               ; |finalTermProject|HEX0[5]                               ; padio            ;
-; |finalTermProject|HEX0[4]                               ; |finalTermProject|HEX0[4]                               ; padio            ;
-; |finalTermProject|HEX0[3]                               ; |finalTermProject|HEX0[3]                               ; padio            ;
-; |finalTermProject|HEX0[2]                               ; |finalTermProject|HEX0[2]                               ; padio            ;
-; |finalTermProject|HEX0[1]                               ; |finalTermProject|HEX0[1]                               ; padio            ;
-; |finalTermProject|HEX0[0]                               ; |finalTermProject|HEX0[0]                               ; padio            ;
-; |finalTermProject|HEX4[6]                               ; |finalTermProject|HEX4[6]                               ; padio            ;
-; |finalTermProject|HEX4[5]                               ; |finalTermProject|HEX4[5]                               ; padio            ;
-; |finalTermProject|HEX4[4]                               ; |finalTermProject|HEX4[4]                               ; padio            ;
-; |finalTermProject|HEX4[3]                               ; |finalTermProject|HEX4[3]                               ; padio            ;
-; |finalTermProject|HEX4[2]                               ; |finalTermProject|HEX4[2]                               ; padio            ;
-; |finalTermProject|HEX4[1]                               ; |finalTermProject|HEX4[1]                               ; padio            ;
-; |finalTermProject|HEX4[0]                               ; |finalTermProject|HEX4[0]                               ; padio            ;
-; |finalTermProject|HEX7[5]                               ; |finalTermProject|HEX7[5]                               ; padio            ;
-; |finalTermProject|HEX7[4]                               ; |finalTermProject|HEX7[4]                               ; padio            ;
-; |finalTermProject|HEX7[3]                               ; |finalTermProject|HEX7[3]                               ; padio            ;
-; |finalTermProject|HEX7[2]                               ; |finalTermProject|HEX7[2]                               ; padio            ;
-; |finalTermProject|HEX7[1]                               ; |finalTermProject|HEX7[1]                               ; padio            ;
-; |finalTermProject|HEX7[0]                               ; |finalTermProject|HEX7[0]                               ; padio            ;
-; |finalTermProject|SW[3]                                 ; |finalTermProject|SW[3]~corein                          ; combout          ;
-; |finalTermProject|SW[4]                                 ; |finalTermProject|SW[4]~corein                          ; combout          ;
-; |finalTermProject|SW[1]                                 ; |finalTermProject|SW[1]~corein                          ; combout          ;
-; |finalTermProject|SW[0]                                 ; |finalTermProject|SW[0]~corein                          ; combout          ;
-+---------------------------------------------------------+---------------------------------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                         ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+; Node Name                                             ; Output Port Name                                      ; Output Port Type ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+; |finalTermProject|SW[1]                               ; |finalTermProject|SW[1]                               ; out              ;
+; |finalTermProject|SW[4]                               ; |finalTermProject|SW[4]                               ; out              ;
+; |finalTermProject|HEX3[6]                             ; |finalTermProject|HEX3[6]                             ; pin_out          ;
+; |finalTermProject|HEX3[2]                             ; |finalTermProject|HEX3[2]                             ; pin_out          ;
+; |finalTermProject|HEX3[1]                             ; |finalTermProject|HEX3[1]                             ; pin_out          ;
+; |finalTermProject|HEX1[6]                             ; |finalTermProject|HEX1[6]                             ; pin_out          ;
+; |finalTermProject|HEX1[2]                             ; |finalTermProject|HEX1[2]                             ; pin_out          ;
+; |finalTermProject|HEX1[1]                             ; |finalTermProject|HEX1[1]                             ; pin_out          ;
+; |finalTermProject|HEX0[1]                             ; |finalTermProject|HEX0[1]                             ; pin_out          ;
+; |finalTermProject|HEX4[6]                             ; |finalTermProject|HEX4[6]                             ; pin_out          ;
+; |finalTermProject|HEX4[2]                             ; |finalTermProject|HEX4[2]                             ; pin_out          ;
+; |finalTermProject|HEX4[1]                             ; |finalTermProject|HEX4[1]                             ; pin_out          ;
+; |finalTermProject|HEX7[1]                             ; |finalTermProject|HEX7[1]                             ; pin_out          ;
+; |finalTermProject|print:comb_8|WideOr1                ; |finalTermProject|print:comb_8|WideOr1                ; out0             ;
+; |finalTermProject|print:comb_8|WideOr5                ; |finalTermProject|print:comb_8|WideOr5                ; out0             ;
+; |finalTermProject|print:comb_8|h7[1]                  ; |finalTermProject|print:comb_8|h7[1]                  ; out0             ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout ; regout           ;
+; |finalTermProject|conventionalLogic:comb_6|a~0        ; |finalTermProject|conventionalLogic:comb_6|a~0        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~1        ; |finalTermProject|conventionalLogic:comb_6|a~1        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~2        ; |finalTermProject|conventionalLogic:comb_6|a~2        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~4        ; |finalTermProject|conventionalLogic:comb_6|a~4        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~5        ; |finalTermProject|conventionalLogic:comb_6|a~5        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~11       ; |finalTermProject|conventionalLogic:comb_6|a~11       ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|a~15       ; |finalTermProject|conventionalLogic:comb_6|a~15       ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~0        ; |finalTermProject|conventionalLogic:comb_6|b~0        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~1        ; |finalTermProject|conventionalLogic:comb_6|b~1        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~3        ; |finalTermProject|conventionalLogic:comb_6|b~3        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|b~4        ; |finalTermProject|conventionalLogic:comb_6|b~4        ; out0             ;
+; |finalTermProject|conventionalLogic:comb_6|c~1        ; |finalTermProject|conventionalLogic:comb_6|c~1        ; out0             ;
+; |finalTermProject|print:comb_8|Decoder1~4             ; |finalTermProject|print:comb_8|Decoder1~4             ; out0             ;
+; |finalTermProject|print:comb_8|Decoder1~5             ; |finalTermProject|print:comb_8|Decoder1~5             ; out0             ;
+; |finalTermProject|print:comb_8|Decoder1~6             ; |finalTermProject|print:comb_8|Decoder1~6             ; out0             ;
+; |finalTermProject|print:comb_8|Decoder1~7             ; |finalTermProject|print:comb_8|Decoder1~7             ; out0             ;
+; |finalTermProject|print:comb_8|Decoder2~1             ; |finalTermProject|print:comb_8|Decoder2~1             ; out0             ;
+; |finalTermProject|print:comb_8|Decoder2~2             ; |finalTermProject|print:comb_8|Decoder2~2             ; out0             ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -238,7 +302,7 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Apr 30 11:41:16 2019
+    Info: Processing started: Tue Apr 30 16:27:34 2019
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off finalTermProject -c finalTermProject
 Info: Using vector source file "C:/Users/kimha/Documents/KU/2_1/Á¤³í¼³/assignment#2/finalTermProject.vwf"
 Warning: Ignored node in vector source file. Can't find corresponding node name "~ALTERA_ASDO_DATA1~" in design.
@@ -251,12 +315,15 @@ Warning: Ignored node in vector source file. Can't find corresponding node name 
 Warning: Ignored node in vector source file. Can't find corresponding node name "d_flip_flop:comb_9|dout" in design.
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout"
+Warning: Found clock-sensitive change during active clock edge at time 30.0 ns on register "|finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout"
+Warning: Found clock-sensitive change during active clock edge at time 30.0 ns on register "|finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout"
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      29.82 %
-Info: Number of transitions in simulation is 1259
-Info: Quartus II Simulator was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 165 megabytes
-    Info: Processing ended: Tue Apr 30 11:41:17 2019
+Info: Simulation coverage is      71.54 %
+Info: Number of transitions in simulation is 501
+Info: Quartus II Simulator was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 158 megabytes
+    Info: Processing ended: Tue Apr 30 16:27:35 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
