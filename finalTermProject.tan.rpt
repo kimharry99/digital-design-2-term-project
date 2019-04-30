@@ -1,0 +1,517 @@
+Classic Timing Analyzer report for finalTermProject
+Tue Apr 30 11:31:05 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'SW[0]'
+  7. Clock Setup: 'SW[3]'
+  8. Clock Setup: 'SW[1]'
+  9. Clock Setup: 'SW[2]'
+ 10. tsu
+ 11. tco
+ 12. th
+ 13. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                  ;
++------------------------------+-------+---------------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                                ; To                                  ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 2.393 ns                                       ; SW[2]                               ; dffs:comb_7|d_flip_flop:comb_5|dout ; --         ; SW[0]    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 13.528 ns                                      ; dffs:comb_7|d_flip_flop:comb_5|dout ; HEX1[6]                             ; SW[3]      ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 3.015 ns                                       ; SW[3]                               ; dffs:comb_7|d_flip_flop:comb_3|dout ; --         ; SW[3]    ; 0            ;
+; Clock Setup: 'SW[3]'         ; N/A   ; None          ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[3]      ; SW[3]    ; 0            ;
+; Clock Setup: 'SW[2]'         ; N/A   ; None          ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[2]      ; SW[2]    ; 0            ;
+; Clock Setup: 'SW[1]'         ; N/A   ; None          ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[1]      ; SW[1]    ; 0            ;
+; Clock Setup: 'SW[0]'         ; N/A   ; None          ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]      ; SW[0]    ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                                     ;                                     ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; SW[0]           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; SW[3]           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; SW[1]           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; SW[2]           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'SW[0]'                                                                                                                                                                                                                           ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                ; To                                  ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]      ; SW[0]    ; None                        ; None                      ; 1.507 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]      ; SW[0]    ; None                        ; None                      ; 1.467 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]      ; SW[0]    ; None                        ; None                      ; 1.418 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]      ; SW[0]    ; None                        ; None                      ; 1.356 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]      ; SW[0]    ; None                        ; None                      ; 1.356 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]      ; SW[0]    ; None                        ; None                      ; 1.296 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]      ; SW[0]    ; None                        ; None                      ; 1.097 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]      ; SW[0]    ; None                        ; None                      ; 1.096 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]      ; SW[0]    ; None                        ; None                      ; 0.960 ns                ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'SW[3]'                                                                                                                                                                                                                           ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                ; To                                  ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[3]      ; SW[3]    ; None                        ; None                      ; 1.507 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[3]      ; SW[3]    ; None                        ; None                      ; 1.467 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[3]      ; SW[3]    ; None                        ; None                      ; 1.418 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[3]      ; SW[3]    ; None                        ; None                      ; 1.356 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[3]      ; SW[3]    ; None                        ; None                      ; 1.356 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[3]      ; SW[3]    ; None                        ; None                      ; 1.296 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[3]      ; SW[3]    ; None                        ; None                      ; 1.097 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[3]      ; SW[3]    ; None                        ; None                      ; 1.096 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[3]      ; SW[3]    ; None                        ; None                      ; 0.960 ns                ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'SW[1]'                                                                                                                                                                                                                           ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                ; To                                  ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[1]      ; SW[1]    ; None                        ; None                      ; 1.507 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[1]      ; SW[1]    ; None                        ; None                      ; 1.467 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[1]      ; SW[1]    ; None                        ; None                      ; 1.418 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[1]      ; SW[1]    ; None                        ; None                      ; 1.356 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[1]      ; SW[1]    ; None                        ; None                      ; 1.356 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[1]      ; SW[1]    ; None                        ; None                      ; 1.296 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[1]      ; SW[1]    ; None                        ; None                      ; 1.097 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[1]      ; SW[1]    ; None                        ; None                      ; 1.096 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[1]      ; SW[1]    ; None                        ; None                      ; 0.960 ns                ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'SW[2]'                                                                                                                                                                                                                           ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                ; To                                  ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[2]      ; SW[2]    ; None                        ; None                      ; 1.507 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[2]      ; SW[2]    ; None                        ; None                      ; 1.467 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[2]      ; SW[2]    ; None                        ; None                      ; 1.418 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[2]      ; SW[2]    ; None                        ; None                      ; 1.356 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[2]      ; SW[2]    ; None                        ; None                      ; 1.356 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[2]      ; SW[2]    ; None                        ; None                      ; 1.296 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[2]      ; SW[2]    ; None                        ; None                      ; 1.097 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[2]      ; SW[2]    ; None                        ; None                      ; 1.096 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[2]      ; SW[2]    ; None                        ; None                      ; 0.960 ns                ;
++-------+------------------------------------------------+-------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; tsu                                                                                        ;
++-------+--------------+------------+-------+-------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From  ; To                                  ; To Clock ;
++-------+--------------+------------+-------+-------------------------------------+----------+
+; N/A   ; None         ; 2.393 ns   ; SW[2] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]    ;
+; N/A   ; None         ; 2.239 ns   ; SW[2] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]    ;
+; N/A   ; None         ; 2.139 ns   ; SW[2] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[1]    ;
+; N/A   ; None         ; 2.066 ns   ; SW[1] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]    ;
+; N/A   ; None         ; 1.987 ns   ; SW[2] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]    ;
+; N/A   ; None         ; 1.985 ns   ; SW[2] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[1]    ;
+; N/A   ; None         ; 1.812 ns   ; SW[1] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[1]    ;
+; N/A   ; None         ; 1.773 ns   ; SW[2] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[2]    ;
+; N/A   ; None         ; 1.755 ns   ; SW[1] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]    ;
+; N/A   ; None         ; 1.733 ns   ; SW[2] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[1]    ;
+; N/A   ; None         ; 1.675 ns   ; SW[1] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]    ;
+; N/A   ; None         ; 1.622 ns   ; SW[4] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]    ;
+; N/A   ; None         ; 1.619 ns   ; SW[2] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[2]    ;
+; N/A   ; None         ; 1.619 ns   ; SW[4] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]    ;
+; N/A   ; None         ; 1.618 ns   ; SW[4] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]    ;
+; N/A   ; None         ; 1.521 ns   ; SW[2] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[3]    ;
+; N/A   ; None         ; 1.501 ns   ; SW[1] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[1]    ;
+; N/A   ; None         ; 1.446 ns   ; SW[1] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[2]    ;
+; N/A   ; None         ; 1.421 ns   ; SW[1] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[1]    ;
+; N/A   ; None         ; 1.368 ns   ; SW[4] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[1]    ;
+; N/A   ; None         ; 1.367 ns   ; SW[2] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[2]    ;
+; N/A   ; None         ; 1.367 ns   ; SW[2] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[3]    ;
+; N/A   ; None         ; 1.365 ns   ; SW[4] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[1]    ;
+; N/A   ; None         ; 1.364 ns   ; SW[4] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[1]    ;
+; N/A   ; None         ; 1.194 ns   ; SW[1] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[3]    ;
+; N/A   ; None         ; 1.135 ns   ; SW[1] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[2]    ;
+; N/A   ; None         ; 1.115 ns   ; SW[2] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[3]    ;
+; N/A   ; None         ; 1.055 ns   ; SW[1] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[2]    ;
+; N/A   ; None         ; 1.002 ns   ; SW[4] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[2]    ;
+; N/A   ; None         ; 0.999 ns   ; SW[4] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[2]    ;
+; N/A   ; None         ; 0.998 ns   ; SW[4] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[2]    ;
+; N/A   ; None         ; 0.883 ns   ; SW[1] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[3]    ;
+; N/A   ; None         ; 0.803 ns   ; SW[1] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[3]    ;
+; N/A   ; None         ; 0.750 ns   ; SW[4] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[3]    ;
+; N/A   ; None         ; 0.747 ns   ; SW[4] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[3]    ;
+; N/A   ; None         ; 0.746 ns   ; SW[4] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[3]    ;
+; N/A   ; None         ; -1.540 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]    ;
+; N/A   ; None         ; -1.794 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[1]    ;
+; N/A   ; None         ; -1.904 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]    ;
+; N/A   ; None         ; -1.913 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]    ;
+; N/A   ; None         ; -2.158 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[1]    ;
+; N/A   ; None         ; -2.160 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[2]    ;
+; N/A   ; None         ; -2.167 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[1]    ;
+; N/A   ; None         ; -2.412 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[3]    ;
+; N/A   ; None         ; -2.524 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[2]    ;
+; N/A   ; None         ; -2.533 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[2]    ;
+; N/A   ; None         ; -2.776 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[3]    ;
+; N/A   ; None         ; -2.785 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[3]    ;
++-------+--------------+------------+-------+-------------------------------------+----------+
+
+
++------------------------------------------------------------------------------------------------+
+; tco                                                                                            ;
++-------+--------------+------------+-------------------------------------+---------+------------+
+; Slack ; Required tco ; Actual tco ; From                                ; To      ; From Clock ;
++-------+--------------+------------+-------------------------------------+---------+------------+
+; N/A   ; None         ; 13.528 ns  ; dffs:comb_7|d_flip_flop:comb_5|dout ; HEX1[6] ; SW[3]      ;
+; N/A   ; None         ; 13.469 ns  ; dffs:comb_7|d_flip_flop:comb_3|dout ; HEX1[6] ; SW[3]      ;
+; N/A   ; None         ; 13.276 ns  ; dffs:comb_7|d_flip_flop:comb_5|dout ; HEX1[6] ; SW[2]      ;
+; N/A   ; None         ; 13.217 ns  ; dffs:comb_7|d_flip_flop:comb_3|dout ; HEX1[6] ; SW[2]      ;
+; N/A   ; None         ; 13.188 ns  ; dffs:comb_7|d_flip_flop:comb_4|dout ; HEX1[6] ; SW[3]      ;
+; N/A   ; None         ; 12.936 ns  ; dffs:comb_7|d_flip_flop:comb_4|dout ; HEX1[6] ; SW[2]      ;
+; N/A   ; None         ; 12.910 ns  ; dffs:comb_7|d_flip_flop:comb_5|dout ; HEX1[6] ; SW[1]      ;
+; N/A   ; None         ; 12.851 ns  ; dffs:comb_7|d_flip_flop:comb_3|dout ; HEX1[6] ; SW[1]      ;
+; N/A   ; None         ; 12.656 ns  ; dffs:comb_7|d_flip_flop:comb_5|dout ; HEX1[6] ; SW[0]      ;
+; N/A   ; None         ; 12.597 ns  ; dffs:comb_7|d_flip_flop:comb_3|dout ; HEX1[6] ; SW[0]      ;
+; N/A   ; None         ; 12.570 ns  ; dffs:comb_7|d_flip_flop:comb_4|dout ; HEX1[6] ; SW[1]      ;
+; N/A   ; None         ; 12.316 ns  ; dffs:comb_7|d_flip_flop:comb_4|dout ; HEX1[6] ; SW[0]      ;
+; N/A   ; None         ; 10.643 ns  ; dffs:comb_7|d_flip_flop:comb_5|dout ; HEX0[6] ; SW[3]      ;
+; N/A   ; None         ; 10.566 ns  ; dffs:comb_7|d_flip_flop:comb_3|dout ; HEX0[6] ; SW[3]      ;
+; N/A   ; None         ; 10.532 ns  ; dffs:comb_7|d_flip_flop:comb_5|dout ; HEX7[6] ; SW[3]      ;
+; N/A   ; None         ; 10.442 ns  ; dffs:comb_7|d_flip_flop:comb_3|dout ; HEX7[6] ; SW[3]      ;
+; N/A   ; None         ; 10.391 ns  ; dffs:comb_7|d_flip_flop:comb_5|dout ; HEX0[6] ; SW[2]      ;
+; N/A   ; None         ; 10.314 ns  ; dffs:comb_7|d_flip_flop:comb_3|dout ; HEX0[6] ; SW[2]      ;
+; N/A   ; None         ; 10.280 ns  ; dffs:comb_7|d_flip_flop:comb_5|dout ; HEX7[6] ; SW[2]      ;
+; N/A   ; None         ; 10.275 ns  ; dffs:comb_7|d_flip_flop:comb_4|dout ; HEX0[6] ; SW[3]      ;
+; N/A   ; None         ; 10.190 ns  ; dffs:comb_7|d_flip_flop:comb_3|dout ; HEX7[6] ; SW[2]      ;
+; N/A   ; None         ; 10.161 ns  ; dffs:comb_7|d_flip_flop:comb_4|dout ; HEX7[6] ; SW[3]      ;
+; N/A   ; None         ; 10.025 ns  ; dffs:comb_7|d_flip_flop:comb_5|dout ; HEX0[6] ; SW[1]      ;
+; N/A   ; None         ; 10.023 ns  ; dffs:comb_7|d_flip_flop:comb_4|dout ; HEX0[6] ; SW[2]      ;
+; N/A   ; None         ; 9.948 ns   ; dffs:comb_7|d_flip_flop:comb_3|dout ; HEX0[6] ; SW[1]      ;
+; N/A   ; None         ; 9.914 ns   ; dffs:comb_7|d_flip_flop:comb_5|dout ; HEX7[6] ; SW[1]      ;
+; N/A   ; None         ; 9.909 ns   ; dffs:comb_7|d_flip_flop:comb_4|dout ; HEX7[6] ; SW[2]      ;
+; N/A   ; None         ; 9.824 ns   ; dffs:comb_7|d_flip_flop:comb_3|dout ; HEX7[6] ; SW[1]      ;
+; N/A   ; None         ; 9.771 ns   ; dffs:comb_7|d_flip_flop:comb_5|dout ; HEX0[6] ; SW[0]      ;
+; N/A   ; None         ; 9.694 ns   ; dffs:comb_7|d_flip_flop:comb_3|dout ; HEX0[6] ; SW[0]      ;
+; N/A   ; None         ; 9.660 ns   ; dffs:comb_7|d_flip_flop:comb_5|dout ; HEX7[6] ; SW[0]      ;
+; N/A   ; None         ; 9.657 ns   ; dffs:comb_7|d_flip_flop:comb_4|dout ; HEX0[6] ; SW[1]      ;
+; N/A   ; None         ; 9.570 ns   ; dffs:comb_7|d_flip_flop:comb_3|dout ; HEX7[6] ; SW[0]      ;
+; N/A   ; None         ; 9.543 ns   ; dffs:comb_7|d_flip_flop:comb_4|dout ; HEX7[6] ; SW[1]      ;
+; N/A   ; None         ; 9.403 ns   ; dffs:comb_7|d_flip_flop:comb_4|dout ; HEX0[6] ; SW[0]      ;
+; N/A   ; None         ; 9.289 ns   ; dffs:comb_7|d_flip_flop:comb_4|dout ; HEX7[6] ; SW[0]      ;
++-------+--------------+------------+-------------------------------------+---------+------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; th                                                                                               ;
++---------------+-------------+-----------+-------+-------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From  ; To                                  ; To Clock ;
++---------------+-------------+-----------+-------+-------------------------------------+----------+
+; N/A           ; None        ; 3.015 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[3]    ;
+; N/A           ; None        ; 3.006 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[3]    ;
+; N/A           ; None        ; 2.763 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[2]    ;
+; N/A           ; None        ; 2.754 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[2]    ;
+; N/A           ; None        ; 2.642 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[3]    ;
+; N/A           ; None        ; 2.397 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[1]    ;
+; N/A           ; None        ; 2.390 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[2]    ;
+; N/A           ; None        ; 2.388 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[1]    ;
+; N/A           ; None        ; 2.143 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]    ;
+; N/A           ; None        ; 2.134 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]    ;
+; N/A           ; None        ; 2.024 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[1]    ;
+; N/A           ; None        ; 1.770 ns  ; SW[3] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]    ;
+; N/A           ; None        ; -0.516 ns ; SW[4] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[3]    ;
+; N/A           ; None        ; -0.517 ns ; SW[4] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[3]    ;
+; N/A           ; None        ; -0.520 ns ; SW[4] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[3]    ;
+; N/A           ; None        ; -0.526 ns ; SW[1] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[3]    ;
+; N/A           ; None        ; -0.527 ns ; SW[1] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[3]    ;
+; N/A           ; None        ; -0.573 ns ; SW[1] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[3]    ;
+; N/A           ; None        ; -0.705 ns ; SW[2] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[3]    ;
+; N/A           ; None        ; -0.768 ns ; SW[4] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[2]    ;
+; N/A           ; None        ; -0.769 ns ; SW[4] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[2]    ;
+; N/A           ; None        ; -0.772 ns ; SW[4] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[2]    ;
+; N/A           ; None        ; -0.778 ns ; SW[1] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[2]    ;
+; N/A           ; None        ; -0.779 ns ; SW[1] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[2]    ;
+; N/A           ; None        ; -0.825 ns ; SW[1] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[2]    ;
+; N/A           ; None        ; -0.957 ns ; SW[2] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[2]    ;
+; N/A           ; None        ; -1.134 ns ; SW[4] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[1]    ;
+; N/A           ; None        ; -1.135 ns ; SW[4] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[1]    ;
+; N/A           ; None        ; -1.137 ns ; SW[2] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[3]    ;
+; N/A           ; None        ; -1.138 ns ; SW[4] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[1]    ;
+; N/A           ; None        ; -1.144 ns ; SW[1] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[1]    ;
+; N/A           ; None        ; -1.145 ns ; SW[1] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[1]    ;
+; N/A           ; None        ; -1.191 ns ; SW[1] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[1]    ;
+; N/A           ; None        ; -1.291 ns ; SW[2] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[3]    ;
+; N/A           ; None        ; -1.323 ns ; SW[2] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[1]    ;
+; N/A           ; None        ; -1.388 ns ; SW[4] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]    ;
+; N/A           ; None        ; -1.389 ns ; SW[2] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[2]    ;
+; N/A           ; None        ; -1.389 ns ; SW[4] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]    ;
+; N/A           ; None        ; -1.392 ns ; SW[4] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]    ;
+; N/A           ; None        ; -1.398 ns ; SW[1] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]    ;
+; N/A           ; None        ; -1.399 ns ; SW[1] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]    ;
+; N/A           ; None        ; -1.445 ns ; SW[1] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]    ;
+; N/A           ; None        ; -1.543 ns ; SW[2] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[2]    ;
+; N/A           ; None        ; -1.577 ns ; SW[2] ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]    ;
+; N/A           ; None        ; -1.755 ns ; SW[2] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[1]    ;
+; N/A           ; None        ; -1.909 ns ; SW[2] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[1]    ;
+; N/A           ; None        ; -2.009 ns ; SW[2] ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]    ;
+; N/A           ; None        ; -2.163 ns ; SW[2] ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]    ;
++---------------+-------------+-----------+-------+-------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Apr 30 11:31:04 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off finalTermProject -c finalTermProject --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "SW[0]" is an undefined clock
+    Info: Assuming node "SW[3]" is an undefined clock
+    Info: Assuming node "SW[1]" is an undefined clock
+    Info: Assuming node "SW[2]" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "input_pulse:comb_3|pulse" as buffer
+Info: Clock "SW[0]" Internal fmax is restricted to 450.05 MHz between source register "dffs:comb_7|d_flip_flop:comb_4|dout" and destination register "dffs:comb_7|d_flip_flop:comb_5|dout"
+    Info: fmax restricted to clock pin edge rate 2.222 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.507 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X5_Y35_N9; Fanout = 6; REG Node = 'dffs:comb_7|d_flip_flop:comb_4|dout'
+            Info: 2: + IC(0.345 ns) + CELL(0.275 ns) = 0.620 ns; Loc. = LCCOMB_X5_Y35_N26; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~0'
+            Info: 3: + IC(0.251 ns) + CELL(0.150 ns) = 1.021 ns; Loc. = LCCOMB_X5_Y35_N30; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~1'
+            Info: 4: + IC(0.252 ns) + CELL(0.150 ns) = 1.423 ns; Loc. = LCCOMB_X5_Y35_N0; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~2'
+            Info: 5: + IC(0.000 ns) + CELL(0.084 ns) = 1.507 ns; Loc. = LCFF_X5_Y35_N1; Fanout = 7; REG Node = 'dffs:comb_7|d_flip_flop:comb_5|dout'
+            Info: Total cell delay = 0.659 ns ( 43.73 % )
+            Info: Total interconnect delay = 0.848 ns ( 56.27 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "SW[0]" to destination register is 4.912 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.860 ns) = 0.860 ns; Loc. = PIN_D5; Fanout = 1; CLK Node = 'SW[0]'
+                Info: 2: + IC(0.944 ns) + CELL(0.149 ns) = 1.953 ns; Loc. = LCCOMB_X5_Y35_N24; Fanout = 1; COMB Node = 'input_pulse:comb_3|pulse'
+                Info: 3: + IC(1.398 ns) + CELL(0.000 ns) = 3.351 ns; Loc. = CLKCTRL_G10; Fanout = 3; COMB Node = 'input_pulse:comb_3|pulse~clkctrl'
+                Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 4.912 ns; Loc. = LCFF_X5_Y35_N1; Fanout = 7; REG Node = 'dffs:comb_7|d_flip_flop:comb_5|dout'
+                Info: Total cell delay = 1.546 ns ( 31.47 % )
+                Info: Total interconnect delay = 3.366 ns ( 68.53 % )
+            Info: - Longest clock path from clock "SW[0]" to source register is 4.912 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.860 ns) = 0.860 ns; Loc. = PIN_D5; Fanout = 1; CLK Node = 'SW[0]'
+                Info: 2: + IC(0.944 ns) + CELL(0.149 ns) = 1.953 ns; Loc. = LCCOMB_X5_Y35_N24; Fanout = 1; COMB Node = 'input_pulse:comb_3|pulse'
+                Info: 3: + IC(1.398 ns) + CELL(0.000 ns) = 3.351 ns; Loc. = CLKCTRL_G10; Fanout = 3; COMB Node = 'input_pulse:comb_3|pulse~clkctrl'
+                Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 4.912 ns; Loc. = LCFF_X5_Y35_N9; Fanout = 6; REG Node = 'dffs:comb_7|d_flip_flop:comb_4|dout'
+                Info: Total cell delay = 1.546 ns ( 31.47 % )
+                Info: Total interconnect delay = 3.366 ns ( 68.53 % )
+        Info: + Micro clock to output delay of source is 0.250 ns
+        Info: + Micro setup delay of destination is -0.036 ns
+Info: Clock "SW[3]" Internal fmax is restricted to 420.17 MHz between source register "dffs:comb_7|d_flip_flop:comb_4|dout" and destination register "dffs:comb_7|d_flip_flop:comb_5|dout"
+    Info: fmax restricted to clock pin edge rate 2.38 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.507 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X5_Y35_N9; Fanout = 6; REG Node = 'dffs:comb_7|d_flip_flop:comb_4|dout'
+            Info: 2: + IC(0.345 ns) + CELL(0.275 ns) = 0.620 ns; Loc. = LCCOMB_X5_Y35_N26; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~0'
+            Info: 3: + IC(0.251 ns) + CELL(0.150 ns) = 1.021 ns; Loc. = LCCOMB_X5_Y35_N30; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~1'
+            Info: 4: + IC(0.252 ns) + CELL(0.150 ns) = 1.423 ns; Loc. = LCCOMB_X5_Y35_N0; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~2'
+            Info: 5: + IC(0.000 ns) + CELL(0.084 ns) = 1.507 ns; Loc. = LCFF_X5_Y35_N1; Fanout = 7; REG Node = 'dffs:comb_7|d_flip_flop:comb_5|dout'
+            Info: Total cell delay = 0.659 ns ( 43.73 % )
+            Info: Total interconnect delay = 0.848 ns ( 56.27 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "SW[3]" to destination register is 5.784 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 4; CLK Node = 'SW[3]'
+                Info: 2: + IC(1.604 ns) + CELL(0.242 ns) = 2.825 ns; Loc. = LCCOMB_X5_Y35_N24; Fanout = 1; COMB Node = 'input_pulse:comb_3|pulse'
+                Info: 3: + IC(1.398 ns) + CELL(0.000 ns) = 4.223 ns; Loc. = CLKCTRL_G10; Fanout = 3; COMB Node = 'input_pulse:comb_3|pulse~clkctrl'
+                Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 5.784 ns; Loc. = LCFF_X5_Y35_N1; Fanout = 7; REG Node = 'dffs:comb_7|d_flip_flop:comb_5|dout'
+                Info: Total cell delay = 1.758 ns ( 30.39 % )
+                Info: Total interconnect delay = 4.026 ns ( 69.61 % )
+            Info: - Longest clock path from clock "SW[3]" to source register is 5.784 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 4; CLK Node = 'SW[3]'
+                Info: 2: + IC(1.604 ns) + CELL(0.242 ns) = 2.825 ns; Loc. = LCCOMB_X5_Y35_N24; Fanout = 1; COMB Node = 'input_pulse:comb_3|pulse'
+                Info: 3: + IC(1.398 ns) + CELL(0.000 ns) = 4.223 ns; Loc. = CLKCTRL_G10; Fanout = 3; COMB Node = 'input_pulse:comb_3|pulse~clkctrl'
+                Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 5.784 ns; Loc. = LCFF_X5_Y35_N9; Fanout = 6; REG Node = 'dffs:comb_7|d_flip_flop:comb_4|dout'
+                Info: Total cell delay = 1.758 ns ( 30.39 % )
+                Info: Total interconnect delay = 4.026 ns ( 69.61 % )
+        Info: + Micro clock to output delay of source is 0.250 ns
+        Info: + Micro setup delay of destination is -0.036 ns
+Info: Clock "SW[1]" Internal fmax is restricted to 450.05 MHz between source register "dffs:comb_7|d_flip_flop:comb_4|dout" and destination register "dffs:comb_7|d_flip_flop:comb_5|dout"
+    Info: fmax restricted to clock pin edge rate 2.222 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.507 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X5_Y35_N9; Fanout = 6; REG Node = 'dffs:comb_7|d_flip_flop:comb_4|dout'
+            Info: 2: + IC(0.345 ns) + CELL(0.275 ns) = 0.620 ns; Loc. = LCCOMB_X5_Y35_N26; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~0'
+            Info: 3: + IC(0.251 ns) + CELL(0.150 ns) = 1.021 ns; Loc. = LCCOMB_X5_Y35_N30; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~1'
+            Info: 4: + IC(0.252 ns) + CELL(0.150 ns) = 1.423 ns; Loc. = LCCOMB_X5_Y35_N0; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~2'
+            Info: 5: + IC(0.000 ns) + CELL(0.084 ns) = 1.507 ns; Loc. = LCFF_X5_Y35_N1; Fanout = 7; REG Node = 'dffs:comb_7|d_flip_flop:comb_5|dout'
+            Info: Total cell delay = 0.659 ns ( 43.73 % )
+            Info: Total interconnect delay = 0.848 ns ( 56.27 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "SW[1]" to destination register is 5.166 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.840 ns) = 0.840 ns; Loc. = PIN_K9; Fanout = 6; CLK Node = 'SW[1]'
+                Info: 2: + IC(0.947 ns) + CELL(0.420 ns) = 2.207 ns; Loc. = LCCOMB_X5_Y35_N24; Fanout = 1; COMB Node = 'input_pulse:comb_3|pulse'
+                Info: 3: + IC(1.398 ns) + CELL(0.000 ns) = 3.605 ns; Loc. = CLKCTRL_G10; Fanout = 3; COMB Node = 'input_pulse:comb_3|pulse~clkctrl'
+                Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 5.166 ns; Loc. = LCFF_X5_Y35_N1; Fanout = 7; REG Node = 'dffs:comb_7|d_flip_flop:comb_5|dout'
+                Info: Total cell delay = 1.797 ns ( 34.79 % )
+                Info: Total interconnect delay = 3.369 ns ( 65.21 % )
+            Info: - Longest clock path from clock "SW[1]" to source register is 5.166 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.840 ns) = 0.840 ns; Loc. = PIN_K9; Fanout = 6; CLK Node = 'SW[1]'
+                Info: 2: + IC(0.947 ns) + CELL(0.420 ns) = 2.207 ns; Loc. = LCCOMB_X5_Y35_N24; Fanout = 1; COMB Node = 'input_pulse:comb_3|pulse'
+                Info: 3: + IC(1.398 ns) + CELL(0.000 ns) = 3.605 ns; Loc. = CLKCTRL_G10; Fanout = 3; COMB Node = 'input_pulse:comb_3|pulse~clkctrl'
+                Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 5.166 ns; Loc. = LCFF_X5_Y35_N9; Fanout = 6; REG Node = 'dffs:comb_7|d_flip_flop:comb_4|dout'
+                Info: Total cell delay = 1.797 ns ( 34.79 % )
+                Info: Total interconnect delay = 3.369 ns ( 65.21 % )
+        Info: + Micro clock to output delay of source is 0.250 ns
+        Info: + Micro setup delay of destination is -0.036 ns
+Info: Clock "SW[2]" Internal fmax is restricted to 450.05 MHz between source register "dffs:comb_7|d_flip_flop:comb_4|dout" and destination register "dffs:comb_7|d_flip_flop:comb_5|dout"
+    Info: fmax restricted to clock pin edge rate 2.222 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.507 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X5_Y35_N9; Fanout = 6; REG Node = 'dffs:comb_7|d_flip_flop:comb_4|dout'
+            Info: 2: + IC(0.345 ns) + CELL(0.275 ns) = 0.620 ns; Loc. = LCCOMB_X5_Y35_N26; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~0'
+            Info: 3: + IC(0.251 ns) + CELL(0.150 ns) = 1.021 ns; Loc. = LCCOMB_X5_Y35_N30; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~1'
+            Info: 4: + IC(0.252 ns) + CELL(0.150 ns) = 1.423 ns; Loc. = LCCOMB_X5_Y35_N0; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~2'
+            Info: 5: + IC(0.000 ns) + CELL(0.084 ns) = 1.507 ns; Loc. = LCFF_X5_Y35_N1; Fanout = 7; REG Node = 'dffs:comb_7|d_flip_flop:comb_5|dout'
+            Info: Total cell delay = 0.659 ns ( 43.73 % )
+            Info: Total interconnect delay = 0.848 ns ( 56.27 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "SW[2]" to destination register is 5.532 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_E5; Fanout = 5; CLK Node = 'SW[2]'
+                Info: 2: + IC(1.293 ns) + CELL(0.438 ns) = 2.573 ns; Loc. = LCCOMB_X5_Y35_N24; Fanout = 1; COMB Node = 'input_pulse:comb_3|pulse'
+                Info: 3: + IC(1.398 ns) + CELL(0.000 ns) = 3.971 ns; Loc. = CLKCTRL_G10; Fanout = 3; COMB Node = 'input_pulse:comb_3|pulse~clkctrl'
+                Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 5.532 ns; Loc. = LCFF_X5_Y35_N1; Fanout = 7; REG Node = 'dffs:comb_7|d_flip_flop:comb_5|dout'
+                Info: Total cell delay = 1.817 ns ( 32.85 % )
+                Info: Total interconnect delay = 3.715 ns ( 67.15 % )
+            Info: - Longest clock path from clock "SW[2]" to source register is 5.532 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_E5; Fanout = 5; CLK Node = 'SW[2]'
+                Info: 2: + IC(1.293 ns) + CELL(0.438 ns) = 2.573 ns; Loc. = LCCOMB_X5_Y35_N24; Fanout = 1; COMB Node = 'input_pulse:comb_3|pulse'
+                Info: 3: + IC(1.398 ns) + CELL(0.000 ns) = 3.971 ns; Loc. = CLKCTRL_G10; Fanout = 3; COMB Node = 'input_pulse:comb_3|pulse~clkctrl'
+                Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 5.532 ns; Loc. = LCFF_X5_Y35_N9; Fanout = 6; REG Node = 'dffs:comb_7|d_flip_flop:comb_4|dout'
+                Info: Total cell delay = 1.817 ns ( 32.85 % )
+                Info: Total interconnect delay = 3.715 ns ( 67.15 % )
+        Info: + Micro clock to output delay of source is 0.250 ns
+        Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "dffs:comb_7|d_flip_flop:comb_5|dout" (data pin = "SW[2]", clock pin = "SW[0]") is 2.393 ns
+    Info: + Longest pin to register delay is 7.341 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_E5; Fanout = 5; CLK Node = 'SW[2]'
+        Info: 2: + IC(5.193 ns) + CELL(0.419 ns) = 6.454 ns; Loc. = LCCOMB_X5_Y35_N26; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~0'
+        Info: 3: + IC(0.251 ns) + CELL(0.150 ns) = 6.855 ns; Loc. = LCCOMB_X5_Y35_N30; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~1'
+        Info: 4: + IC(0.252 ns) + CELL(0.150 ns) = 7.257 ns; Loc. = LCCOMB_X5_Y35_N0; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_5|dout~2'
+        Info: 5: + IC(0.000 ns) + CELL(0.084 ns) = 7.341 ns; Loc. = LCFF_X5_Y35_N1; Fanout = 7; REG Node = 'dffs:comb_7|d_flip_flop:comb_5|dout'
+        Info: Total cell delay = 1.645 ns ( 22.41 % )
+        Info: Total interconnect delay = 5.696 ns ( 77.59 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "SW[0]" to destination register is 4.912 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.860 ns) = 0.860 ns; Loc. = PIN_D5; Fanout = 1; CLK Node = 'SW[0]'
+        Info: 2: + IC(0.944 ns) + CELL(0.149 ns) = 1.953 ns; Loc. = LCCOMB_X5_Y35_N24; Fanout = 1; COMB Node = 'input_pulse:comb_3|pulse'
+        Info: 3: + IC(1.398 ns) + CELL(0.000 ns) = 3.351 ns; Loc. = CLKCTRL_G10; Fanout = 3; COMB Node = 'input_pulse:comb_3|pulse~clkctrl'
+        Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 4.912 ns; Loc. = LCFF_X5_Y35_N1; Fanout = 7; REG Node = 'dffs:comb_7|d_flip_flop:comb_5|dout'
+        Info: Total cell delay = 1.546 ns ( 31.47 % )
+        Info: Total interconnect delay = 3.366 ns ( 68.53 % )
+Info: tco from clock "SW[3]" to destination pin "HEX1[6]" through register "dffs:comb_7|d_flip_flop:comb_5|dout" is 13.528 ns
+    Info: + Longest clock path from clock "SW[3]" to source register is 5.784 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 4; CLK Node = 'SW[3]'
+        Info: 2: + IC(1.604 ns) + CELL(0.242 ns) = 2.825 ns; Loc. = LCCOMB_X5_Y35_N24; Fanout = 1; COMB Node = 'input_pulse:comb_3|pulse'
+        Info: 3: + IC(1.398 ns) + CELL(0.000 ns) = 4.223 ns; Loc. = CLKCTRL_G10; Fanout = 3; COMB Node = 'input_pulse:comb_3|pulse~clkctrl'
+        Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 5.784 ns; Loc. = LCFF_X5_Y35_N1; Fanout = 7; REG Node = 'dffs:comb_7|d_flip_flop:comb_5|dout'
+        Info: Total cell delay = 1.758 ns ( 30.39 % )
+        Info: Total interconnect delay = 4.026 ns ( 69.61 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 7.494 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X5_Y35_N1; Fanout = 7; REG Node = 'dffs:comb_7|d_flip_flop:comb_5|dout'
+        Info: 2: + IC(0.552 ns) + CELL(0.408 ns) = 0.960 ns; Loc. = LCCOMB_X5_Y35_N22; Fanout = 1; COMB Node = 'print:comb_8|Decoder0~0'
+        Info: 3: + IC(3.716 ns) + CELL(2.818 ns) = 7.494 ns; Loc. = PIN_AE5; Fanout = 0; PIN Node = 'HEX1[6]'
+        Info: Total cell delay = 3.226 ns ( 43.05 % )
+        Info: Total interconnect delay = 4.268 ns ( 56.95 % )
+Info: th for register "dffs:comb_7|d_flip_flop:comb_3|dout" (data pin = "SW[3]", clock pin = "SW[3]") is 3.015 ns
+    Info: + Longest clock path from clock "SW[3]" to destination register is 5.784 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 4; CLK Node = 'SW[3]'
+        Info: 2: + IC(1.604 ns) + CELL(0.242 ns) = 2.825 ns; Loc. = LCCOMB_X5_Y35_N24; Fanout = 1; COMB Node = 'input_pulse:comb_3|pulse'
+        Info: 3: + IC(1.398 ns) + CELL(0.000 ns) = 4.223 ns; Loc. = CLKCTRL_G10; Fanout = 3; COMB Node = 'input_pulse:comb_3|pulse~clkctrl'
+        Info: 4: + IC(1.024 ns) + CELL(0.537 ns) = 5.784 ns; Loc. = LCFF_X5_Y35_N29; Fanout = 8; REG Node = 'dffs:comb_7|d_flip_flop:comb_3|dout'
+        Info: Total cell delay = 1.758 ns ( 30.39 % )
+        Info: Total interconnect delay = 4.026 ns ( 69.61 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 3.035 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 4; CLK Node = 'SW[3]'
+        Info: 2: + IC(1.601 ns) + CELL(0.371 ns) = 2.951 ns; Loc. = LCCOMB_X5_Y35_N28; Fanout = 1; COMB Node = 'dffs:comb_7|d_flip_flop:comb_3|dout~2'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 3.035 ns; Loc. = LCFF_X5_Y35_N29; Fanout = 8; REG Node = 'dffs:comb_7|d_flip_flop:comb_3|dout'
+        Info: Total cell delay = 1.434 ns ( 47.25 % )
+        Info: Total interconnect delay = 1.601 ns ( 52.75 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 195 megabytes
+    Info: Processing ended: Tue Apr 30 11:31:05 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+

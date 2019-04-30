@@ -19,10 +19,12 @@ module finalTermProject(
 	clock_4(CLOCK_50,newClk_4);
 	
 	conventionalLogic(A,B,C,input_x,input_y, in_A,in_B,in_C);
-	
+	/*
 	d_flip_flop ( in_A ,pulse, SW[4], A);
 	d_flip_flop ( in_B ,pulse, SW[4], B);
 	d_flip_flop ( in_C ,pulse, SW[4], C);
+	*/
+	dffs(in_A,in_B,in_C,pulse,SW[4],A,B,C);
 	always@(*)
 	begin
 		case(pulse)
@@ -93,12 +95,12 @@ assign encodedOutput_0 = SW1|SW3;
 endmodule
 
 module conventionalLogic(
-input A,B,C,D,E,
-output a,b,c
+	input A, B, C, x, y,
+	output a, b, c
 );
-assign a = A&~D|A&~E|B&~D&E|B&C&~D|~B&C&D&~E|B&~C&D&~E;
-assign b =  A&D&E| ~A&~B&~D&E | ~A&~B&C&~D| B&~C&~D&~E | B&C&D&~E | ~A&~B&~C&D&~E;
-assign c = C&E | A&C | ~A&~C&~E | ~C&~D&~E | B&D&~E;
+assign a = A & ~x | A & ~y | B & ~x & y | B & C & ~x | ~B & C & x & ~y | B & ~C & x & ~y;
+assign b = A & x & y | ~A & ~B & ~x & y | ~A & ~B & C & ~x | B & ~C & ~x & ~y | B & C & x & ~y | ~A & ~B & ~C & x & ~y;
+assign c = C & y | A & C | ~A & ~C & ~y | ~C & ~x & ~y | B & x & ~y;
 endmodule
 
 module d_flip_flop ( input din ,input clk ,input reset ,output reg dout );
@@ -135,3 +137,12 @@ module clock_8(input clk, output newclk);
 	assign newclk = cnt[8];
 endmodule
 
+module dffs(
+input dinA, dinB, dinC, clk, reset,
+output doutA, doutB, doutC
+);
+d_flip_flop ( dinA ,clk , reset ,doutA );
+d_flip_flop ( dinB ,clk , reset ,doutB );
+d_flip_flop ( dinC ,clk , reset ,doutC );
+
+endmodule

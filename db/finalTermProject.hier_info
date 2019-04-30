@@ -3,7 +3,7 @@ SW[0] => SW[0].IN2
 SW[1] => SW[1].IN2
 SW[2] => SW[2].IN2
 SW[3] => SW[3].IN2
-SW[4] => SW[4].IN3
+SW[4] => SW[4].IN1
 CLOCK_50 => CLOCK_50.IN1
 HEX3[6] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
 HEX3[5] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
@@ -111,52 +111,63 @@ C => a.IN1
 C => b.IN1
 C => c.IN0
 C => c.IN1
-D => a.IN1
-D => a.IN1
-D => b.IN1
-D => b.IN1
-D => b.IN1
-D => c.IN1
-D => a.IN1
-D => a.IN1
-D => a.IN1
-D => b.IN1
-D => b.IN1
-D => b.IN1
-D => c.IN1
-E => a.IN1
-E => b.IN1
-E => b.IN1
-E => c.IN1
-E => a.IN1
-E => a.IN1
-E => a.IN1
-E => b.IN1
-E => b.IN1
-E => b.IN1
-E => c.IN1
-E => c.IN1
-E => c.IN1
+x => a.IN1
+x => a.IN1
+x => b.IN1
+x => b.IN1
+x => b.IN1
+x => c.IN1
+x => a.IN1
+x => a.IN1
+x => a.IN1
+x => b.IN1
+x => b.IN1
+x => b.IN1
+x => c.IN1
+y => a.IN1
+y => b.IN1
+y => b.IN1
+y => c.IN1
+y => a.IN1
+y => a.IN1
+y => a.IN1
+y => b.IN1
+y => b.IN1
+y => b.IN1
+y => c.IN1
+y => c.IN1
+y => c.IN1
 a <= a.DB_MAX_OUTPUT_PORT_TYPE
 b <= b.DB_MAX_OUTPUT_PORT_TYPE
 c <= c.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|finalTermProject|d_flip_flop:comb_7
+|finalTermProject|dffs:comb_7
+dinA => dinA.IN1
+dinB => dinB.IN1
+dinC => dinC.IN1
+clk => clk.IN3
+reset => reset.IN3
+doutA <= d_flip_flop:comb_3.port3
+doutB <= d_flip_flop:comb_4.port3
+doutC <= d_flip_flop:comb_5.port3
+
+
+|finalTermProject|dffs:comb_7|d_flip_flop:comb_3
 din => dout.DATAA
 clk => dout~reg0.CLK
 reset => dout.OUTPUTSELECT
 dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|finalTermProject|d_flip_flop:comb_8
+|finalTermProject|dffs:comb_7|d_flip_flop:comb_4
 din => dout.DATAA
 clk => dout~reg0.CLK
 reset => dout.OUTPUTSELECT
 dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|finalTermProject|d_flip_flop:comb_9
+|finalTermProject|dffs:comb_7|d_flip_flop:comb_5
 din => dout.DATAA
 clk => dout~reg0.CLK
 reset => dout.OUTPUTSELECT

@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for finalTermProject
-Mon Apr 29 22:19:09 2019
+Tue Apr 30 15:39:53 2019
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -178,74 +178,74 @@ No paths to report.
 +-------+--------+----------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup: 'SW[0]'                                                                                             ;
-+--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; -1.045 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.964      ;
-; -0.972 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.891      ;
-; -0.858 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.777      ;
-; -0.839 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.758      ;
-; -0.778 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.697      ;
-; -0.778 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.697      ;
-; -0.693 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.612      ;
-; -0.678 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.597      ;
-; 0.185  ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 0.734      ;
-+--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'SW[0]'                                                                                                                     ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.045 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.964      ;
+; -0.972 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.891      ;
+; -0.858 ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.777      ;
+; -0.839 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.758      ;
+; -0.778 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.697      ;
+; -0.778 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.697      ;
+; -0.693 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.612      ;
+; -0.678 ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 1.597      ;
+; 0.185  ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.079     ; 0.734      ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold: 'SW[0]'                                                                                             ;
-+-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; 0.384 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 0.669      ;
-; 0.384 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 0.669      ;
-; 0.907 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.192      ;
-; 1.125 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.410      ;
-; 1.127 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.412      ;
-; 1.226 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.511      ;
-; 1.312 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.597      ;
-; 1.440 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.725      ;
-; 1.512 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.797      ;
-+-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'SW[0]'                                                                                                                     ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.384 ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 0.669      ;
+; 0.384 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 0.669      ;
+; 0.907 ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.192      ;
+; 1.125 ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.410      ;
+; 1.127 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.412      ;
+; 1.226 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.511      ;
+; 1.312 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.597      ;
+; 1.440 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.725      ;
+; 1.512 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.079      ; 1.797      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Minimum Pulse Width: 'SW[0]'                                                             ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                        ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------+
-; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; SW[0] ; Rise       ; SW[0]                         ;
-; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; 0.228  ; 0.416        ; 0.188          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; 0.228  ; 0.416        ; 0.188          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; 0.228  ; 0.416        ; 0.188          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; 0.363  ; 0.583        ; 0.220          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; 0.363  ; 0.583        ; 0.220          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; 0.363  ; 0.583        ; 0.220          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; 0.379  ; 0.379        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
-; 0.379  ; 0.379        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
-; 0.381  ; 0.381        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|dout|clk               ;
-; 0.381  ; 0.381        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_8|dout|clk               ;
-; 0.381  ; 0.381        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_9|dout|clk               ;
-; 0.395  ; 0.395        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|o                 ;
-; 0.419  ; 0.419        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
-; 0.448  ; 0.448        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|i                 ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|i                 ;
-; 0.550  ; 0.550        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
-; 0.580  ; 0.580        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
-; 0.605  ; 0.605        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|o                 ;
-; 0.619  ; 0.619        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|dout|clk               ;
-; 0.619  ; 0.619        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_8|dout|clk               ;
-; 0.619  ; 0.619        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_9|dout|clk               ;
-; 0.620  ; 0.620        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
-; 0.620  ; 0.620        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'SW[0]'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; SW[0] ; Rise       ; SW[0]                               ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_3|dout ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_4|dout ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_5|dout ;
+; 0.228  ; 0.416        ; 0.188          ; Low Pulse Width  ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_3|dout ;
+; 0.228  ; 0.416        ; 0.188          ; Low Pulse Width  ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_4|dout ;
+; 0.228  ; 0.416        ; 0.188          ; Low Pulse Width  ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_5|dout ;
+; 0.363  ; 0.583        ; 0.220          ; High Pulse Width ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_3|dout ;
+; 0.363  ; 0.583        ; 0.220          ; High Pulse Width ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_4|dout ;
+; 0.363  ; 0.583        ; 0.220          ; High Pulse Width ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_5|dout ;
+; 0.379  ; 0.379        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0]       ;
+; 0.379  ; 0.379        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk         ;
+; 0.381  ; 0.381        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|comb_3|dout|clk              ;
+; 0.381  ; 0.381        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|comb_4|dout|clk              ;
+; 0.381  ; 0.381        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|comb_5|dout|clk              ;
+; 0.395  ; 0.395        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|o                       ;
+; 0.419  ; 0.419        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|datad                  ;
+; 0.448  ; 0.448        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|combout                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|i                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|i                       ;
+; 0.550  ; 0.550        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|combout                ;
+; 0.580  ; 0.580        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|datad                  ;
+; 0.605  ; 0.605        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|o                       ;
+; 0.619  ; 0.619        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|comb_3|dout|clk              ;
+; 0.619  ; 0.619        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|comb_4|dout|clk              ;
+; 0.619  ; 0.619        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|comb_5|dout|clk              ;
+; 0.620  ; 0.620        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0]       ;
+; 0.620  ; 0.620        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk         ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -469,74 +469,74 @@ No paths to report.
 +-------+--------+---------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup: 'SW[0]'                                                                                              ;
-+--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; -0.840 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.770      ;
-; -0.791 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.721      ;
-; -0.674 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.604      ;
-; -0.654 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.584      ;
-; -0.615 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.545      ;
-; -0.593 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.523      ;
-; -0.516 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.446      ;
-; -0.505 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.435      ;
-; 0.271  ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 0.659      ;
-+--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'SW[0]'                                                                                                                      ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.840 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.770      ;
+; -0.791 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.721      ;
+; -0.674 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.604      ;
+; -0.654 ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.584      ;
+; -0.615 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.545      ;
+; -0.593 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.523      ;
+; -0.516 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.446      ;
+; -0.505 ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 1.435      ;
+; 0.271  ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.069     ; 0.659      ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold: 'SW[0]'                                                                                              ;
-+-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; 0.337 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 0.597      ;
-; 0.337 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 0.597      ;
-; 0.838 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.098      ;
-; 1.010 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.270      ;
-; 1.013 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.273      ;
-; 1.104 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.364      ;
-; 1.185 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.445      ;
-; 1.299 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.559      ;
-; 1.364 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.624      ;
-+-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'SW[0]'                                                                                                                      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.337 ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 0.597      ;
+; 0.337 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 0.597      ;
+; 0.838 ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.098      ;
+; 1.010 ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.270      ;
+; 1.013 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.273      ;
+; 1.104 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.364      ;
+; 1.185 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.445      ;
+; 1.299 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.559      ;
+; 1.364 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.069      ; 1.624      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Minimum Pulse Width: 'SW[0]'                                                              ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                        ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------+
-; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; SW[0] ; Rise       ; SW[0]                         ;
-; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; 0.252  ; 0.470        ; 0.218          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; 0.252  ; 0.470        ; 0.218          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; 0.252  ; 0.470        ; 0.218          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; 0.340  ; 0.526        ; 0.186          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; 0.340  ; 0.526        ; 0.186          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; 0.340  ; 0.526        ; 0.186          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; 0.395  ; 0.395        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|o                 ;
-; 0.448  ; 0.448        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
-; 0.482  ; 0.482        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
-; 0.484  ; 0.484        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
-; 0.484  ; 0.484        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
-; 0.488  ; 0.488        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|dout|clk               ;
-; 0.488  ; 0.488        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_8|dout|clk               ;
-; 0.488  ; 0.488        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_9|dout|clk               ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|i                 ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|i                 ;
-; 0.510  ; 0.510        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|dout|clk               ;
-; 0.510  ; 0.510        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_8|dout|clk               ;
-; 0.510  ; 0.510        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_9|dout|clk               ;
-; 0.514  ; 0.514        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
-; 0.514  ; 0.514        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
-; 0.516  ; 0.516        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
-; 0.550  ; 0.550        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
-; 0.605  ; 0.605        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|o                 ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'SW[0]'                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; SW[0] ; Rise       ; SW[0]                               ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_3|dout ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_4|dout ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period       ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_5|dout ;
+; 0.252  ; 0.470        ; 0.218          ; High Pulse Width ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_3|dout ;
+; 0.252  ; 0.470        ; 0.218          ; High Pulse Width ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_4|dout ;
+; 0.252  ; 0.470        ; 0.218          ; High Pulse Width ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_5|dout ;
+; 0.340  ; 0.526        ; 0.186          ; Low Pulse Width  ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_3|dout ;
+; 0.340  ; 0.526        ; 0.186          ; Low Pulse Width  ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_4|dout ;
+; 0.340  ; 0.526        ; 0.186          ; Low Pulse Width  ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_5|dout ;
+; 0.395  ; 0.395        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|o                       ;
+; 0.448  ; 0.448        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|datad                  ;
+; 0.482  ; 0.482        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|combout                ;
+; 0.484  ; 0.484        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0]       ;
+; 0.484  ; 0.484        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk         ;
+; 0.488  ; 0.488        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|comb_3|dout|clk              ;
+; 0.488  ; 0.488        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|comb_4|dout|clk              ;
+; 0.488  ; 0.488        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|comb_5|dout|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|i                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|i                       ;
+; 0.510  ; 0.510        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|comb_3|dout|clk              ;
+; 0.510  ; 0.510        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|comb_4|dout|clk              ;
+; 0.510  ; 0.510        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|comb_5|dout|clk              ;
+; 0.514  ; 0.514        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0]       ;
+; 0.514  ; 0.514        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk         ;
+; 0.516  ; 0.516        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|combout                ;
+; 0.550  ; 0.550        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|datad                  ;
+; 0.605  ; 0.605        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|o                       ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -750,74 +750,74 @@ No paths to report.
 +-------+--------+---------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Setup: 'SW[0]'                                                                                              ;
-+--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; -0.006 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.953      ;
-; 0.018  ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.929      ;
-; 0.073  ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.874      ;
-; 0.074  ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.873      ;
-; 0.123  ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.824      ;
-; 0.142  ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.805      ;
-; 0.154  ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.793      ;
-; 0.176  ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.771      ;
-; 0.597  ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.350      ;
-+--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'SW[0]'                                                                                                                      ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.006 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.953      ;
+; 0.018  ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.929      ;
+; 0.073  ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.874      ;
+; 0.074  ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.873      ;
+; 0.123  ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.824      ;
+; 0.142  ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.805      ;
+; 0.154  ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.793      ;
+; 0.176  ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.771      ;
+; 0.597  ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 1.000        ; -0.040     ; 0.350      ;
++--------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold: 'SW[0]'                                                                                              ;
-+-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; 0.163 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.307      ;
-; 0.163 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.307      ;
-; 0.401 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.545      ;
-; 0.499 ; d_flip_flop:comb_7|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.643      ;
-; 0.502 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.646      ;
-; 0.547 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_8|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.691      ;
-; 0.597 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.741      ;
-; 0.634 ; d_flip_flop:comb_9|dout ; d_flip_flop:comb_7|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.778      ;
-; 0.671 ; d_flip_flop:comb_8|dout ; d_flip_flop:comb_9|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.815      ;
-+-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'SW[0]'                                                                                                                      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.163 ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.307      ;
+; 0.163 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.307      ;
+; 0.401 ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.545      ;
+; 0.499 ; dffs:comb_7|d_flip_flop:comb_3|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.643      ;
+; 0.502 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.646      ;
+; 0.547 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_4|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.691      ;
+; 0.597 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.741      ;
+; 0.634 ; dffs:comb_7|d_flip_flop:comb_5|dout ; dffs:comb_7|d_flip_flop:comb_3|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.778      ;
+; 0.671 ; dffs:comb_7|d_flip_flop:comb_4|dout ; dffs:comb_7|d_flip_flop:comb_5|dout ; SW[0]        ; SW[0]       ; 0.000        ; 0.040      ; 0.815      ;
++-------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Minimum Pulse Width: 'SW[0]'                                                              ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                        ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------+
-; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; SW[0] ; Rise       ; SW[0]                         ;
-; -1.000 ; 1.000        ; 2.000          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; -1.000 ; 1.000        ; 2.000          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; -1.000 ; 1.000        ; 2.000          ; Min Period       ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; -0.199 ; -0.015       ; 0.184          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; -0.199 ; -0.015       ; 0.184          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; -0.199 ; -0.015       ; 0.184          ; Low Pulse Width  ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; -0.019 ; -0.019       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|dout|clk               ;
-; -0.019 ; -0.019       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_8|dout|clk               ;
-; -0.019 ; -0.019       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_9|dout|clk               ;
-; -0.005 ; -0.005       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
-; -0.005 ; -0.005       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
-; 0.102  ; 0.102        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
-; 0.106  ; 0.106        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
-; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|o                 ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|i                 ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|i                 ;
-; 0.795  ; 1.011        ; 0.216          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_7|dout       ;
-; 0.795  ; 1.011        ; 0.216          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_8|dout       ;
-; 0.795  ; 1.011        ; 0.216          ; High Pulse Width ; SW[0] ; Rise       ; d_flip_flop:comb_9|dout       ;
-; 0.877  ; 0.877        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|o                 ;
-; 0.892  ; 0.892        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|combout          ;
-; 0.897  ; 0.897        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|datad            ;
-; 1.003  ; 1.003        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0] ;
-; 1.003  ; 1.003        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk   ;
-; 1.017  ; 1.017        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|dout|clk               ;
-; 1.017  ; 1.017        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_8|dout|clk               ;
-; 1.017  ; 1.017        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_9|dout|clk               ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'SW[0]'                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; SW[0] ; Rise       ; SW[0]                               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_3|dout ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_4|dout ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_5|dout ;
+; -0.199 ; -0.015       ; 0.184          ; Low Pulse Width  ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_3|dout ;
+; -0.199 ; -0.015       ; 0.184          ; Low Pulse Width  ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_4|dout ;
+; -0.199 ; -0.015       ; 0.184          ; Low Pulse Width  ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_5|dout ;
+; -0.019 ; -0.019       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|comb_3|dout|clk              ;
+; -0.019 ; -0.019       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|comb_4|dout|clk              ;
+; -0.019 ; -0.019       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_7|comb_5|dout|clk              ;
+; -0.005 ; -0.005       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0]       ;
+; -0.005 ; -0.005       ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk         ;
+; 0.102  ; 0.102        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|datad                  ;
+; 0.106  ; 0.106        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; comb_3|pulse|combout                ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|o                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|i                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[0] ; Rise       ; SW[0]~input|i                       ;
+; 0.795  ; 1.011        ; 0.216          ; High Pulse Width ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_3|dout ;
+; 0.795  ; 1.011        ; 0.216          ; High Pulse Width ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_4|dout ;
+; 0.795  ; 1.011        ; 0.216          ; High Pulse Width ; SW[0] ; Rise       ; dffs:comb_7|d_flip_flop:comb_5|dout ;
+; 0.877  ; 0.877        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; SW[0]~input|o                       ;
+; 0.892  ; 0.892        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|combout                ;
+; 0.897  ; 0.897        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse|datad                  ;
+; 1.003  ; 1.003        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|inclk[0]       ;
+; 1.003  ; 1.003        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_3|pulse~clkctrl|outclk         ;
+; 1.017  ; 1.017        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|comb_3|dout|clk              ;
+; 1.017  ; 1.017        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|comb_4|dout|clk              ;
+; 1.017  ; 1.017        ; 0.000          ; High Pulse Width ; SW[0] ; Rise       ; comb_7|comb_5|dout|clk              ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------+
 
 
 +------------------------------------------------------------------------+
@@ -1374,7 +1374,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II TimeQuest Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Apr 29 22:19:05 2019
+    Info: Processing started: Tue Apr 30 15:39:49 2019
 Info: Command: quartus_sta finalTermProject -c finalTermProject
 Info: qsta_default_script.tcl version: #1
 Info: Core supply voltage is 1.2V
@@ -1470,7 +1470,7 @@ Info: Design is not fully constrained for setup requirements
 Info: Design is not fully constrained for hold requirements
 Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 315 megabytes
-    Info: Processing ended: Mon Apr 29 22:19:09 2019
+    Info: Processing ended: Tue Apr 30 15:39:53 2019
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 

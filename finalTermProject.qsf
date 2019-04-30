@@ -45,13 +45,16 @@ set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name VERILOG_FILE main.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name MISC_FILE "C:/Users/kimha/Documents/KU/2_1/Á¤³í¼³/assignment#2/finalTermProject.dpf"
+set_global_assignment -name VECTOR_WAVEFORM_FILE finalTermProject.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE finalTermProject.vwf
+set_global_assignment -name SIMULATION_MODE TIMING
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_location_assignment PIN_D2 -to AUD_ADCDAT
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCDAT
 set_location_assignment PIN_C2 -to AUD_ADCLRCK

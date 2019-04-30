@@ -1,0 +1,263 @@
+Simulator report for finalTermProject
+Tue Apr 30 11:41:17 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 58 nodes     ;
+; Simulation Coverage         ;      29.82 % ;
+; Total Number of Transitions ; 1259         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                ;
++--------------------------------------------------------------------------------------------+----------------------+---------------+
+; Option                                                                                     ; Setting              ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------+---------------+
+; Simulation mode                                                                            ; Timing               ; Timing        ;
+; Start time                                                                                 ; 0 ns                 ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                 ;               ;
+; Vector input source                                                                        ; finalTermProject.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                   ; On            ;
+; Check outputs                                                                              ; Off                  ; Off           ;
+; Report simulation coverage                                                                 ; On                   ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                   ; On            ;
+; Display missing 1-value coverage report                                                    ; On                   ; On            ;
+; Display missing 0-value coverage report                                                    ; On                   ; On            ;
+; Detect setup and hold time violations                                                      ; Off                  ; Off           ;
+; Detect glitches                                                                            ; Off                  ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                  ; Off           ;
+; Generate Signal Activity File                                                              ; Off                  ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                  ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                  ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                   ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE           ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                  ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                  ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                 ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      29.82 % ;
+; Total nodes checked                                 ; 58           ;
+; Total output ports checked                          ; 57           ;
+; Total output ports with complete 1/0-value coverage ; 17           ;
+; Total output ports with no 1/0-value coverage       ; 36           ;
+; Total output ports with no 1-value coverage         ; 37           ;
+; Total output ports with no 0-value coverage         ; 39           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                          ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; Node Name                                               ; Output Port Name                                        ; Output Port Type ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout   ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout   ; regout           ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout   ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout   ; regout           ;
+; |finalTermProject|print:comb_8|WideOr0~0                ; |finalTermProject|print:comb_8|WideOr0~0                ; combout          ;
+; |finalTermProject|print:comb_8|WideOr1~0                ; |finalTermProject|print:comb_8|WideOr1~0                ; combout          ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~0 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~0 ; combout          ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~2 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~2 ; combout          ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~0 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~0 ; combout          ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~1 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~1 ; combout          ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~2 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_5|dout~2 ; combout          ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~0 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~0 ; combout          ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~1 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~1 ; combout          ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~2 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_4|dout~2 ; combout          ;
+; |finalTermProject|input_pulse:comb_3|pulse              ; |finalTermProject|input_pulse:comb_3|pulse              ; combout          ;
+; |finalTermProject|HEX0[6]                               ; |finalTermProject|HEX0[6]                               ; padio            ;
+; |finalTermProject|HEX7[6]                               ; |finalTermProject|HEX7[6]                               ; padio            ;
+; |finalTermProject|SW[2]                                 ; |finalTermProject|SW[2]~corein                          ; combout          ;
+; |finalTermProject|input_pulse:comb_3|pulse~clkctrl      ; |finalTermProject|input_pulse:comb_3|pulse~clkctrl      ; outclk           ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                      ;
++---------------------------+--------------------------------+------------------+
+; Node Name                 ; Output Port Name               ; Output Port Type ;
++---------------------------+--------------------------------+------------------+
+; |finalTermProject|HEX3[6] ; |finalTermProject|HEX3[6]      ; padio            ;
+; |finalTermProject|HEX3[5] ; |finalTermProject|HEX3[5]      ; padio            ;
+; |finalTermProject|HEX3[4] ; |finalTermProject|HEX3[4]      ; padio            ;
+; |finalTermProject|HEX3[3] ; |finalTermProject|HEX3[3]      ; padio            ;
+; |finalTermProject|HEX3[2] ; |finalTermProject|HEX3[2]      ; padio            ;
+; |finalTermProject|HEX3[1] ; |finalTermProject|HEX3[1]      ; padio            ;
+; |finalTermProject|HEX3[0] ; |finalTermProject|HEX3[0]      ; padio            ;
+; |finalTermProject|HEX1[6] ; |finalTermProject|HEX1[6]      ; padio            ;
+; |finalTermProject|HEX1[5] ; |finalTermProject|HEX1[5]      ; padio            ;
+; |finalTermProject|HEX1[4] ; |finalTermProject|HEX1[4]      ; padio            ;
+; |finalTermProject|HEX1[3] ; |finalTermProject|HEX1[3]      ; padio            ;
+; |finalTermProject|HEX1[2] ; |finalTermProject|HEX1[2]      ; padio            ;
+; |finalTermProject|HEX1[1] ; |finalTermProject|HEX1[1]      ; padio            ;
+; |finalTermProject|HEX1[0] ; |finalTermProject|HEX1[0]      ; padio            ;
+; |finalTermProject|HEX0[5] ; |finalTermProject|HEX0[5]      ; padio            ;
+; |finalTermProject|HEX0[4] ; |finalTermProject|HEX0[4]      ; padio            ;
+; |finalTermProject|HEX0[3] ; |finalTermProject|HEX0[3]      ; padio            ;
+; |finalTermProject|HEX0[2] ; |finalTermProject|HEX0[2]      ; padio            ;
+; |finalTermProject|HEX0[1] ; |finalTermProject|HEX0[1]      ; padio            ;
+; |finalTermProject|HEX0[0] ; |finalTermProject|HEX0[0]      ; padio            ;
+; |finalTermProject|HEX4[6] ; |finalTermProject|HEX4[6]      ; padio            ;
+; |finalTermProject|HEX4[5] ; |finalTermProject|HEX4[5]      ; padio            ;
+; |finalTermProject|HEX4[4] ; |finalTermProject|HEX4[4]      ; padio            ;
+; |finalTermProject|HEX4[3] ; |finalTermProject|HEX4[3]      ; padio            ;
+; |finalTermProject|HEX4[2] ; |finalTermProject|HEX4[2]      ; padio            ;
+; |finalTermProject|HEX4[1] ; |finalTermProject|HEX4[1]      ; padio            ;
+; |finalTermProject|HEX4[0] ; |finalTermProject|HEX4[0]      ; padio            ;
+; |finalTermProject|HEX7[5] ; |finalTermProject|HEX7[5]      ; padio            ;
+; |finalTermProject|HEX7[4] ; |finalTermProject|HEX7[4]      ; padio            ;
+; |finalTermProject|HEX7[3] ; |finalTermProject|HEX7[3]      ; padio            ;
+; |finalTermProject|HEX7[2] ; |finalTermProject|HEX7[2]      ; padio            ;
+; |finalTermProject|HEX7[1] ; |finalTermProject|HEX7[1]      ; padio            ;
+; |finalTermProject|HEX7[0] ; |finalTermProject|HEX7[0]      ; padio            ;
+; |finalTermProject|SW[3]   ; |finalTermProject|SW[3]~corein ; combout          ;
+; |finalTermProject|SW[4]   ; |finalTermProject|SW[4]~corein ; combout          ;
+; |finalTermProject|SW[1]   ; |finalTermProject|SW[1]~corein ; combout          ;
+; |finalTermProject|SW[0]   ; |finalTermProject|SW[0]~corein ; combout          ;
++---------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                             ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; Node Name                                               ; Output Port Name                                        ; Output Port Type ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout   ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout   ; regout           ;
+; |finalTermProject|print:comb_8|Decoder0~0               ; |finalTermProject|print:comb_8|Decoder0~0               ; combout          ;
+; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~1 ; |finalTermProject|dffs:comb_7|d_flip_flop:comb_3|dout~1 ; combout          ;
+; |finalTermProject|HEX3[6]                               ; |finalTermProject|HEX3[6]                               ; padio            ;
+; |finalTermProject|HEX3[5]                               ; |finalTermProject|HEX3[5]                               ; padio            ;
+; |finalTermProject|HEX3[4]                               ; |finalTermProject|HEX3[4]                               ; padio            ;
+; |finalTermProject|HEX3[3]                               ; |finalTermProject|HEX3[3]                               ; padio            ;
+; |finalTermProject|HEX3[2]                               ; |finalTermProject|HEX3[2]                               ; padio            ;
+; |finalTermProject|HEX3[1]                               ; |finalTermProject|HEX3[1]                               ; padio            ;
+; |finalTermProject|HEX3[0]                               ; |finalTermProject|HEX3[0]                               ; padio            ;
+; |finalTermProject|HEX1[5]                               ; |finalTermProject|HEX1[5]                               ; padio            ;
+; |finalTermProject|HEX1[4]                               ; |finalTermProject|HEX1[4]                               ; padio            ;
+; |finalTermProject|HEX1[3]                               ; |finalTermProject|HEX1[3]                               ; padio            ;
+; |finalTermProject|HEX1[2]                               ; |finalTermProject|HEX1[2]                               ; padio            ;
+; |finalTermProject|HEX1[1]                               ; |finalTermProject|HEX1[1]                               ; padio            ;
+; |finalTermProject|HEX1[0]                               ; |finalTermProject|HEX1[0]                               ; padio            ;
+; |finalTermProject|HEX0[5]                               ; |finalTermProject|HEX0[5]                               ; padio            ;
+; |finalTermProject|HEX0[4]                               ; |finalTermProject|HEX0[4]                               ; padio            ;
+; |finalTermProject|HEX0[3]                               ; |finalTermProject|HEX0[3]                               ; padio            ;
+; |finalTermProject|HEX0[2]                               ; |finalTermProject|HEX0[2]                               ; padio            ;
+; |finalTermProject|HEX0[1]                               ; |finalTermProject|HEX0[1]                               ; padio            ;
+; |finalTermProject|HEX0[0]                               ; |finalTermProject|HEX0[0]                               ; padio            ;
+; |finalTermProject|HEX4[6]                               ; |finalTermProject|HEX4[6]                               ; padio            ;
+; |finalTermProject|HEX4[5]                               ; |finalTermProject|HEX4[5]                               ; padio            ;
+; |finalTermProject|HEX4[4]                               ; |finalTermProject|HEX4[4]                               ; padio            ;
+; |finalTermProject|HEX4[3]                               ; |finalTermProject|HEX4[3]                               ; padio            ;
+; |finalTermProject|HEX4[2]                               ; |finalTermProject|HEX4[2]                               ; padio            ;
+; |finalTermProject|HEX4[1]                               ; |finalTermProject|HEX4[1]                               ; padio            ;
+; |finalTermProject|HEX4[0]                               ; |finalTermProject|HEX4[0]                               ; padio            ;
+; |finalTermProject|HEX7[5]                               ; |finalTermProject|HEX7[5]                               ; padio            ;
+; |finalTermProject|HEX7[4]                               ; |finalTermProject|HEX7[4]                               ; padio            ;
+; |finalTermProject|HEX7[3]                               ; |finalTermProject|HEX7[3]                               ; padio            ;
+; |finalTermProject|HEX7[2]                               ; |finalTermProject|HEX7[2]                               ; padio            ;
+; |finalTermProject|HEX7[1]                               ; |finalTermProject|HEX7[1]                               ; padio            ;
+; |finalTermProject|HEX7[0]                               ; |finalTermProject|HEX7[0]                               ; padio            ;
+; |finalTermProject|SW[3]                                 ; |finalTermProject|SW[3]~corein                          ; combout          ;
+; |finalTermProject|SW[4]                                 ; |finalTermProject|SW[4]~corein                          ; combout          ;
+; |finalTermProject|SW[1]                                 ; |finalTermProject|SW[1]~corein                          ; combout          ;
+; |finalTermProject|SW[0]                                 ; |finalTermProject|SW[0]~corein                          ; combout          ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Apr 30 11:41:16 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off finalTermProject -c finalTermProject
+Info: Using vector source file "C:/Users/kimha/Documents/KU/2_1/Á¤³í¼³/assignment#2/finalTermProject.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "~ALTERA_ASDO_DATA1~" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "~ALTERA_DATA0~" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "~ALTERA_DCLK~" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "~ALTERA_FLASH_nCE_nCSO~" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "~ALTERA_nCEO~" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "d_flip_flop:comb_7|dout" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "d_flip_flop:comb_8|dout" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "d_flip_flop:comb_9|dout" in design.
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      29.82 %
+Info: Number of transitions in simulation is 1259
+Info: Quartus II Simulator was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 165 megabytes
+    Info: Processing ended: Tue Apr 30 11:41:17 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

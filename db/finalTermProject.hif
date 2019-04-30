@@ -31,7 +31,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-e9bb8fdd911718e7589681c46ba0b9b4
+cd31cafcfbae5164e3183092c73adcbd
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -113,7 +113,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-e9bb8fdd911718e7589681c46ba0b9b4
+cd31cafcfbae5164e3183092c73adcbd
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -149,7 +149,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-e9bb8fdd911718e7589681c46ba0b9b4
+cd31cafcfbae5164e3183092c73adcbd
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -185,7 +185,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-e9bb8fdd911718e7589681c46ba0b9b4
+cd31cafcfbae5164e3183092c73adcbd
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -221,7 +221,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-e9bb8fdd911718e7589681c46ba0b9b4
+cd31cafcfbae5164e3183092c73adcbd
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -246,7 +246,7 @@ conventionalLogic:comb_6
 
 # end
 # entity
-d_flip_flop
+dffs
 # storage
 db|finalTermProject.(5).cnf
 db|finalTermProject.(5).cnf
@@ -257,7 +257,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-e9bb8fdd911718e7589681c46ba0b9b4
+cd31cafcfbae5164e3183092c73adcbd
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -276,9 +276,45 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-d_flip_flop:comb_7
-d_flip_flop:comb_8
-d_flip_flop:comb_9
+dffs:comb_7
+}
+# macro_sequence
+
+# end
+# entity
+d_flip_flop
+# storage
+db|finalTermProject.(6).cnf
+db|finalTermProject.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+main.v
+cd31cafcfbae5164e3183092c73adcbd
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+dffs:comb_7|d_flip_flop:comb_3
+dffs:comb_7|d_flip_flop:comb_4
+dffs:comb_7|d_flip_flop:comb_5
 }
 # macro_sequence
 
