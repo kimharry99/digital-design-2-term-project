@@ -1,5 +1,5 @@
 Flow report for finalTermProject
-Tue Apr 30 17:31:20 2019
+Thu May 02 13:16:45 2019
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Tue Apr 30 17:31:20 2019        ;
+; Flow Status                        ; Successful - Thu May 02 13:16:45 2019        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; finalTermProject                             ;
 ; Top-level Entity Name              ; finalTermProject                             ;
@@ -46,11 +46,11 @@ applicable agreement for further details.
 ; Device                             ; EP4CE115F29C7                                ;
 ; Timing Models                      ; Preliminary                                  ;
 ; Met timing requirements            ; N/A                                          ;
-; Total logic elements               ; 49 / 114,480 ( < 1 % )                       ;
-;     Total combinational functions  ; 49 / 114,480 ( < 1 % )                       ;
+; Total logic elements               ; 43 / 114,480 ( < 1 % )                       ;
+;     Total combinational functions  ; 43 / 114,480 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 25 / 114,480 ( < 1 % )                       ;
 ; Total registers                    ; 25                                           ;
-; Total pins                         ; 41 / 529 ( 8 % )                             ;
+; Total pins                         ; 27 / 529 ( 5 % )                             ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                              ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/30/2019 17:30:52 ;
+; Start date & time ; 05/02/2019 13:16:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; finalTermProject    ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------------------+--------------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                                    ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+--------------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 79871132962354.155661305214764                                           ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 79871132962354.155677056310952                                           ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                                                       ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                                                        ; --            ; --          ; --             ;
 ; MISC_FILE                          ; C:/Users/kimha/Documents/KU/2_1/Á¤³í¼³/assignment#2/finalTermProject.dpf ; --            ; --          ; --             ;
@@ -90,11 +90,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 234 MB              ; 00:00:03                           ;
-; Fitter                    ; 00:00:17     ; 1.0                     ; 413 MB              ; 00:00:18                           ;
-; Assembler                 ; 00:00:08     ; 1.0                     ; 454 MB              ; 00:00:08                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 315 MB              ; 00:00:04                           ;
-; Total                     ; 00:00:26     ; --                      ; --                  ; 00:00:29                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 235 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:25     ; 1.0                     ; 412 MB              ; 00:00:25                           ;
+; Assembler                 ; 00:00:11     ; 1.0                     ; 454 MB              ; 00:00:11                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 315 MB              ; 00:00:06                           ;
+; Total                     ; 00:00:38     ; --                      ; --                  ; 00:00:38                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

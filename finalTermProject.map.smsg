@@ -1,3 +1,3 @@
-Info (10281): Verilog HDL Declaration information at main.v(53): object "A" differs only in case from object "a" in the same scope
-Info (10281): Verilog HDL Declaration information at main.v(53): object "B" differs only in case from object "b" in the same scope
-Info (10281): Verilog HDL Declaration information at main.v(53): object "C" differs only in case from object "c" in the same scope
+Info (10281): Verilog HDL Declaration information at main.v(54): object "A" differs only in case from object "a" in the same scope
+Info (10281): Verilog HDL Declaration information at main.v(54): object "B" differs only in case from object "b" in the same scope
+Info (10281): Verilog HDL Declaration information at main.v(54): object "C" differs only in case from object "c" in the same scope

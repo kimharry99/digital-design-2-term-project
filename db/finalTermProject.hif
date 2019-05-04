@@ -31,7 +31,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-f81826fab057492dff21ab34355aaf65
+e0b21c4d38be1c3199c1e1048e4c5e
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -56,7 +56,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 
 # end
 # entity
-d_flip_flop
+input_pulse
 # storage
 db|finalTermProject.(1).cnf
 db|finalTermProject.(1).cnf
@@ -67,7 +67,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-f81826fab057492dff21ab34355aaf65
+e0b21c4d38be1c3199c1e1048e4c5e
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -86,16 +86,13 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-d_flip_flop:comb_3
-dffs:comb_8|d_flip_flop:comb_3
-dffs:comb_8|d_flip_flop:comb_4
-dffs:comb_8|d_flip_flop:comb_5
+input_pulse:comb_3
 }
 # macro_sequence
 
 # end
 # entity
-input_pulse
+d_flip_flop
 # storage
 db|finalTermProject.(2).cnf
 db|finalTermProject.(2).cnf
@@ -106,7 +103,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-f81826fab057492dff21ab34355aaf65
+e0b21c4d38be1c3199c1e1048e4c5e
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -125,7 +122,10 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-input_pulse:comb_4
+d_flip_flop:comb_4
+dffs:comb_8|d_flip_flop:comb_3
+dffs:comb_8|d_flip_flop:comb_4
+dffs:comb_8|d_flip_flop:comb_5
 }
 # macro_sequence
 
@@ -142,7 +142,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-f81826fab057492dff21ab34355aaf65
+e0b21c4d38be1c3199c1e1048e4c5e
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -178,7 +178,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-f81826fab057492dff21ab34355aaf65
+e0b21c4d38be1c3199c1e1048e4c5e
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -214,7 +214,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-f81826fab057492dff21ab34355aaf65
+e0b21c4d38be1c3199c1e1048e4c5e
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -250,7 +250,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-f81826fab057492dff21ab34355aaf65
+e0b21c4d38be1c3199c1e1048e4c5e
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -286,7 +286,7 @@ ON
 # case_sensitive
 # source_file
 main.v
-f81826fab057492dff21ab34355aaf65
+e0b21c4d38be1c3199c1e1048e4c5e
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
